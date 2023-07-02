@@ -4,8 +4,16 @@ export default function Home() {
   return (
     <main>
       Main page
-      <hr></hr>
-      <Link href="/pages">pages to</Link>
+      <hr />
+      <Link href="/events">to events</Link>
+      <hr />
+      <Link href="/executives">to executives</Link>
+      <hr />
+      <Link href="/newsletter">to newsletter</Link>
+      <hr />
+      <Link href="/resources">to resources</Link>
+      <hr />
+      <Link href="/sponsors">to sponsors</Link>
     </main>
   );
 }

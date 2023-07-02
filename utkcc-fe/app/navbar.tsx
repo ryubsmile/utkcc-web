@@ -1,5 +1,5 @@
 const NavBar = ({ children }: { children: any }) => {
-  return <nav>asdf</nav>;
+  return <nav>navigation bar</nav>;
 };
 
 export default NavBar;
