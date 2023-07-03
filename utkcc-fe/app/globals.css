@@ -3,4 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --main-theme-color: rgb(5, 60, 140)
+  --bg-color: rgb(255, 255, 255)
+  --txt-color: rgb(0, 0, 0)
 }
