@@ -1,9 +1,29 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
 import NavBar from './navbar';
 import { Metadata } from 'next';
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ['latin'] });
+const gMarket = localFont({
+  src: [
+    {
+      path: './GmarketSansTTF/GmarketSansTTFMedium.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: './GmarketSansTTF/GmarketSansTTFLight.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './GmarketSansTTF/GmarketSansTTFBold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-main',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -28,12 +48,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={gMarket.className}>
+      <body>
         <header>
           <NavBar>{{ children: '' }}</NavBar>
         </header>
-        <main className="pt-14">{children}</main>
+        <main className="pt-16">{children}</main>
       </body>
     </html>
   );
