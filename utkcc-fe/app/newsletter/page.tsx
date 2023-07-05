@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Newsletter',
 };
 
-export default function Page() {
+export default function Newsletter() {
   return (
     <>
       <div>This is Newsletter page.</div>

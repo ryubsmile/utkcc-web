@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Sponsors',
 };
 
-export default function Page() {
+export default function Sponsors() {
   return (
     <>
       <div>This is Sponsors page.</div>

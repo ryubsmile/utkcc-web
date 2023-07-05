@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Resources',
 };
 
-export default function Page() {
+export default function Resources() {
   return (
     <>
       <div>This is Resources page.</div>

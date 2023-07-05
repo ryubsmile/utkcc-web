@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Events',
 };
 
-export default function Page() {
+export default function Events() {
   return (
     <>
       <div>This is Events page.</div>
