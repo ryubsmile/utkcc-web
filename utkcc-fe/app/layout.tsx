@@ -49,11 +49,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={gMarket.className}>
-      <body>
+      <body className="w-screen min-h-screen">
         <header>
-          <NavBar>{{ children: '' }}</NavBar>
+          <NavBar />
         </header>
-        <main className="pt-16">{children}</main>
+        {/* pt-16 */}
+        <main>{children}</main>
       </body>
     </html>
   );

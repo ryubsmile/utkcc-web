@@ -34,19 +34,19 @@ function MenuButton(props: navBarProps) {
   );
 }
 
-export default function NavBar({ children }: { children: any }) {
+export default function NavBar() {
   const [navActive, setNavActive] = useState(false);
   return (
     <nav
       className={`w-screen ${
         navActive ? 'h-screen' : 'h-16'
-      } fixed bg-white border-b border-solid border-transparent font-semibold duration-200 select-none`}
+      } fixed bg-white border-b border-solid border-transparent font-semibold duration-100 select-none z-10`}
     >
       <div className="px-4 py-2 h-16 flex">
         <Link
-          className={`w-fit h-full flex gap-2 duration-100 items-center ${
-            navActive ? 'opacity-0' : 'opacity-100'
-          }`}
+          className={`${
+            navActive ? 'hidden' : 'flex'
+          } w-fit h-full gap-2 items-center`}
           href="/"
         >
           <Image
