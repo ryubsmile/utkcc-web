@@ -17,8 +17,6 @@ interface animationProperties {
 export default function Home() {
   const [currentPos, setPos] = useState(0);
 
-  const scrollerStyles: animationProperties[] = [];
-
   const updatePos = () => {
     setPos(window.scrollY + window.innerHeight / 2);
     console.log(currentPos);
@@ -125,7 +123,7 @@ export default function Home() {
             {/* 2. KCC 첫 텍스트 */}
             <div className="flex flex-col">
               <div className="font-bold text-4xl text-kcc-theme">UTKCC</div>
-              <div className="mt-4 font-semibold">
+              <div className="mt-4 font-semibold text-gray-600">
                 University of Toronto <br /> Korean Commerce Community
               </div>
             </div>
@@ -135,14 +133,21 @@ export default function Home() {
             animations={[
               {
                 top: 2500,
-                bottom: 3200,
+                bottom: 3000,
                 styleAttr: 'opacity',
                 topVal: 0,
                 bottomVal: 1,
               },
               {
-                top: 3200,
-                bottom: 3500,
+                top: 3000,
+                bottom: 3700,
+                styleAttr: 'opacity',
+                topVal: 1,
+                bottomVal: 1,
+              },
+              {
+                top: 3700,
+                bottom: 4000,
                 styleAttr: 'opacity',
                 topVal: 1,
                 bottomVal: 0,
@@ -150,10 +155,85 @@ export default function Home() {
             ]}
           >
             {/* 3. KCC 두번째 텍스트 */}
-            <div className="font-semibold">
+            <div className="font-semibold text-xl text-gray-600">
               Be part of a
               <br /> <span className="text-kcc-theme">professional</span>{' '}
               community.
+            </div>
+          </Slide>
+
+          <Slide
+            currentPos={currentPos}
+            animations={[
+              {
+                top: 4000,
+                bottom: 4300,
+                styleAttr: 'opacity',
+                topVal: 0,
+                bottomVal: 1,
+              },
+              {
+                top: 4300,
+                bottom: 6000,
+                styleAttr: 'opacity',
+                topVal: 1,
+                bottomVal: 1,
+              },
+              // {
+              //   top: 5500,
+              //   bottom: 5800,
+              //   styleAttr: 'opacity',
+              //   topVal: 1,
+              //   bottomVal: 0,
+              // },
+            ]}
+          >
+            <div className="font-semibold text-xl">
+              학업성취와 커리어의 첫 시작점 <br />
+              모두 이 곳에서 시작하세요. <br />
+              <span className="text-transparent">
+                이제껏 경험 못 했던 한인경영동아리, <br /> <span>UTKCC</span>와
+                함께라면 당신의 <br />
+                유티는 분명 더 즐거울거에요.
+              </span>
+            </div>
+          </Slide>
+          <Slide
+            currentPos={currentPos}
+            animations={[
+              {
+                top: 5000,
+                bottom: 5300,
+                styleAttr: 'opacity',
+                topVal: 0,
+                bottomVal: 1,
+              },
+              {
+                top: 5300,
+                bottom: 6000,
+                styleAttr: 'opacity',
+                topVal: 1,
+                bottomVal: 1,
+              },
+              // {
+              //   top: 5500,
+              //   bottom: 5800,
+              //   styleAttr: 'opacity',
+              //   topVal: 1,
+              //   bottomVal: 0,
+              // },
+            ]}
+          >
+            <div className="font-semibold text-xl">
+              <span className="text-transparent">
+                학업성취와 커리어의 첫 시작점 <br />
+                모두 이 곳에서 시작하세요.{' '}
+              </span>
+              <br />
+              이제껏 경험 못 했던 한인경영동아리, <br />{' '}
+              <span className="text-kcc-theme">UTKCC</span>와 함께라면 당신의{' '}
+              <br />
+              유티는 분명 더 즐거울거에요.
             </div>
           </Slide>
         </div>

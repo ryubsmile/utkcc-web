@@ -56,7 +56,7 @@ export default function NavBar() {
             height={36}
             className="object-scale-down"
           />
-          <span className="text-xl">UTKCC</span>
+          <span className="text-xl text-kcc-theme font-bold">UTKCC</span>
         </Link>
         <div className="w-8 h-8 ml-auto self-center">
           <MenuButton getter={navActive} setter={setNavActive} />
