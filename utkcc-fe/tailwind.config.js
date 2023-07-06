@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         mainfont: ['var(--font-main)'],
       },
+      colors: {
+        'kcc-theme': 'var(--main-theme-color)',
+      },
     },
   },
   plugins: [],
