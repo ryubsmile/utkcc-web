@@ -43,7 +43,7 @@ export default function Home() {
             animations={[
               {
                 top: 0,
-                bottom: 2000,
+                bottom: 1500,
                 styleAttr: 'opacity',
                 topVal: 1,
                 bottomVal: 0,
@@ -108,13 +108,13 @@ export default function Home() {
               },
               {
                 top: 1500,
-                bottom: 2000,
+                bottom: 2200,
                 styleAttr: 'opacity',
                 topVal: 1,
                 bottomVal: 1,
               },
               {
-                top: 2000,
+                top: 2200,
                 bottom: 2500,
                 styleAttr: 'opacity',
                 topVal: 1,
@@ -122,9 +122,38 @@ export default function Home() {
               },
             ]}
           >
+            {/* 2. KCC 첫 텍스트 */}
             <div className="flex flex-col">
-              <div className="font-bold text-4xl">UTKCC</div>
-              <div>asdf2</div>
+              <div className="font-bold text-4xl text-kcc-theme">UTKCC</div>
+              <div className="mt-4 font-semibold">
+                University of Toronto <br /> Korean Commerce Community
+              </div>
+            </div>
+          </Slide>
+          <Slide
+            currentPos={currentPos}
+            animations={[
+              {
+                top: 2500,
+                bottom: 3200,
+                styleAttr: 'opacity',
+                topVal: 0,
+                bottomVal: 1,
+              },
+              {
+                top: 3200,
+                bottom: 3500,
+                styleAttr: 'opacity',
+                topVal: 1,
+                bottomVal: 0,
+              },
+            ]}
+          >
+            {/* 3. KCC 두번째 텍스트 */}
+            <div className="font-semibold">
+              Be part of a
+              <br /> <span className="text-kcc-theme">professional</span>{' '}
+              community.
             </div>
           </Slide>
         </div>
