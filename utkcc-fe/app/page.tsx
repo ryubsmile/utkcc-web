@@ -3,14 +3,6 @@
 import Image from 'next/image';
 import { useState, useEffect, CSSProperties } from 'react';
 
-interface animationProperties {
-  top: number;
-  bottom: number;
-  styleAttr: string;
-  topVal: number;
-  bottomVal: number;
-}
-
 export default function Home() {
   const [currentPos, setPos] = useState(0);
 
@@ -230,6 +222,14 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+interface animationProperties {
+  top: number;
+  bottom: number;
+  styleAttr: string;
+  topVal: number;
+  bottomVal: number;
 }
 
 /**
