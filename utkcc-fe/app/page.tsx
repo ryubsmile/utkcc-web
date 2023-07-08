@@ -1,21 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import { useState, useEffect, CSSProperties } from 'react';
-
-// @ts-ignore
-// const bezierEasing: = (await import('https://cdn.skypack.dev/pin/bezier-easing@v2.1.0-ELIKFSyR7ljg13TI3nit/mode=imports/optimized/bezier-easing.js')).default
-
-interface animationProperties {
-  top: number;
-  bottom: number;
-  styleAttr: string;
-  topVal: number;
-  bottomVal: number;
-}
+import './page.css';
+import { useState, useRef, useEffect, CSSProperties } from 'react';
 
 export default function Home() {
   const [currentPos, setPos] = useState(0);
+  const mounted = useRef<HTMLDivElement>(null);
 
   const updatePos = () => {
     setPos(window.scrollY + window.innerHeight / 2);
@@ -34,7 +25,10 @@ export default function Home() {
       {/* sticky container */}
       <div className="sticky h-screen top-0">
         {/* sticky */}
-        <div className="relative flex items-center justify-center w-full h-full">
+        <div
+          className="relative flex items-center justify-center w-full h-full"
+          ref={mounted}
+        >
           {/* slide container */}
           <Slide
             currentPos={currentPos}
@@ -42,50 +36,38 @@ export default function Home() {
               {
                 top: 0,
                 bottom: 1500,
-                styleAttr: 'opacity',
-                topVal: 1,
-                bottomVal: 0,
+                keyframes: 'disappear',
               },
             ]}
             additionalStyle="bottom-20"
           >
-            {/* 스크롤 표시 컴포넌트 */}
             <div className="text-center">아래로 스크롤하세요.</div>
-          </Slide>
+          </Slide>{' '}
           <Slide
             currentPos={currentPos}
             animations={[
               {
                 top: 0,
                 bottom: 500,
-                styleAttr: 'opacity',
-                topVal: 1,
-                bottomVal: 1,
+                keyframes: 'show',
               },
               {
                 top: 500,
                 bottom: 1000,
-                styleAttr: 'opacity',
-                topVal: 1,
-                bottomVal: 0.2,
+                keyframes: 'dimmer',
               },
               {
                 top: 1000,
-                bottom: 4000,
-                styleAttr: 'opacity',
-                topVal: 0.2,
-                bottomVal: 0.2,
+                bottom: 3400,
+                keyframes: 'dimshow',
               },
               {
-                top: 4000,
+                top: 3400,
                 bottom: 4500,
-                styleAttr: 'opacity',
-                topVal: 0.2,
-                bottomVal: 0,
+                keyframes: 'dimdisappear',
               },
             ]}
           >
-            {/* 1. 로고 */}
             <Image
               src="/icon4.png"
               width={300}
@@ -99,28 +81,11 @@ export default function Home() {
             animations={[
               {
                 top: 1000,
-                bottom: 1500,
-                styleAttr: 'opacity',
-                topVal: 0,
-                bottomVal: 1,
-              },
-              {
-                top: 1500,
-                bottom: 2200,
-                styleAttr: 'opacity',
-                topVal: 1,
-                bottomVal: 1,
-              },
-              {
-                top: 2200,
                 bottom: 2500,
-                styleAttr: 'opacity',
-                topVal: 1,
-                bottomVal: 0,
+                keyframes: 'display-while',
               },
             ]}
           >
-            {/* 2. KCC 첫 텍스트 */}
             <div className="flex flex-col">
               <div className="font-bold text-4xl text-kcc-theme">UTKCC</div>
               <div className="mt-4 font-semibold text-gray-600">
@@ -133,59 +98,25 @@ export default function Home() {
             animations={[
               {
                 top: 2500,
-                bottom: 3000,
-                styleAttr: 'opacity',
-                topVal: 0,
-                bottomVal: 1,
-              },
-              {
-                top: 3000,
-                bottom: 3700,
-                styleAttr: 'opacity',
-                topVal: 1,
-                bottomVal: 1,
-              },
-              {
-                top: 3700,
                 bottom: 4000,
-                styleAttr: 'opacity',
-                topVal: 1,
-                bottomVal: 0,
+                keyframes: 'display-while',
               },
             ]}
           >
-            {/* 3. KCC 두번째 텍스트 */}
             <div className="font-semibold text-xl text-gray-600">
               Be part of a
               <br /> <span className="text-kcc-theme">professional</span>{' '}
               community.
             </div>
           </Slide>
-
           <Slide
             currentPos={currentPos}
             animations={[
               {
                 top: 4000,
-                bottom: 4300,
-                styleAttr: 'opacity',
-                topVal: 0,
-                bottomVal: 1,
-              },
-              {
-                top: 4300,
                 bottom: 6000,
-                styleAttr: 'opacity',
-                topVal: 1,
-                bottomVal: 1,
+                keyframes: 'appear',
               },
-              // {
-              //   top: 5500,
-              //   bottom: 5800,
-              //   styleAttr: 'opacity',
-              //   topVal: 1,
-              //   bottomVal: 0,
-              // },
             ]}
           >
             <div className="font-semibold text-xl">
@@ -203,25 +134,9 @@ export default function Home() {
             animations={[
               {
                 top: 5000,
-                bottom: 5300,
-                styleAttr: 'opacity',
-                topVal: 0,
-                bottomVal: 1,
-              },
-              {
-                top: 5300,
                 bottom: 6000,
-                styleAttr: 'opacity',
-                topVal: 1,
-                bottomVal: 1,
+                keyframes: 'appear',
               },
-              // {
-              //   top: 5500,
-              //   bottom: 5800,
-              //   styleAttr: 'opacity',
-              //   topVal: 1,
-              //   bottomVal: 0,
-              // },
             ]}
           >
             <div className="font-semibold text-xl">
@@ -240,6 +155,12 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+interface animationProperties {
+  top: number;
+  bottom: number;
+  keyframes: string;
 }
 
 /**
@@ -284,10 +205,14 @@ function mergeAnimationObjects(
     {},
   );
 
-  return Object.keys(mergedCSSObject).length == 0 // == {} ?
-    ? { display: 'none' }
-    : mergedCSSObject;
+  return Object.keys(mergedCSSObject).length !== 0
+    ? mergedCSSObject
+    : { display: 'none' };
 }
+
+const ease = 'cubic-bezier(.25, .1, .25, 1)';
+const easeIn = 'cubic-bezier(.38, .01, .78, .13)';
+const midSlow = 'cubic-bezier(0, .7, 1, .3)';
 
 /**
  * 인자들에 따른 현재 애니메이션의 진행률을 계산해서 `CSSProperties` 타입 오브젝트를 리턴하는 함수.
@@ -296,21 +221,18 @@ function createAnimationObject(
   animation: animationProperties,
   currentPos: number,
 ): CSSProperties {
-  const { top, bottom, styleAttr, topVal, bottomVal } = animation;
+  const { top, bottom, keyframes } = animation;
   const ratio = (currentPos - top) / (bottom - top);
-  const currentVal = topVal + (bottomVal - topVal) * ratio;
   return {
-    [styleAttr]: currentVal,
+    animation: `1s ${easeIn} ${
+      ratio * -1
+    }s 1 normal forwards paused ${keyframes}`,
   };
 }
-
-const ease = 'cubicBezier(.25, .1, .25, 1)';
-const easeIn = 'cubicBezier(.38, .01, .78, .13)';
-const midSlow = 'cubicBezier(0, .7, 1, .3)';
 
 /**
  * 해당 숫자가 `top`과 `bottom` 사이에 있는지 확인하는 함수
  */
 function isInRange(num: number, top: number, bottom: number) {
-  return num >= top && num <= bottom;
+  return num > top && num <= bottom;
 }
