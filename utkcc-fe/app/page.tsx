@@ -3,9 +3,6 @@
 import Image from 'next/image';
 import { useState, useEffect, CSSProperties } from 'react';
 
-// @ts-ignore
-// const bezierEasing: = (await import('https://cdn.skypack.dev/pin/bezier-easing@v2.1.0-ELIKFSyR7ljg13TI3nit/mode=imports/optimized/bezier-easing.js')).default
-
 interface animationProperties {
   top: number;
   bottom: number;
@@ -215,13 +212,6 @@ export default function Home() {
                 topVal: 1,
                 bottomVal: 1,
               },
-              // {
-              //   top: 5500,
-              //   bottom: 5800,
-              //   styleAttr: 'opacity',
-              //   topVal: 1,
-              //   bottomVal: 0,
-              // },
             ]}
           >
             <div className="font-semibold text-xl">
@@ -303,10 +293,6 @@ function createAnimationObject(
     [styleAttr]: currentVal,
   };
 }
-
-const ease = 'cubicBezier(.25, .1, .25, 1)';
-const easeIn = 'cubicBezier(.38, .01, .78, .13)';
-const midSlow = 'cubicBezier(0, .7, 1, .3)';
 
 /**
  * 해당 숫자가 `top`과 `bottom` 사이에 있는지 확인하는 함수
