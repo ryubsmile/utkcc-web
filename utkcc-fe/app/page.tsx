@@ -7,13 +7,38 @@ import { useEffect, CSSProperties, useRef } from 'react';
 export default function Home() {
   return (
     <div style={{ height: '7000px' }}>
-      <div className="w-full h-full">
+      <div>
+        <Slide
+          duration={500}
+          transitions={[
+            {
+              top: '150vh',
+              bottom: '300vh',
+              startOpacityVal: '0',
+              endOpacityVal: '0.2',
+            },
+            {
+              top: '300vh',
+              bottom: '410vh',
+              startOpacityVal: '0.2',
+              endOpacityVal: '0',
+            },
+          ]}
+        >
+          <Image
+            src="/icon4.png"
+            width={300}
+            height={300}
+            alt=""
+            className="w-screen h-screen object-contain scale-50"
+          />
+        </Slide>
         {/* <div
           className="absolute w-full"
           style={{ top: '60vh', height: '60vh' }}
         ></div> */}
-        <Slide
-          animations={[
+        {/* <Slide
+          transitions={[
             {
               top: '90vh',
               bottom: '400vh',
@@ -28,11 +53,11 @@ export default function Home() {
             alt=""
             className="w-screen h-screen object-contain scale-50"
           />
-        </Slide>
+        </Slide> */}
         {/* slide container */}
         {/* <Slide
             currentPos={currentPos}
-            animations={[
+            transitions={[
               {
                 top: 0,
                 bottom: 1500,
@@ -47,7 +72,7 @@ export default function Home() {
           </Slide>
           <Slide
             currentPos={currentPos}
-            animations={[
+            transitions={[
               {
                 top: 0,
                 bottom: 500,
@@ -88,7 +113,7 @@ export default function Home() {
           </Slide>
           <Slide
             currentPos={currentPos}
-            animations={[
+            transitions={[
               {
                 top: 1000,
                 bottom: 1500,
@@ -121,7 +146,7 @@ export default function Home() {
           </Slide>
           <Slide
             currentPos={currentPos}
-            animations={[
+            transitions={[
               {
                 top: 2500,
                 bottom: 3000,
@@ -154,7 +179,7 @@ export default function Home() {
 
           <Slide
             currentPos={currentPos}
-            animations={[
+            transitions={[
               {
                 top: 4000,
                 bottom: 4300,
@@ -190,7 +215,7 @@ export default function Home() {
           </Slide>
           <Slide
             currentPos={currentPos}
-            animations={[
+            transitions={[
               {
                 top: 5000,
                 bottom: 5300,
@@ -234,47 +259,41 @@ export default function Home() {
 /**
  * 하나의 애니메이션/효과를 설명하는 인터페이스.
  */
-interface animationProperties {
-  keyframes: string;
+interface transitionInfo {
   top: number | string;
   bottom: number | string;
+  startOpacityVal: string;
+  endOpacityVal: string;
 }
 
 /**
  * 스크롤해서 등장하는 컴포넌트 한개.
- * 여러개의 `animation` 을 배열로 받으며,
- * `style` 객체의
  */
 function Slide({
   children,
-  animations,
+  transitions,
+  duration,
+  additionalStyle,
 }: {
   children: React.ReactNode;
-  animations: animationProperties[];
+  transitions: transitionInfo[];
+  duration: number;
+  additionalStyle?: string;
 }) {
   // array that tracks each and every animation div element
   const observedTargets = useRef<Array<HTMLDivElement | null>>([]);
   const appliedTarget = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // observer는 하나만 있어도 됨.
-    // 초기화 하는 시점에
     let observer: IntersectionObserver;
     if (observedTargets) {
       observer = new IntersectionObserver(e => {
         e.forEach((aniDiv, index) => {
-          if (aniDiv.isIntersecting) {
+          if (appliedTarget.current) {
             // style 적용
-            console.log(aniDiv.intersectionRatio);
-            const { keyframes } = animations[index];
-            if (appliedTarget.current) {
-              const styleObj = appliedTarget.current.style;
-              styleObj.display = 'block';
-              styleObj.animation = `${keyframes} 1s linear infinite`;
-              styleObj.animationIterationCount = '1';
-              styleObj.animationPlayState = 'paused';
-              styleObj.animationDelay = `calc(var(${aniDiv.intersectionRatio})) * -1s`;
-            }
+            appliedTarget.current.style.opacity = aniDiv.isIntersecting
+              ? transitions[index].endOpacityVal
+              : '';
           }
         });
       });
@@ -282,14 +301,42 @@ function Slide({
         observer.observe(aniDiv as Element),
       );
     }
-  }, [observedTargets, animations]);
+  }, [observedTargets, transitions]);
 
   return (
-    <div>
+    <>
+      <div className="w-full fixed h-full flex text-center items-center">
+        <div
+          className={`absolute z-0 w-full ease-in duration-${duration} ${additionalStyle}`}
+          ref={appliedTarget}
+        >
+          {children}
+        </div>
+      </div>
+      {transitions.map((trans, i) => (
+        <div
+          key={i}
+          className="absolute w-full"
+          style={{
+            top: trans.top,
+            height: trans.bottom,
+            backgroundColor: 'transparent',
+          }}
+          ref={el => (observedTargets.current[i] = el)}
+        />
+      ))}
+      {/* <div
+        className="absolute w-screen top-[200vh] h-[400vh] bg-black opacity-50 z-10"
+        ref={}
+      ></div> */}
+
+      {/* <div>
       <div className="fixed z-0 hidden" ref={appliedTarget}>
         {children}
       </div>
-      {animations.map((ani, i) => (
+      {transitions.map((ani, i) => (
+    <>
+      <div className="w-full fixed h-full flex text-center items-center">
         <div
           key={i}
           className="absolute w-full"
@@ -301,6 +348,7 @@ function Slide({
           ref={el => (observedTargets.current[i] = el)}
         />
       ))}
-    </div>
+    </div> */}
+    </>
   );
 }
