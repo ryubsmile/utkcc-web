@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import './page.css';
 import { useEffect, CSSProperties, useRef } from 'react';
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
             {
               top: '150vh',
               bottom: '300vh',
-              startOpacityVal: '0',
+              startOpacityVal: '1',
               endOpacityVal: '0.2',
             },
             {
@@ -33,27 +32,34 @@ export default function Home() {
             className="w-screen h-screen object-contain scale-50"
           />
         </Slide>
+        <Slide
+          duration={500}
+          transitions={[
+            {
+              top: '300vh',
+              bottom: '410vh',
+              startOpacityVal: '0',
+              endOpacityVal: '1',
+            },
+            {
+              top: '410vh',
+              bottom: '600vh',
+              startOpacityVal: '1',
+              endOpacityVal: '0',
+            },
+          ]}
+        >
+          <div className="flex flex-col">
+            <div className="font-bold text-4xl text-kcc-theme">UTKCC</div>
+            <div className="mt-4 font-semibold text-gray-600">
+              University of Toronto <br /> Korean Commerce Community
+            </div>
+          </div>
+        </Slide>
         {/* <div
           className="absolute w-full"
           style={{ top: '60vh', height: '60vh' }}
         ></div> */}
-        {/* <Slide
-          transitions={[
-            {
-              top: '90vh',
-              bottom: '400vh',
-              keyframes: 'disappear',
-            },
-          ]}
-        >
-          <Image
-            src="/icon4.png"
-            width={300}
-            height={300}
-            alt=""
-            className="w-screen h-screen object-contain scale-50"
-          />
-        </Slide> */}
         {/* slide container */}
         {/* <Slide
             currentPos={currentPos}
@@ -273,7 +279,7 @@ function Slide({
   children,
   transitions,
   duration,
-  additionalStyle,
+  additionalStyle = '',
 }: {
   children: React.ReactNode;
   transitions: transitionInfo[];
@@ -285,6 +291,11 @@ function Slide({
   const appliedTarget = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (appliedTarget.current) {
+      appliedTarget.current.style.opacity = transitions[0]?.startOpacityVal;
+      console.log(transitions);
+    }
+
     let observer: IntersectionObserver;
     if (observedTargets) {
       observer = new IntersectionObserver(e => {
@@ -307,7 +318,7 @@ function Slide({
     <>
       <div className="w-full fixed h-full flex text-center items-center">
         <div
-          className={`absolute z-0 w-full ease-in duration-${duration} ${additionalStyle}`}
+          className={`absolute z-0 w-full opacity-0 ease-in transition duration-${duration} ${additionalStyle}`}
           ref={appliedTarget}
         >
           {children}
