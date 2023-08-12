@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, CSSProperties, useRef } from 'react';
+import { useState, useEffect, CSSProperties, useRef } from 'react';
 
 export default function Home() {
   return (
@@ -101,45 +101,6 @@ export default function Home() {
             </div>
           </div>
         </Slide>
-        {/*
-          <Slide
-            currentPos={currentPos}
-            transitions={[
-              {
-                top: 5000,
-                height: 5300,
-                styleAttr: 'opacity',
-                topVal: 0,
-                heightVal: 1,
-              },
-              {
-                top: 5300,
-                height: 6000,
-                styleAttr: 'opacity',
-                topVal: 1,
-                heightVal: 1,
-              },
-              // {
-              //   top: 5500,
-              //   height: 5800,
-              //   styleAttr: 'opacity',
-              //   topVal: 1,
-              //   heightVal: 0,
-              // },
-            ]}
-          >
-            <div className="font-semibold text-xl">
-              <span className="text-transparent">
-                학업성취와 커리어의 첫 시작점 <br />
-                모두 이 곳에서 시작하세요.{' '}
-              </span>
-              <br />
-              이제껏 경험 못 했던 한인경영동아리, <br />{' '}
-              <span className="text-kcc-theme">UTKCC</span>와 함께라면 당신의{' '}
-              <br />
-              유티는 분명 더 즐거울거에요.
-            </div>
-          </Slide> */}
       </div>
     </div>
   );
@@ -304,4 +265,3 @@ function Slide({
       ))}
     </>
   );
-}
