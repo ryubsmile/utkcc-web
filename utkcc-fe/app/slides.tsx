@@ -1,11 +1,30 @@
 'use client';
 
 import Image from 'next/image';
+import Arrow from './arrow';
 import { useEffect, useRef } from 'react';
 
 export default function Slides() {
   return (
-    <div style={{ height: 'max-content' }}>
+    <div style={{ height: '600vh' }}>
+      <Slide
+        duration={500}
+        additionalStyle="bottom-20"
+        transitions={[
+          {
+            top: '0px',
+            height: '50vh',
+            opacityTo: '1',
+          },
+          {
+            top: '470vh',
+            height: '10vh',
+            opacityTo: '1',
+          },
+        ]}
+      >
+        <Arrow />
+      </Slide>
       <LogoSlide duration={500} />
       <Slide
         duration={500}
@@ -251,7 +270,7 @@ function Slide({
       {transitions.map((trans, i) => (
         <div
           key={i}
-          className="absolute w-full bg-gray-200 opacity-40"
+          className="absolute w-full bg-transparent"
           style={{
             top: trans.top,
             height: trans.height,
