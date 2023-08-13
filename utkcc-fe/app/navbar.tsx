@@ -18,7 +18,6 @@ function MenuButton(props: navBarProps) {
       className={`w-full h-full flex flex-col justify-between cursor-pointer`}
       onClick={() => {
         setNavActive(!navActive);
-        console.log(navActive);
       }}
     >
       <Image
@@ -39,10 +38,10 @@ export default function NavBar() {
   return (
     <nav
       className={`w-screen ${
-        navActive ? 'h-screen' : 'h-16'
+        navActive ? 'h-screen' : 'h-auto'
       } fixed bg-white border-b border-solid border-transparent font-semibold duration-100 select-none z-10`}
     >
-      <div className="px-4 py-2 h-16 flex">
+      <div className="px-4 py-4 flex">
         <Link
           className={`${
             navActive ? 'hidden' : 'flex'
@@ -56,7 +55,7 @@ export default function NavBar() {
             height={36}
             className="object-scale-down"
           />
-          <span className="text-xl text-kcc-theme font-bold">UTKCC</span>
+          {/* <span className="text-xl text-kcc-theme font-bold">UTKCC</span> */}
         </Link>
         <div className="w-8 h-8 ml-auto self-center">
           <MenuButton getter={navActive} setter={setNavActive} />

@@ -228,11 +228,6 @@ function Slide({
       entries.forEach((aniDiv, index) => {
         if (appliedTarget.current) {
           // style 적용
-          console.log(
-            aniDiv.isIntersecting,
-            transitions[index].opacityTo,
-            observedTargets.current,
-          );
           if (aniDiv.isIntersecting) {
             appliedTarget.current.style.opacity = transitions[index].opacityTo;
             containerDisplay = 'flex';
