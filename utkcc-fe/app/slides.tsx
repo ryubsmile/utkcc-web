@@ -136,7 +136,7 @@ interface transitionInfo {
  */
 function LogoSlide({ duration }: { duration: number }) {
   const appliedTarget = useRef<HTMLDivElement>(null);
-  const observedTarget = useRef<HTMLDivElement | null>(null);
+  const observedTarget = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let observer: IntersectionObserver;
@@ -179,9 +179,9 @@ function LogoSlide({ duration }: { duration: number }) {
 
   return (
     <>
-      <div className="w-full fixed h-full flex text-center items-center">
+      <div className="-z-50 w-full fixed h-full flex text-center items-center">
         <div
-          className={`absolute z-0 w-full ease-in transition duration-${duration} z-50`}
+          className={`absolute w-full ease-in transition duration-${duration}`}
           ref={appliedTarget}
         >
           <Image
@@ -194,7 +194,7 @@ function LogoSlide({ duration }: { duration: number }) {
         </div>
       </div>
       <div
-        className="absolute w-full top-[0px] h-[50vh] bg-transparent"
+        className="absolute -z-50 w-full top-[0px] h-[50vh] bg-transparent"
         ref={observedTarget}
       ></div>
     </>
@@ -224,6 +224,7 @@ function Slide({
 
     // 요소가 화면에 등장할시 실행되는 함수
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+      let containerDisplay = 'none';
       entries.forEach((aniDiv, index) => {
         if (appliedTarget.current) {
           // style 적용
@@ -234,6 +235,7 @@ function Slide({
           );
           if (aniDiv.isIntersecting) {
             appliedTarget.current.style.opacity = transitions[index].opacityTo;
+            containerDisplay = 'flex';
           } else {
             appliedTarget.current.style.opacity = '0';
           }
@@ -259,9 +261,9 @@ function Slide({
 
   return (
     <>
-      <div className="w-full fixed h-full flex text-center items-center">
+      <div className="-z-10 w-full fixed h-full flex text-center items-center">
         <div
-          className={`absolute z-0 w-full opacity-0 ease-in transition duration-${duration} ${additionalStyle}`}
+          className={`absolute w-full opacity-0 ease-in transition duration-${duration} ${additionalStyle}`}
           ref={appliedTarget}
         >
           {children}
@@ -270,7 +272,7 @@ function Slide({
       {transitions.map((trans, i) => (
         <div
           key={i}
-          className="absolute w-full bg-transparent"
+          className="-z-50 absolute w-full bg-transparent"
           style={{
             top: trans.top,
             height: trans.height,
