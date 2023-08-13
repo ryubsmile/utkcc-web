@@ -70,20 +70,26 @@ export default function NavBar() {
         <Link href="/" onClick={() => setNavActive(false)}>
           Home
         </Link>
+        <Link href="/about" onClick={() => setNavActive(false)}>
+          About
+        </Link>
         <Link href="/events" onClick={() => setNavActive(false)}>
           Events
         </Link>
         <Link href="/executives" onClick={() => setNavActive(false)}>
           Executives
         </Link>
-        <Link href="/newsletter" onClick={() => setNavActive(false)}>
-          Newsletter
+        <Link href="/sponsors" onClick={() => setNavActive(false)}>
+          Sponsors
         </Link>
         <Link href="/resources" onClick={() => setNavActive(false)}>
           Resources
         </Link>
-        <Link href="/sponsors" onClick={() => setNavActive(false)}>
-          Sponsors
+        <Link href="/newsletter" onClick={() => setNavActive(false)}>
+          Newsletter
+        </Link>
+        <Link href="/contact" onClick={() => setNavActive(false)}>
+          Contact
         </Link>
       </div>
     </nav>
