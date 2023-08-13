@@ -49,12 +49,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={gMarket.className}>
-      <body className="w-screen min-h-screen">
+      <body
+        className="w-screen min-h-screen"
+        // suppressHydrationWarning={true}
+      >
         <header>
           <NavBar />
         </header>
         {/* pt-16 */}
         <main>{children}</main>
+        <footer>
+          <div className="flex flex-col min-h-[20vh] mt-[10vh] p-8 bg-kcc-theme text-white font-semibold">
+            <div className="text-center">Contact Information</div>
+            <div className="flex flex-col my-3 text-xs">
+              <div>General Inquiries: koreancommerce@gmail.com</div>
+              <div>President: seohyun.kang@mail.utoronto.ca</div>
+              <div>Vice-president: suye.han@mail.utoronto.ca</div>
+              <div>Sponsor Inquiries: yujin.shim@mail.utoronto.ca</div>
+              <div className="py-2 opacity-50">
+                Designed by Hyunjun You, <br /> Created by Jaehyuk Ryu and
+                Jingeon Kim
+              </div>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
