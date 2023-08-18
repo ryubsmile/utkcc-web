@@ -54,7 +54,7 @@ export default function Slides() {
           },
         ]}
       >
-        <div className="font-semibold text-xl">
+        <div className="font-normal text-xl">
           학업성취와 커리어의 첫 시작점 <br />
           모두 이 곳에서 시작하세요. <br />
           <span className="text-transparent">
@@ -74,7 +74,7 @@ export default function Slides() {
           },
         ]}
       >
-        <div className="font-semibold text-xl">
+        <div className="font-normal text-xl">
           <span className="text-transparent">
             학업성취와 커리어의 첫 시작점 <br />
             모두 이 곳에서 시작하세요.{' '}
@@ -95,7 +95,7 @@ export default function Slides() {
           },
         ]}
       >
-        <div className="font-semibold text-xl text-gray-600">
+        <div className="font-normal text-xl text-gray-600">
           Be part of a
           <br /> <span className="text-kcc-theme">professional</span> community.
         </div>
@@ -112,7 +112,7 @@ export default function Slides() {
       >
         <div className="flex flex-col">
           <div className="font-bold text-4xl text-kcc-theme">UTKCC</div>
-          <div className="mt-4 font-semibold text-gray-600">
+          <div className="mt-4 font-normal text-gray-600">
             University of Toronto <br /> Korean Commerce Community
           </div>
         </div>

@@ -39,7 +39,7 @@ export default function NavBar() {
     <nav
       className={`w-screen ${
         navActive ? 'h-screen' : 'h-auto'
-      } fixed bg-white border-b border-solid border-transparent font-semibold duration-100 select-none z-10`}
+      } fixed bg-white border-b border-solid border-transparent font-normal duration-100 select-none z-10`}
     >
       <div className="px-4 py-4 flex">
         <Link
