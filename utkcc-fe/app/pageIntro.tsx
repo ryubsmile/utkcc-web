@@ -10,6 +10,7 @@ export default function PageIntro({
   pageName,
   pageSlogan,
   pageExp,
+  pageFooter,
 }: {
   children: React.ReactNode;
   pageName: string;
@@ -18,19 +19,22 @@ export default function PageIntro({
   pageFooter?: string | React.ReactNode;
 }) {
   const [name, setName] = useState('');
-  const [slogan, setSlogan] = useState<React.ReactNode | string | null>('');
-  const [exp, setExp] = useState<React.ReactNode | string | null>('');
+  const [slogan, setSlogan] = useState<React.ReactNode | string | null>(null);
+  const [exp, setExp] = useState<React.ReactNode | string | null>(null);
+  const [footer, setFooter] = useState<React.ReactNode | string | null>(null);
 
   useEffect(() => {
     setName(pageName);
     setSlogan(pageSlogan);
     setExp(pageExp);
-  }, [pageName, pageSlogan, pageExp]);
+    setFooter(pageFooter);
+    console.log(pageFooter);
+  }, [pageName, pageSlogan, pageExp, pageFooter]);
 
   return (
     <article className="mt-[20vh] h-auto">
       {/* section intro title */}
-      <div className="text-kcc-theme font-bold text-md first-letter:uppercase">
+      <div className="text-kcc-theme font-bold first-letter:uppercase">
         {name}
       </div>
       {/* section intro slogans */}
@@ -38,15 +42,25 @@ export default function PageIntro({
       <div className="max-h-[50vh] max-w-full flex justify-center">
         {children}
       </div>
-      <p className="text-md break-keep hyphens-auto font-normal my-6 text-kcc-gray">
+      <p className="break-keep hyphens-auto font-normal my-6 text-kcc-gray">
         {exp}
       </p>
-      <Link
-        href={`/${name}`}
-        className="text-md underline underline-offset-[6px] text-kcc-gray"
-      >
-        Learn more
-      </Link>
+      {footer ? footer : LearnMoreLink(name)}
     </article>
+  );
+}
+
+/**
+ * subpage link generator.
+ * use only if there is a subpage.
+ */
+function LearnMoreLink(name: string) {
+  return (
+    <Link
+      href={`/${name}`}
+      className="underline underline-offset-[6px] text-kcc-gray"
+    >
+      Learn more
+    </Link>
   );
 }
