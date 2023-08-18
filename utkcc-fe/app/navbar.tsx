@@ -53,7 +53,7 @@ export default function NavBar() {
             alt="logo"
             width={36}
             height={36}
-            className="object-scale-down"
+            className="object-scale-down w-auto"
           />
           {/* <span className="text-xl text-kcc-theme font-bold">UTKCC</span> */}
         </Link>

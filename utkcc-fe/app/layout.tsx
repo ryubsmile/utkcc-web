@@ -1,3 +1,4 @@
+import path from 'path';
 import './globals.css';
 import NavBar from './navbar';
 import { Metadata } from 'next';
@@ -52,6 +53,7 @@ export default function RootLayout({
   const vicePresEmail = 'suye.han@mail.utoronto.ca';
   const erDirectorEmail = 'yujin.shim@mail.utoronto.ca';
 
+  console.log(path);
   return (
     <html lang="en" className={gMarket.className}>
       <body
@@ -61,7 +63,6 @@ export default function RootLayout({
         <header>
           <NavBar />
         </header>
-        {/* pt-16 */}
         <main>{children}</main>
         <footer>
           <div className="flex flex-col min-h-[20vh] mt-[10vh] p-8 bg-kcc-theme text-white font-normal">

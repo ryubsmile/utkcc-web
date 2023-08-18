@@ -28,7 +28,6 @@ export default function PageIntro({
     setSlogan(pageSlogan);
     setExp(pageExp);
     setFooter(pageFooter);
-    console.log(pageFooter);
   }, [pageName, pageSlogan, pageExp, pageFooter]);
 
   return (
