@@ -14,6 +14,10 @@ module.exports = {
         'kcc-theme': 'var(--main-theme-color)',
         'kcc-gray': 'var(--theme-gray-color)',
       },
+      fontSize: {
+        '2xs': '0.625rem',
+        '3xs': '0.5rem',
+      },
     },
   },
   plugins: [],

@@ -6,10 +6,15 @@ export const metadata: Metadata = {
 };
 
 export default function Executives() {
+  const title = 'Executives';
+  const subtitle = '남들과는 다른 이벤트를 만들고자 합니다';
+
   return (
-    <>
-      <div>This is Executives page.</div>
-      <Link href="/">Go Back</Link>
-    </>
+    <div className="pt-16 px-8">
+      <div className="text-xl font-bold text-center mt-12">{title}</div>
+      <div className="text-sm font-normal text-center mt-4 mb-8 text-kcc-gray">
+        {subtitle}
+      </div>
+    </div>
   );
 }

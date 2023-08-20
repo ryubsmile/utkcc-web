@@ -16,15 +16,21 @@ export default function Events() {
         {subtitle}
       </div>
       <div className="flex flex-col gap-8 h-auto">
-        <div className="aspect-square bg-gray-200 w-full rounded-lg p-6 flex flex-col gap-6">
-          <div className="text-sm">Academic Events</div>
-          <div className="text-lg leading-5">
-            학생의 본분을 <br />
-            잊지 않기 위하여
-          </div>
-        </div>
-        <div>asdf</div>
-        <div>asdf</div>
+        <EventTile></EventTile>
+        <EventTile></EventTile>
+        <EventTile></EventTile>
+      </div>
+    </div>
+  );
+}
+
+function EventTile({ bgImage }: { bgImage?: string }) {
+  return (
+    <div className="aspect-square bg-gray-200 w-full rounded-lg p-6 flex flex-col gap-6">
+      <div className="text-sm">Academic Events</div>
+      <div className="text-lg leading-5">
+        학생의 본분을 <br />
+        잊지 않기 위하여
       </div>
     </div>
   );

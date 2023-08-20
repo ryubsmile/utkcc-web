@@ -44,7 +44,7 @@ export default function NavBar() {
       <div className="px-4 py-4 flex">
         <Link
           className={`${
-            navActive ? 'hidden' : 'flex'
+            navActive ? 'opacity-0' : 'flex'
           } w-fit h-full gap-2 items-center`}
           href="/"
         >
@@ -55,7 +55,6 @@ export default function NavBar() {
             height={36}
             className="object-scale-down w-auto"
           />
-          {/* <span className="text-xl text-kcc-theme font-bold">UTKCC</span> */}
         </Link>
         <div className="w-8 h-8 ml-auto self-center">
           <MenuButton getter={navActive} setter={setNavActive} />

@@ -55,7 +55,7 @@ export default function Slides() {
         ]}
       >
         <div className="font-normal text-xl">
-          학업성취와 커리어의 첫 시작점 <br />
+          학업 성취와 커리어의 첫 시작점 <br />
           모두 이 곳에서 시작하세요. <br />
           <span className="text-transparent">
             이제껏 경험 못 했던 한인경영동아리, <br /> <span>UTKCC</span>와
@@ -224,13 +224,11 @@ function Slide({
 
     // 요소가 화면에 등장할시 실행되는 함수
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
-      let containerDisplay = 'none';
       entries.forEach((aniDiv, index) => {
         if (appliedTarget.current) {
           // style 적용
           if (aniDiv.isIntersecting) {
-            appliedTarget.current.style.opacity = transitions[index].opacityTo;
-            containerDisplay = 'flex';
+            appliedTarget.current.style.opacity = transitions[index]?.opacityTo;
           } else {
             appliedTarget.current.style.opacity = '0';
           }

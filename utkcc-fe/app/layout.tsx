@@ -53,7 +53,6 @@ export default function RootLayout({
   const vicePresEmail = 'suye.han@mail.utoronto.ca';
   const erDirectorEmail = 'yujin.shim@mail.utoronto.ca';
 
-  console.log(path);
   return (
     <html lang="en" className={gMarket.className}>
       <body
