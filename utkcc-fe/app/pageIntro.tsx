@@ -31,7 +31,7 @@ export default function PageIntro({
   }, [pageName, pageSlogan, pageExp, pageFooter]);
 
   return (
-    <article className="mt-[20vh] h-auto">
+    <article className="h-auto">
       {/* section intro title */}
       <div className="text-kcc-theme font-bold first-letter:uppercase">
         {name}

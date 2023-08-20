@@ -44,7 +44,7 @@ export default function NavBar() {
       <div className="px-4 py-4 flex">
         <Link
           className={`${
-            navActive ? 'opacity-0' : 'flex'
+            navActive ? 'hidden' : 'flex'
           } w-fit h-full gap-2 items-center`}
           href="/"
         >
@@ -53,7 +53,7 @@ export default function NavBar() {
             alt="logo"
             width={36}
             height={36}
-            className="object-scale-down w-auto"
+            className="object-scale-down"
           />
         </Link>
         <div className="w-8 h-8 ml-auto self-center">

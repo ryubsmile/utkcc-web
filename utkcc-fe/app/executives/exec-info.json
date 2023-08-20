@@ -1,0 +1,163 @@
+[
+  {
+    "dept": "social",
+    "position": "director",
+    "name": "김보경",
+    "linkedIn": "",
+    "program": "Econ & Stat"
+  },
+  {
+    "dept": "social",
+    "position": "committee",
+    "name": "이기서",
+    "linkedIn": "",
+    "program": "Financial Economics specialist"
+  },
+  {
+    "dept": "social",
+    "position": "committee",
+    "name": "신예서",
+    "linkedIn": "",
+    "program": "Economics"
+  },
+  {
+    "dept": "social",
+    "position": "committee",
+    "name": "김준수",
+    "linkedIn": "",
+    "program": "Statistics"
+  },
+  {
+    "dept": "academic",
+    "position": "director",
+    "name": "이수나",
+    "linkedIn": "https://www.linkedIn.com/in/suna-lee-8344a6220/",
+    "program": "Rotman program"
+  },
+  {
+    "dept": "academic",
+    "position": "committee",
+    "name": "전재민",
+    "linkedIn": "https://www.linkedIn.com/in/justinjaeminjun/",
+    "program": "Rotman program"
+  },
+  {
+    "dept": "academic",
+    "position": "committee",
+    "name": "이은서",
+    "linkedIn": "https://www.linkedIn.com/in/eunseo-lee-715435216",
+    "program": "Economics and programtics"
+  },
+  {
+    "dept": "external relations",
+    "position": "director",
+    "name": "심유진",
+    "linkedIn": "https://www.linkedIn.com/in/yujin-shim-828b21234",
+    "program": "program"
+  },
+  {
+    "dept": "external relations",
+    "position": "committee",
+    "name": "배정훈",
+    "linkedIn": "",
+    "program": "Economics & Health studies program and Statistics minor"
+  },
+  {
+    "dept": "external relations",
+    "position": "committee",
+    "name": "진예령",
+    "linkedIn": "",
+    "program": "Kinesiology and Physical Education"
+  },
+  {
+    "dept": "marketing",
+    "position": "director",
+    "name": "김소현",
+    "linkedIn": "https://www.linkedIn.com/in/sohyun-kim-121573226/",
+    "program": "program"
+  },
+  {
+    "dept": "marketing",
+    "position": "committee",
+    "name": "오하린",
+    "linkedIn": "",
+    "program": "Rotman Commerce"
+  },
+  {
+    "dept": "marketing",
+    "position": "committee",
+    "name": "조은비",
+    "linkedIn": "https://www.linkedIn.com/in/eunbi-cho-70b854257/",
+    "program": "Economics and programtics"
+  },
+  {
+    "dept": "marketing",
+    "position": "committee",
+    "name": "임윤아",
+    "linkedIn": "",
+    "program": "Rotman Commerce"
+  },
+  {
+    "dept": "marketing",
+    "position": "committee",
+    "name": "유현준",
+    "linkedIn": "www.linkedIn.com/in/hyunjunyou",
+    "program": "Rotman programrce"
+  },
+  {
+    "dept": "finance",
+    "position": "director",
+    "name": "정윤서",
+    "linkedIn": "https://www.linkedIn.com/in/chloe-jung-55b1b5172",
+    "program": "Rotman program"
+  },
+  {
+    "dept": "finance",
+    "position": "committee",
+    "name": "강민서",
+    "linkedIn": "https://www.linkedIn.com/in/lauren-kang-92149a24b/",
+    "program": "Economics and program"
+  },
+  {
+    "dept": "finance",
+    "position": "committee",
+    "name": "홍윤재",
+    "linkedIn": "https://www.linkedIn.com/in/yoon-jae-hong-418858139/",
+    "program": "Rotman program"
+  },
+  {
+    "dept": "media",
+    "position": "director",
+    "name": "지가형",
+    "linkedIn": "",
+    "program": "Criminology and Sociological Studies & Ethics"
+  },
+  {
+    "dept": "media",
+    "position": "committee",
+    "name": "이지현",
+    "linkedIn": "https://www.linkedIn.com/in/lucy-lee-056402256",
+    "program": "Computer Science program Statistics"
+  },
+  {
+    "dept": "media",
+    "position": "committee",
+    "name": "조예은",
+    "linkedIn": "",
+    "program": "Math and Statistics"
+  },
+  {
+    "dept": "programming",
+    "position": "director",
+    "name": "김진건",
+    "linkedIn": "https://www.linkedIn.com/in/justin-kim-a47306212/",
+    "program": "Rotman program"
+  },
+  {
+    "dept": "programming",
+    "position": "committee",
+    "name": "류재혁",
+    "linkedIn": "",
+    "program": "Statistics and Computer Science"
+  }
+]

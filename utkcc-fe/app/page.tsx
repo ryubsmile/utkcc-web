@@ -1,7 +1,5 @@
-'use client';
 import Slides from './slides';
 import PageIntro from './pageIntro';
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import aboutImage from '/public/assets/about-image.png';
@@ -12,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex-col">
       <Slides />
-      <div className="px-8 z-50">
+      <div className="px-8 z-50 flex flex-col gap-y-[20vh]">
         {/* about intro */}
         <PageIntro
           pageName="about"
@@ -66,7 +64,7 @@ export default function Home() {
           }
           pageFooter={<div></div>}
         >
-          <MenuBar />
+          {/* <MenuBar /> */}
         </PageIntro>
         {/* sponsors intro */}
         {/* resources intro */}
@@ -104,118 +102,6 @@ export default function Home() {
         >
           <Image alt="events image" className="h-fit" src={newsletterImage} />
         </PageIntro>
-      </div>
-    </div>
-  );
-}
-
-function MenuBar() {
-  const [dept, setDept] = useState('Presidents');
-  const [exec, setExec] = useState(null);
-  const deptList = [
-    'Presidents',
-    'Academic',
-    'External Relations',
-    'Finance',
-    'Marketing',
-    'Media',
-    'Programming',
-    'Social',
-  ];
-
-  const deptContent: { [dept: string]: any } = {
-    Presidents: 'loading...',
-    Academic: [{}, {}, {}],
-    'External Relations': 'loading...',
-    Finance: 'loading...',
-    Marketing: 'loading...',
-    Media: 'loading...',
-    Programming: 'loading...',
-    Social: 'loading...',
-  };
-
-  const handleMenuChange = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-  ) => {
-    setDept(e.currentTarget.outerText);
-  };
-
-  return (
-    <div className="w-full">
-      <div className="max-w-full w-fit flex border-b border-b-kcc-gray text-kcc-gray overflow-x-auto gap-4 pb-2 text-xs whitespace-nowrap justify-items-center">
-        {deptList.map((d, i) => (
-          <div
-            key={i}
-            className={`cursor-pointer ${
-              d === dept ? 'font-bold text-kcc-theme' : ''
-            }`}
-            onClick={handleMenuChange}
-          >
-            {d}
-          </div>
-        ))}
-      </div>
-      <div className="grid grid-cols-2 p-5 gap-x-10 gap-y-5">
-        {/* an exec cell */}
-        <ExecutiveCell
-          imageSrc="/assets/exec-dummy-image.png"
-          position="position"
-          name="홍길동"
-          program="computer science"
-        />
-      </div>
-    </div>
-  );
-}
-
-interface ExecInfo {
-  imageSrc: string;
-  position: string;
-  name: string;
-  program: string;
-}
-
-function createExecObject(
-  imgsrc: string,
-  pos: string,
-  nm: string,
-  pg: string,
-): ExecInfo {
-  return {
-    imageSrc: imgsrc,
-    position: pos,
-    name: nm,
-    program: pg,
-  };
-}
-
-function ExecutiveCell({
-  imageSrc,
-  position,
-  name,
-  program,
-}: {
-  imageSrc: string;
-  position: string;
-  name: string;
-  program: string;
-}) {
-  return (
-    <div className="">
-      <div className="relative aspect-square rounded-xl">
-        <Image
-          alt=""
-          src={imageSrc}
-          fill={true}
-          className="bg-gray-200 border-0 rounded-lg object-cover"
-        />
-      </div>
-      <div className="text-2xs my-2 underline underline-offset-2 first-letter:capitalize">
-        {position}
-      </div>
-      <div className="mb-1">{name}</div>
-      <div className="text-3xs opacity-50 first-letter: capitalize">
-        {program}
       </div>
     </div>
   );
