@@ -9,13 +9,8 @@ export default function Slides() {
     <div style={{ height: '600vh' }}>
       <Slide
         duration={500}
-        additionalStyle="bottom-20"
+        additionalStyle="bottom-[8vh]"
         transitions={[
-          {
-            top: '0px',
-            height: '50vh',
-            opacityTo: '1',
-          },
           {
             top: '470vh',
             height: '10vh',
@@ -23,7 +18,7 @@ export default function Slides() {
           },
         ]}
       >
-        <Arrow />
+        <div className="font-normal opacity-60">아래로 스크롤하세요.</div>
       </Slide>
       <LogoSlide duration={500} />
       <Slide
@@ -191,6 +186,9 @@ function LogoSlide({ duration }: { duration: number }) {
             alt=""
             className="w-screen h-screen object-contain scale-50"
           />
+          <div className="relative bottom-[10vh] opacity-60">
+            아래로 스크롤하세요.
+          </div>
         </div>
       </div>
       <div
