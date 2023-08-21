@@ -24,13 +24,15 @@ export default function Resources() {
         {/* TODO: links update */}
         <div className="flex flex-col w-max mx-auto">
           <Link
-            href="/"
+            href="/assets/pdf/anti-calendar-freshmen.pdf"
+            target="_blank"
             className="text-xs rounded-lg bg-gray-200 w-full py-2 px-auto mx-auto my-2"
           >
             Sample for freshmen
           </Link>
           <Link
-            href="/"
+            href="/assets/pdf/anti-calendar-upperyears.pdf"
+            target="_blank"
             className="text-xs rounded-lg bg-gray-200 w-fit py-2 px-5 mx-auto my-2"
           >
             Sample for upper years
@@ -59,13 +61,15 @@ export default function Resources() {
         {/* TODO: links update */}
         <div className="flex flex-col w-max mx-auto">
           <Link
-            href="/"
+            href="/assets/pdf/eco101-sample.pdf"
+            target="_blank"
             className="text-xs rounded-lg bg-gray-200 w-full py-2 px-auto mx-auto my-2"
           >
             Sample for ECO101
           </Link>
           <Link
-            href="/"
+            href="/assets/pdf/sta130-sample.pdf"
+            target="_blank"
             className="text-xs rounded-lg bg-gray-200 w-fit py-2 px-5 mx-auto my-2"
           >
             Sample for STA130
