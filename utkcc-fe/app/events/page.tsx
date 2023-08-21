@@ -1,10 +1,3 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'Events',
-};
-
 export default function Events() {
   const title = 'UTKCC PRESENTS';
   const subtitle = '남들과는 다른 이벤트를 만들고자 합니다';
@@ -15,7 +8,7 @@ export default function Events() {
       <div className="text-sm font-normal text-center mt-4 mb-8 text-kcc-gray">
         {subtitle}
       </div>
-      <div className="flex flex-col gap-8 h-auto">
+      <div className="grid grid-cols-1 gap-8 h-auto">
         <EventTile></EventTile>
         <EventTile></EventTile>
         <EventTile></EventTile>

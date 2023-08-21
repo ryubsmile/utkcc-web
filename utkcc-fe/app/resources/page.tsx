@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import PageIntro from '../../components/pageIntro';
 import MenuBar from '../../components/menubar';
+import Link from 'next/link';
 
 export default function Resources() {
   const resourcesData: { [k: string]: JSX.Element[] } = {
@@ -22,12 +23,18 @@ export default function Resources() {
         <div className="mb-1 text-xs">과목별 꿀팁들은 여기서</div>
         {/* TODO: links update */}
         <div className="flex flex-col w-max mx-auto">
-          <div className="text-xs rounded-lg bg-gray-200 w-full py-2 px-auto mx-auto my-2">
+          <Link
+            href="/"
+            className="text-xs rounded-lg bg-gray-200 w-full py-2 px-auto mx-auto my-2"
+          >
             Sample for freshmen
-          </div>
-          <div className="text-xs rounded-lg bg-gray-200 w-fit py-2 px-5 mx-auto my-2">
+          </Link>
+          <Link
+            href="/"
+            className="text-xs rounded-lg bg-gray-200 w-fit py-2 px-5 mx-auto my-2"
+          >
             Sample for upper years
-          </div>
+          </Link>
         </div>
       </div>,
     ],
@@ -51,12 +58,18 @@ export default function Resources() {
         </div>
         {/* TODO: links update */}
         <div className="flex flex-col w-max mx-auto">
-          <div className="text-xs rounded-lg bg-gray-200 w-full py-2 px-auto mx-auto my-2">
+          <Link
+            href="/"
+            className="text-xs rounded-lg bg-gray-200 w-full py-2 px-auto mx-auto my-2"
+          >
             Sample for ECO101
-          </div>
-          <div className="text-xs rounded-lg bg-gray-200 w-fit py-2 px-5 mx-auto my-2">
+          </Link>
+          <Link
+            href="/"
+            className="text-xs rounded-lg bg-gray-200 w-fit py-2 px-5 mx-auto my-2"
+          >
             Sample for STA130
-          </div>
+          </Link>
         </div>
       </div>,
     ],
@@ -78,14 +91,22 @@ export default function Resources() {
         <div className="mb-1 text-xs">여러 곳에서 저희를 만나보세요</div>
         {/* TODO: links update */}
         <div className="flex flex-col w-max mx-auto">
-          <div className="text-xs rounded-lg w-full text-transparent py-2 px-auto mx-auto my-2">
-            {/* Sample for ECO101 */}
-            {1}
-          </div>
-          <div className="text-xs rounded-lg w-fit text-transparent py-2 px-5 mx-auto my-2">
-            {/* Sample for STA130 */}
-            {2}
-          </div>
+          <Link
+            href="https://www.youtube.com/@utkcc3050"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs rounded-lg w-full bg-gray-200 py-2 px-auto mx-auto my-2"
+          >
+            Youtube
+          </Link>
+          <Link
+            href="https://www.instagram.com/utkcc_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs rounded-lg w-fit bg-gray-200 py-2 px-5 mx-auto my-2"
+          >
+            Instagram
+          </Link>
         </div>
       </div>,
     ],
