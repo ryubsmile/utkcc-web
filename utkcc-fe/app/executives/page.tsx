@@ -4,6 +4,7 @@ import Image from 'next/image';
 import PageIntro from '../pageIntro';
 import execData from './exec-info.json';
 import { exec } from 'child_process';
+import execData from './executives-info.json';
 
 export default function Executives() {
   return (
