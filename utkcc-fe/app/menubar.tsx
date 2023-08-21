@@ -26,7 +26,7 @@ export default function MenuBar({
 
   return (
     <div className="w-full">
-      <div className="max-w-full w-fit flex border-b border-b-kcc-gray text-kcc-gray overflow-x-auto gap-4 pb-2 text-xs whitespace-nowrap justify-items-center">
+      <div className="w-full flex border-b border-b-kcc-gray text-kcc-gray overflow-x-auto gap-4 pb-2 text-xs whitespace-nowrap justify-items-center">
         {Object.keys(data).map((d, i) => (
           <div
             key={i}
