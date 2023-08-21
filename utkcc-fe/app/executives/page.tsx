@@ -33,7 +33,6 @@ export default function Executives() {
           17기 임원들을 확인해보세요!
         </>
       }
-      pageFooter={<div></div>}
     >
       <MenuBar defaultLabel="presidents" columnNumber={2} data={deptContent} />
     </PageIntro>

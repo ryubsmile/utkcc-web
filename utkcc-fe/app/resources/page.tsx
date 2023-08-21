@@ -102,9 +102,8 @@ export default function Resources() {
           <span className="my-3 w-full block" />각 아이콘을 클릭하여 UTKCC가
           제공하는 다양한 리소스를 받아보세요.
         </>
+        // TODO: footer link
       }
-      // TODO: footer 링크 요청해서 받기
-      pageFooter={<div></div>}
     >
       <MenuBar
         defaultLabel="anti-calendar"

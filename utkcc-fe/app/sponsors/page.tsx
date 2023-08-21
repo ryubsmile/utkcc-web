@@ -23,9 +23,8 @@ export default function Sponsors() {
           <span className="my-3 w-full block" />
           멤버쉽에 가입하셔서 더 많은 혜택을 누려보세요.
         </>
+        // TODO: footer 링크 요청해서 받기
       }
-      // TODO: footer 링크 요청해서 받기
-      pageFooter={<div></div>}
     >
       <MenuBar
         defaultLabel={Object.keys(data)[0]}

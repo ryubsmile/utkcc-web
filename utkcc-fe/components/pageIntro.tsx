@@ -39,22 +39,6 @@ export default function PageIntro({
       <p className="break-keep hyphens-auto font-normal my-6 text-kcc-gray">
         {exp}
       </p>
-      {footer ? footer : LearnMoreLink(name)}
     </article>
-  );
-}
-
-/**
- * subpage link generator.
- * use only if there is a subpage.
- */
-function LearnMoreLink(name: string) {
-  return (
-    <Link
-      href={`/${name}`}
-      className="underline underline-offset-[6px] text-kcc-gray"
-    >
-      Learn more
-    </Link>
   );
 }

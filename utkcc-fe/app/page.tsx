@@ -1,13 +1,14 @@
-import Slides from '../components/slides';
-import PageIntro from '../components/pageIntro';
 import Image from 'next/image';
 import Link from 'next/link';
-import aboutImage from '/public/assets/about-image.png';
-import eventsImage from '/public/assets/events-image.png';
-import newsletterImage from '/public/assets/newsletter-image.png';
 import Executives from './executives/page';
 import Sponsors from './sponsors/page';
 import Resources from './resources/page';
+import Slides from '../components/slides';
+import PageIntro from '../components/pageIntro';
+import aboutImage from '/public/assets/about-image.png';
+import eventsImage from '/public/assets/events-image.png';
+import newsletterImage from '/public/assets/newsletter-image.png';
+import LearnMoreLink from '@/components/learnMoreLink';
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
               <span className="my-3 w-full block" />
               매년 학업, 진로, 그리고 친목도모와 같이 학생들의 대학생활을
               지원하는 다양한 행사들을 진행합니다.
+              <LearnMoreLink name="about" />
             </>
           }
         >
@@ -49,6 +51,7 @@ export default function Home() {
               이벤트.
               <span className="my-3 w-full block" />
               모두 UTKCC에서 만나보세요.
+              <LearnMoreLink name="events" />
             </>
           }
         >
