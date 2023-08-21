@@ -1,5 +1,5 @@
-import Slides from './slides';
-import PageIntro from './pageIntro';
+import Slides from '../components/slides';
+import PageIntro from '../components/pageIntro';
 import Image from 'next/image';
 import Link from 'next/link';
 import aboutImage from '/public/assets/about-image.png';

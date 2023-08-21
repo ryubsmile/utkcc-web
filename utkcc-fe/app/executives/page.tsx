@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import PageIntro from '../pageIntro';
-import MenuBar from '../menubar';
+import PageIntro from '../../components/pageIntro';
+import MenuBar from '../../components/menubar';
 import execData from './executives-info.json';
 
 export default function Executives() {

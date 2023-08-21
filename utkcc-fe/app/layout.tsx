@@ -1,6 +1,6 @@
 import path from 'path';
 import './globals.css';
-import NavBar from './navbar';
+import NavBar from '../components/navbar';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
 

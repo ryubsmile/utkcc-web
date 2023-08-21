@@ -2,9 +2,6 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-/**
- * the subpage needs to be the primary child url of the main page '/'
- */
 export default function PageIntro({
   children,
   pageName,

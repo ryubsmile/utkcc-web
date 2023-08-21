@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Arrow from './arrow';
+import Arrow from '../app/arrow';
 import { useEffect, useRef } from 'react';
 
 export default function Slides() {

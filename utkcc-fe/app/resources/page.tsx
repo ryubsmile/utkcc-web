@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import PageIntro from '../pageIntro';
-import MenuBar from '../menubar';
+import PageIntro from '../../components/pageIntro';
+import MenuBar from '../../components/menubar';
 
 export default function Resources() {
   const resourcesData: { [k: string]: JSX.Element[] } = {

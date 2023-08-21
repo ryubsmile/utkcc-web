@@ -40,7 +40,8 @@ export default function MenuBar({
         ))}
       </div>
       <div
-        className={`grid grid-cols-[repeat(${columnNumber},_minmax(0,_1fr))] p-5 gap-x-10 gap-y-5`}
+        className={`grid ${columnNumber === 1 ? 'grid-cols-1' : 'grid-cols-2'}
+        )} p-5 gap-x-10 gap-y-5`}
       >
         {data[selectedCategory]}
       </div>
