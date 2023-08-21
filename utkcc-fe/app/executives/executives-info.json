@@ -3,21 +3,21 @@
     "dept": "presidents",
     "position": "president",
     "name": "강서현",
-    "program": "Financial Economics specialist",
+    "program": "Math & PhySci",
     "intro": "i am pres"
   },
   {
     "dept": "presidents",
     "position": "vice-president",
     "name": "한수예",
-    "program": "Financial Economics specialist",
+    "program": "Statistics",
     "intro": "i am vice"
   },
   {
     "dept": "social",
     "position": "director",
     "name": "김보경",
-    "program": "Econ & Stat",
+    "program": "Econ. & Stat.",
     "intro": ""
   },
   {
@@ -59,7 +59,7 @@
     "dept": "academic",
     "position": "committee",
     "name": "이은서",
-    "program": "Economics and programtics",
+    "program": "Econ. & Stat.",
     "intro": ""
   },
   {
@@ -73,21 +73,21 @@
     "dept": "external relations",
     "position": "committee",
     "name": "배정훈",
-    "program": "Economics & Health studies program and Statistics minor",
+    "program": "Econ. & Health Studies",
     "intro": ""
   },
   {
     "dept": "external relations",
     "position": "committee",
     "name": "진예령",
-    "program": "Kinesiology and Physical Education",
+    "program": "Kinesiology & P.E.",
     "intro": ""
   },
   {
     "dept": "marketing",
     "position": "director",
     "name": "김소현",
-    "program": "program",
+    "program": "Economics",
     "intro": ""
   },
   {
@@ -101,7 +101,7 @@
     "dept": "marketing",
     "position": "committee",
     "name": "조은비",
-    "program": "Economics and programtics",
+    "program": "Econ. & Stat.",
     "intro": ""
   },
   {
@@ -129,7 +129,7 @@
     "dept": "finance",
     "position": "committee",
     "name": "강민서",
-    "program": "Economics and program",
+    "program": "Econ. & IRHR",
     "intro": ""
   },
   {
@@ -143,21 +143,21 @@
     "dept": "media",
     "position": "director",
     "name": "지가형",
-    "program": "Criminology and Sociological Studies & Ethics",
+    "program": "Crim. & Sociological Studies",
     "intro": ""
   },
   {
     "dept": "media",
     "position": "committee",
     "name": "이지현",
-    "program": "Computer Science program Statistics",
+    "program": "CompSci & Stat.",
     "intro": ""
   },
   {
     "dept": "media",
     "position": "committee",
     "name": "조예은",
-    "program": "Math and Statistics",
+    "program": "Math & Stat.",
     "intro": ""
   },
   {
@@ -171,7 +171,7 @@
     "dept": "programming",
     "position": "committee",
     "name": "류재혁",
-    "program": "Statistics and Computer Science",
+    "program": "CompSci & Stat.",
     "intro": ""
   }
 ]
