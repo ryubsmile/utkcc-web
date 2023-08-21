@@ -23,26 +23,20 @@ export default function Executives() {
   );
 
   return (
-    <div className="pt-10">
-      <PageIntro
-        pageName="executives"
-        pageSlogan={<>자랑스러운 17기 임원</>}
-        pageExp={
-          <>
-            UTKCC는 현재 회장단과 일곱 개의 부서로 이루어져 있습니다.
-            <span className="my-3 w-full block" />각 부서를 클릭하여 자랑스러운
-            17기 임원들을 확인해보세요!
-          </>
-        }
-        pageFooter={<div></div>}
-      >
-        <MenuBar
-          defaultLabel="presidents"
-          columnNumber={2}
-          data={deptContent}
-        />
-      </PageIntro>
-    </div>
+    <PageIntro
+      pageName="executives"
+      pageSlogan={<>자랑스러운 17기 임원</>}
+      pageExp={
+        <>
+          UTKCC는 현재 회장단과 일곱 개의 부서로 이루어져 있습니다.
+          <span className="my-3 w-full block" />각 부서를 클릭하여 자랑스러운
+          17기 임원들을 확인해보세요!
+        </>
+      }
+      pageFooter={<div></div>}
+    >
+      <MenuBar defaultLabel="presidents" columnNumber={2} data={deptContent} />
+    </PageIntro>
   );
 }
 

@@ -92,27 +92,25 @@ export default function Resources() {
   };
 
   return (
-    <div className="pt-10">
-      <PageIntro
-        pageName="resources"
-        pageSlogan={<>소스라치는 리소스</>}
-        pageExp={
-          <>
-            UTKCC는 인스타그램와 유튜브를 소통창구로, 안티캘린더와 족보를
-            참고자료로 나눠드리고 있습니다.
-            <span className="my-3 w-full block" />각 아이콘을 클릭하여 UTKCC가
-            제공하는 다양한 리소스를 받아보세요.
-          </>
-        }
-        // TODO: footer 링크 요청해서 받기
-        pageFooter={<div></div>}
-      >
-        <MenuBar
-          defaultLabel="anti-calendar"
-          columnNumber={1}
-          data={resourcesData}
-        />
-      </PageIntro>
-    </div>
+    <PageIntro
+      pageName="resources"
+      pageSlogan={<>소스라치는 리소스</>}
+      pageExp={
+        <>
+          UTKCC는 인스타그램와 유튜브를 소통창구로, 안티캘린더와 족보를
+          참고자료로 나눠드리고 있습니다.
+          <span className="my-3 w-full block" />각 아이콘을 클릭하여 UTKCC가
+          제공하는 다양한 리소스를 받아보세요.
+        </>
+      }
+      // TODO: footer 링크 요청해서 받기
+      pageFooter={<div></div>}
+    >
+      <MenuBar
+        defaultLabel="anti-calendar"
+        columnNumber={1}
+        data={resourcesData}
+      />
+    </PageIntro>
   );
 }

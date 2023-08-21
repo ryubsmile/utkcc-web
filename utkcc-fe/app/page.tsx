@@ -5,6 +5,9 @@ import Link from 'next/link';
 import aboutImage from '/public/assets/about-image.png';
 import eventsImage from '/public/assets/events-image.png';
 import newsletterImage from '/public/assets/newsletter-image.png';
+import Executives from './executives/page';
+import Sponsors from './sponsors/page';
+import Resources from './resources/page';
 
 export default function Home() {
   return (
@@ -52,22 +55,11 @@ export default function Home() {
           <Image alt="events image" className="h-fit" src={eventsImage} />
         </PageIntro>
         {/* exec intro */}
-        <PageIntro
-          pageName="executives"
-          pageSlogan={<>자랑스러운 17기 임원</>}
-          pageExp={
-            <>
-              UTKCC는 현재 회장단과 일곱 개의 부서로 이루어져 있습니다.
-              <span className="my-3 w-full block" />각 부서를 클릭하여
-              자랑스러운 17기 임원들을 확인해보세요!
-            </>
-          }
-          pageFooter={<div></div>}
-        >
-          {/* <MenuBar /> */}
-        </PageIntro>
+        <Executives />
         {/* sponsors intro */}
+        <Sponsors />
         {/* resources intro */}
+        <Resources />
         {/* newsletter intro */}
         <PageIntro
           pageName="newsletter"
