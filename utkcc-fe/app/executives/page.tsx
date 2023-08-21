@@ -1,12 +1,27 @@
-'use client';
-import { useState } from 'react';
 import Image from 'next/image';
 import PageIntro from '../pageIntro';
-import execData from './exec-info.json';
-import { exec } from 'child_process';
+import MenuBar from '../menubar';
 import execData from './executives-info.json';
 
 export default function Executives() {
+  const deptList = [
+    'presidents',
+    'academic',
+    'external relations',
+    'finance',
+    'marketing',
+    'media',
+    'programming',
+    'social',
+  ];
+
+  const deptContent = Object.fromEntries(
+    deptList.map((deptName: string) => [
+      deptName,
+      getDeptExecCells(getExecutives()[deptName]),
+    ]),
+  );
+
   return (
     <div className="pt-10">
       <PageIntro
@@ -21,60 +36,12 @@ export default function Executives() {
         }
         pageFooter={<div></div>}
       >
-        <MenuBar />
+        <MenuBar
+          defaultLabel="presidents"
+          columnNumber={2}
+          data={deptContent}
+        />
       </PageIntro>
-    </div>
-  );
-}
-
-function MenuBar() {
-  const [selectedDept, setSelectedDept] = useState('presidents');
-
-  const deptList = [
-    'presidents',
-    'academic',
-    'external relations',
-    'finance',
-    'marketing',
-    'media',
-    'programming',
-    'social',
-  ];
-
-  const formattedData: { [dept: string]: ExecInfo[] } = getExecutives();
-
-  const deptContent = Object.fromEntries(
-    deptList.map((deptName: string) => [
-      deptName,
-      getExecCellList(formattedData[deptName]),
-    ]),
-  );
-
-  const handleMenuChange = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-  ) => {
-    setSelectedDept(e.currentTarget.outerText);
-  };
-
-  return (
-    <div className="w-full">
-      <div className="max-w-full w-fit flex border-b border-b-kcc-gray text-kcc-gray overflow-x-auto gap-4 pb-2 text-xs whitespace-nowrap justify-items-center">
-        {deptList.map((d, i) => (
-          <div
-            key={i}
-            className={`cursor-pointer ${
-              d === selectedDept ? 'font-bold text-kcc-theme' : ''
-            }`}
-            onClick={handleMenuChange}
-          >
-            {d}
-          </div>
-        ))}
-      </div>
-      <div className="grid grid-cols-2 p-5 gap-x-10 gap-y-5">
-        {/* an exec cell */}
-        {deptContent[selectedDept]}
-      </div>
     </div>
   );
 }
@@ -84,11 +51,12 @@ interface ExecInfo {
   position: string;
   name: string;
   program: string;
+  intro: string;
 }
 
 // TODO: optimize, rewrite using Object.groupBy when released
 function getExecutives() {
-  const deptContent: { [dept: string]: ExecInfo[] } = {
+  const deptContent: { [dept: string]: any[] } = {
     presidents: [],
     academic: [],
     'external relations': [],
@@ -100,31 +68,21 @@ function getExecutives() {
   };
 
   execData.forEach(execInfo => {
-    console.log(execInfo.dept);
     deptContent[execInfo.dept].push({
       name: execInfo.name,
       program: execInfo.program,
       position: execInfo.position,
       imageSrc: `/assets/exec-headshots/${execInfo.name}.png`,
+      intro: execInfo.intro,
     });
   });
 
   return deptContent;
 }
 
-function ExecutiveCell({
-  imageSrc,
-  position,
-  name,
-  program,
-}: {
-  imageSrc: string;
-  position: string;
-  name: string;
-  program: string;
-}) {
+function ExecutiveCell({ imageSrc, position, name, program, intro }: ExecInfo) {
   return (
-    <div className="">
+    <div>
       <div className="relative aspect-square rounded-xl">
         <Image
           alt=""
@@ -141,18 +99,27 @@ function ExecutiveCell({
       <div className="text-3xs opacity-50 first-letter: capitalize">
         {program}
       </div>
+      {!intro ? (
+        ''
+      ) : (
+        // TODO: onclick
+        <div className="rounded-lg bg-gray-300 px-3 py-1 w-fit text-2xs mt-2">
+          소개글
+        </div>
+      )}
     </div>
   );
 }
 
-function getExecCellList(execList: ExecInfo[]) {
-  return execList.map((execInfo, i) => (
+function getDeptExecCells(deptExecList: ExecInfo[]) {
+  return deptExecList.map((info, i) => (
     <ExecutiveCell
       key={i}
-      imageSrc={execInfo.imageSrc}
-      name={execInfo.name}
-      position={execInfo.position}
-      program={execInfo.program}
+      imageSrc={info.imageSrc}
+      name={info.name}
+      position={info.position}
+      program={info.program}
+      intro={info.intro}
     />
   ));
 }
