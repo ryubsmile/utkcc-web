@@ -30,7 +30,7 @@ export default function MenuBar({
         {Object.keys(data).map((d, i) => (
           <div
             key={i}
-            className={`cursor-pointer first-letter:capitalize ${
+            className={`cursor-pointer capitalize ${
               d === selectedCategory ? 'font-bold text-kcc-theme' : ''
             }`}
             onClick={handleMenuChange}

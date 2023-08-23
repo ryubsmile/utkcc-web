@@ -1,12 +1,5 @@
 'use client';
-import { useState, useEffect, Dispatch, SetStateAction } from 'react';
-
-interface EmailInfo {
-  kccEmail: string;
-  presEmail: string;
-  vicePresEmail: string;
-  erDirectorEmail: string;
-}
+import { useState, useEffect } from 'react';
 
 export default function FooterContactInfo() {
   const [mounted, setMounted] = useState(false);
@@ -30,8 +23,12 @@ export default function FooterContactInfo() {
         <div>President: {mounted ? presEmail : loadingText}</div>
         <div>Vice-president: {mounted ? vicePresEmail : loadingText}</div>
         <div>Sponsor Inquiries: {mounted ? erDirectorEmail : loadingText}</div>
-        <div className="pt-8 pb-2 opacity-50">
-          Designed by Hyunjun You, <br /> Created by Jaehyuk Ryu and Jingeon Kim
+        <div className="pt-8 pb-2 opacity-30">
+          Designed by Hyunjun You. Created by Jaehyuk Ryu and Jingeon Kim.
+        </div>
+        <div className="pb-2">
+          COPYRIGHTⓒ 2023. University of Toronto Korean Commerce Community. All
+          Rights Reserved.
         </div>
       </div>
     </div>

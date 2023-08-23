@@ -1,7 +1,7 @@
-import PageIntro from '@/components/pageIntro';
-import Image from 'next/image';
-import aboutImage from '/public/assets/about-image.png';
 import { Metadata } from 'next';
+import Image from 'next/image';
+import PageIntro from '@/components/pageIntro';
+import aboutImage from '/public/assets/about-image.png';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -12,9 +12,7 @@ export default function About() {
     <PageIntro
       pageName="about"
       pageSlogan={
-        <>
-          토론토 대학교 <br /> 한인 경영동아리
-        </>
+        <span className="after:content-['토론토_대학교_\A_한인_경영동아리'] whitespace-pre lg:after:content-['UTKCC'] lg:font-bold lg:text-[4rem] lg:loading-none lg:mb-0" />
       }
       pageExp={
         <>
