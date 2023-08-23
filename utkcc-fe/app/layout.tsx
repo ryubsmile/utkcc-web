@@ -1,6 +1,4 @@
 import './globals.css';
-import NavBar from '@/components/navbar';
-import FooterContactInfo from '@/components/footerContactInfo';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
 
@@ -54,13 +52,7 @@ export default function RootLayout({
         className="w-screen min-h-[100dvh]"
         // suppressHydrationWarning={true}
       >
-        <header>
-          <NavBar />
-        </header>
-        <main>{children}</main>
-        <footer>
-          <FooterContactInfo />
-        </footer>
+        {children}
       </body>
     </html>
   );

@@ -1,3 +1,16 @@
+import NavBar from '@/components/navbar';
+import FooterContactInfo from '@/components/footerContactInfo';
+
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <div>{children}</div>;
+  return (
+    <>
+      <header>
+        <NavBar visibleThreshold="550dvh" />
+      </header>
+      <main>{children}</main>
+      <footer>
+        <FooterContactInfo />
+      </footer>
+    </>
+  );
 }

@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import Arrow from './arrow';
 import { useEffect, useRef } from 'react';
+import { thresholdArray } from './reusedFunctions';
 
 export default function Slides() {
   return (
@@ -168,7 +168,9 @@ function LogoSlide({ duration }: { duration: number }) {
       });
     };
 
-    observer = new IntersectionObserver(handleIntersect);
+    observer = new IntersectionObserver(handleIntersect, {
+      threshold: thresholdArray(20),
+    });
     observer.observe(observedTarget.current as Element);
   });
 
@@ -192,7 +194,7 @@ function LogoSlide({ duration }: { duration: number }) {
         </div>
       </div>
       <div
-        className="absolute -z-50 w-full top-[0px] h-[50vh] bg-transparent"
+        className="absolute -z-50 w-1 top-[0px] h-[50vh] bg-transparent"
         ref={observedTarget}
       ></div>
     </>
@@ -234,12 +236,6 @@ function Slide({
       });
     };
 
-    // threshold 배열 생성함수
-    const thresholdArray = (steps: number) =>
-      Array(steps + 1)
-        .fill(0)
-        .map((_, index) => index / steps || 0);
-
     if (observedTargets) {
       observer = new IntersectionObserver(handleIntersect, {
         threshold: thresholdArray(20),
@@ -263,7 +259,7 @@ function Slide({
       {transitions.map((trans, i) => (
         <div
           key={i}
-          className="-z-50 absolute w-full bg-transparent"
+          className="-z-50 absolute w-1 bg-transparent"
           style={{
             top: trans.top,
             height: trans.height,
