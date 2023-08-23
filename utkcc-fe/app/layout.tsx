@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={gMarket.className}>
       <body
-        className="w-screen min-h-screen"
+        className="w-screen min-h-[100dvh]"
         // suppressHydrationWarning={true}
       >
         <header>

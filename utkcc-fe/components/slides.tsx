@@ -36,7 +36,7 @@ export default function Slides() {
           width={300}
           height={300}
           alt=""
-          className="w-screen h-screen object-contain scale-50"
+          className="w-screen h-[100dvh] object-contain scale-50"
         />
       </Slide>
       <Slide
@@ -184,9 +184,9 @@ function LogoSlide({ duration }: { duration: number }) {
             width={300}
             height={300}
             alt=""
-            className="w-screen h-screen object-contain scale-50"
+            className="w-screen h-[100dvh] object-contain scale-50"
           />
-          <div className="relative bottom-[10vh] opacity-60">
+          <div className="relative bottom-[10dvh] opacity-60">
             아래로 스크롤하세요.
           </div>
         </div>
