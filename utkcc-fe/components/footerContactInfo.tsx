@@ -23,7 +23,7 @@ export default function FooterContactInfo() {
   }, [setMounted]);
 
   return (
-    <div className="flex flex-col min-h-[20vh] mt-[10vh] p-8 bg-kcc-theme text-white font-normal">
+    <div className="flex flex-col min-h-[20vh] mt-[10vh] p-8 lg:px-32 bg-kcc-theme text-white font-normal">
       <div className="text-center">Contact Information</div>
       <div className="flex flex-col my-3 text-xs">
         <div>General Inquiries: {mounted ? kccEmail : loadingText}</div>

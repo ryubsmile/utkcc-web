@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <NavBar />
       </header>
       <main>
-        <div className="pt-24 px-8">{children}</div>;
+        <div className="pt-24 px-8 lg:px-32">{children}</div>;
       </main>
       <footer>
         <FooterContactInfo />

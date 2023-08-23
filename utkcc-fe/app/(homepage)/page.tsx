@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="flex-col">
       <Slides />
-      <div className="px-8 z-50 flex flex-col gap-y-[20vh]">
+      <div className="px-8 lg:px-32 z-50 flex flex-col gap-y-[20vh]">
         {/* about intro */}
         <About />
         {/* events intro */}
