@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 export default function FooterContactInfo() {
@@ -24,7 +25,23 @@ export default function FooterContactInfo() {
         <div>Vice-president: {mounted ? vicePresEmail : loadingText}</div>
         <div>Sponsor Inquiries: {mounted ? erDirectorEmail : loadingText}</div>
         <div className="pt-8 pb-2 opacity-30">
-          Designed by Hyunjun You. Created by Jaehyuk Ryu and Jingeon Kim.
+          Designed by{' '}
+          <Link href="https://www.instagram.com/hyunjun2003/" target="_blank">
+            Hyunjun You
+          </Link>
+          . <br />
+          Created by{' '}
+          <Link href="https://www.instagram.com/ryubsmile" target="_blank">
+            Jaehyuk Ryu
+          </Link>
+          , and{' '}
+          <Link
+            href="https://www.instagram.com/justin.geon.kim/"
+            target="_blank"
+          >
+            Jingeon Kim
+          </Link>{' '}
+          of UTKCC the 17th.
         </div>
         <div className="pb-2">
           COPYRIGHTⓒ 2023. University of Toronto Korean Commerce Community. All
