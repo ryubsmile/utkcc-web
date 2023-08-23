@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import Image from 'next/image';
 import About from '../(subpages)/about/page';
 import Executives from '../(subpages)/executives/page';
@@ -9,10 +8,6 @@ import Slides from '@/components/slides';
 import PageIntro from '@/components/pageIntro';
 import LearnMoreLink from '@/components/learnMoreLink';
 import eventsImage from '/public/assets/events-image.png';
-
-export const metadata: Metadata = {
-  title: 'About',
-};
 
 export default function Home() {
   return (
