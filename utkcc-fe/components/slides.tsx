@@ -33,7 +33,7 @@ export default function Slides() {
           },
         ]}
       >
-        <div className="relative w-screen h-[100dvmin] scale-50">
+        <div className="relative w-screen h-[100dvmin] scale-[0.4] lg:scale-[0.25]">
           <Image
             src="/icon4.png"
             alt=""
@@ -184,7 +184,7 @@ function LogoSlide({ duration }: { duration: number }) {
           className={`absolute w-full ease-in transition flex items-center duration-${duration}`}
           ref={appliedTarget}
         >
-          <div className="relative w-full h-[100dvmin] scale-50">
+          <div className="relative w-full h-[100dvmin] scale-[0.4] lg:scale-[0.25]">
             <Image
               src="/icon4.png"
               alt=""
