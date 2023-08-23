@@ -9,7 +9,7 @@ export default function Slides() {
     <div style={{ height: '600vh' }}>
       <Slide
         duration={500}
-        additionalStyle="bottom-[8dvh]"
+        additionalStyle=""
         transitions={[
           {
             top: '470vh',
@@ -18,7 +18,9 @@ export default function Slides() {
           },
         ]}
       >
-        <div className="font-normal opacity-60">아래로 스크롤하세요.</div>
+        <div className="fixed w-full bottom-[8dvh] opacity-60">
+          아래로 스크롤하세요.
+        </div>
       </Slide>
       <LogoSlide duration={500} />
       <Slide
@@ -31,13 +33,14 @@ export default function Slides() {
           },
         ]}
       >
-        <Image
-          src="/icon4.png"
-          width={300}
-          height={300}
-          alt=""
-          className="w-screen h-[100dvh] object-contain scale-50"
-        />
+        <div className="relative w-screen h-[100dvmin] scale-50">
+          <Image
+            src="/icon4.png"
+            alt=""
+            fill={true}
+            className="object-contain"
+          />
+        </div>
       </Slide>
       <Slide
         duration={500}
@@ -172,29 +175,30 @@ function LogoSlide({ duration }: { duration: number }) {
       threshold: thresholdArray(20),
     });
     observer.observe(observedTarget.current as Element);
-  });
+  }, [appliedTarget, observedTarget]);
 
   return (
     <>
       <div className="-z-50 w-full fixed h-full flex text-center items-center">
         <div
-          className={`absolute w-full ease-in transition duration-${duration}`}
+          className={`absolute w-full ease-in transition flex items-center duration-${duration}`}
           ref={appliedTarget}
         >
-          <Image
-            src="/icon4.png"
-            width={300}
-            height={300}
-            alt=""
-            className="w-screen h-[100dvh] object-contain scale-50"
-          />
-          <div className="relative bottom-[10dvh] opacity-60">
+          <div className="relative w-full h-[100dvmin] scale-50">
+            <Image
+              src="/icon4.png"
+              alt=""
+              fill={true}
+              className="object-contain"
+            />
+          </div>
+          <div className="fixed w-full opacity-60 bottom-[8dvh]">
             아래로 스크롤하세요.
           </div>
         </div>
       </div>
       <div
-        className="absolute -z-50 w-1 top-[0px] h-[50vh] bg-transparent"
+        className="absolute -z-50 w-1 top-[0px] h-[60vh] bg-transparent"
         ref={observedTarget}
       ></div>
     </>
@@ -244,7 +248,7 @@ function Slide({
         observer.observe(aniDiv as Element),
       );
     }
-  }, [observedTargets, transitions]);
+  }, [observedTargets, appliedTarget, transitions]);
 
   return (
     <>
