@@ -1,5 +1,4 @@
 'use client';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 export default function PageIntro({
@@ -28,15 +27,17 @@ export default function PageIntro({
   }, [pageName, pageSlogan, pageExp, pageFooter]);
 
   return (
-    <article className="h-auto">
+    <article className="h-auto lg:grid grid-cols-right-tilt-twin-columns gap-x-[5vw] grid-rows-3-auto-rows grid-flow-col-dense items-end overflow-y-visible">
       {/* section intro title */}
-      <div className="text-kcc-theme font-bold first-letter:uppercase">
+      <div className="text-kcc-theme font-bold first-letter:uppercase self-end">
         {name}
       </div>
       {/* section intro slogans */}
       <div className="text-black font-normal text-2xl my-6">{slogan}</div>
-      <div className="max-w-full flex justify-center mx-auto">{children}</div>
-      <p className="break-keep hyphens-auto font-normal my-6 text-kcc-gray">
+      <div className="max-w-full w-full flex items-center justify-center mx-auto row-span-2 row-start-2">
+        {children}
+      </div>
+      <p className="break-keep hyphens-auto font-normal my-6 text-kcc-gray self-start">
         {exp}
       </p>
     </article>

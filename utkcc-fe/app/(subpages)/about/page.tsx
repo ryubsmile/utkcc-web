@@ -26,7 +26,11 @@ export default function About() {
         </>
       }
     >
-      <Image alt="about image" className="h-fit" src={aboutImage} />
+      <Image
+        alt="about image"
+        className="w-[80vw] h-auto max-h-[40vh] lg:max-h-[60vh] object-contain"
+        src={aboutImage}
+      />
     </PageIntro>
   );
 }

@@ -18,6 +18,12 @@ module.exports = {
         '2xs': '0.625rem',
         '3xs': '0.5rem',
       },
+      gridTemplateColumns: {
+        'right-tilt-twin-columns': 'minmax(0, 1fr) minmax(0, 1.5fr)',
+      },
+      gridTemplateRows: {
+        '3-auto-rows': '25vh minmax(0, max-content) minmax(0, 1fr)',
+      },
     },
   },
   plugins: [],
