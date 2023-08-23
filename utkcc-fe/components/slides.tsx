@@ -9,7 +9,7 @@ export default function Slides() {
     <div style={{ height: '600vh' }}>
       <Slide
         duration={500}
-        additionalStyle="bottom-[8vh]"
+        additionalStyle="bottom-[8dvh]"
         transitions={[
           {
             top: '470vh',
