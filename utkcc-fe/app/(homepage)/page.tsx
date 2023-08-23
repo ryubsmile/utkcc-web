@@ -1,13 +1,18 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
-import About from './about/page';
-import Executives from './executives/page';
-import Sponsors from './sponsors/page';
-import Resources from './resources/page';
-import Newsletter from './newsletter/page';
-import Slides from '../components/slides';
-import PageIntro from '../components/pageIntro';
-import eventsImage from '/public/assets/events-image.png';
+import About from '../(subpages)/about/page';
+import Executives from '../(subpages)/executives/page';
+import Sponsors from '../(subpages)/sponsors/page';
+import Resources from '../(subpages)/resources/page';
+import Newsletter from '../(subpages)/newsletter/page';
+import Slides from '@/components/slides';
+import PageIntro from '@/components/pageIntro';
 import LearnMoreLink from '@/components/learnMoreLink';
+import eventsImage from '/public/assets/events-image.png';
+
+export const metadata: Metadata = {
+  title: 'About',
+};
 
 export default function Home() {
   return (

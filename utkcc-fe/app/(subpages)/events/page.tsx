@@ -1,3 +1,9 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Events',
+};
+
 export default function Events() {
   const title = 'UTKCC PRESENTS';
   const subtitle = '남들과는 다른 이벤트를 만들고자 합니다';

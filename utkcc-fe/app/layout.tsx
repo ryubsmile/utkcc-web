@@ -1,9 +1,8 @@
-import path from 'path';
 import './globals.css';
-import NavBar from '../components/navbar';
+import NavBar from '@/components/navbar';
+import FooterContactInfo from '@/components/footerContactInfo';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
-import FooterContactInfo from '@/components/footerContactInfo';
 
 const gMarket = localFont({
   src: [
@@ -49,11 +48,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const kccEmail = 'koreancommerce@gmail.com';
-  const presEmail = 'seohyun.kang@mail.utoronto.ca';
-  const vicePresEmail = 'suye.han@mail.utoronto.ca';
-  const erDirectorEmail = 'yujin.shim@mail.utoronto.ca';
-
   return (
     <html lang="en" className={gMarket.className}>
       <body

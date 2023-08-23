@@ -1,8 +1,13 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
-import PageIntro from '../../components/pageIntro';
-import MenuBar from '../../components/menubar';
 import Link from 'next/link';
+import PageIntro from '@/components/pageIntro';
+import MenuBar from '@/components/menubar';
 import sponsorData from './sponsor-info.json';
+
+export const metadata: Metadata = {
+  title: 'Sponsors',
+};
 
 export default function Sponsors() {
   const data: { [k: string]: JSX.Element[] } = Object.fromEntries(

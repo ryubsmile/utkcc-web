@@ -1,6 +1,11 @@
 import PageIntro from '@/components/pageIntro';
 import Image from 'next/image';
 import aboutImage from '/public/assets/about-image.png';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About',
+};
 
 export default function About() {
   return (

@@ -1,7 +1,12 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
-import PageIntro from '../../components/pageIntro';
-import MenuBar from '../../components/menubar';
 import Link from 'next/link';
+import PageIntro from '@/components/pageIntro';
+import MenuBar from '@/components/menubar';
+
+export const metadata: Metadata = {
+  title: 'Resources',
+};
 
 export default function Resources() {
   const resourcesData: { [k: string]: JSX.Element[] } = {
