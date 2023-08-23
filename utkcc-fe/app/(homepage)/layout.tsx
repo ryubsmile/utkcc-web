@@ -8,9 +8,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <NavBar visibleThreshold="550dvh" />
       </header>
       <main>{children}</main>
-      <footer>
-        <FooterContactInfo />
-      </footer>
     </>
   );
 }

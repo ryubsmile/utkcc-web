@@ -6,7 +6,7 @@ import { thresholdArray } from './reusedFunctions';
 
 export default function Slides() {
   return (
-    <div style={{ height: '600vh' }}>
+    <div className="h-[600vh] w-fit">
       <Slide
         duration={500}
         additionalStyle=""

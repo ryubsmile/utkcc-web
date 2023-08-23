@@ -1,3 +1,4 @@
+import FooterContactInfo from '@/components/footerContactInfo';
 import './globals.css';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     default: 'UTKCC',
   },
   description: 'The Official Website of UTKCC',
-  creator: 'ryubsmile, Hyunjun You and Jin Geon Kim',
+  creator: 'Jaehyuk Ryu, Hyunjun You and Jin Geon Kim',
   keywords: ['UTKCC', 'University of Toronto', 'Uoft', 'Clubs'],
   referrer: 'origin-when-cross-origin',
   generator: 'Next.js',
@@ -49,10 +50,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={gMarket.className}>
       <body
-        className="w-screen min-h-[100dvh]"
+        className="w-screen min-h-[100vh] flex flex-col"
         // suppressHydrationWarning={true}
       >
         {children}
+        <footer className="mt-auto">
+          <FooterContactInfo />
+        </footer>
       </body>
     </html>
   );

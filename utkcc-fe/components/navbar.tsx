@@ -40,7 +40,7 @@ export default function NavBar({
         ref={appliedTarget}
         className={`w-screen ${
           navActive ? 'h-[100dvh] lg:h-auto' : 'h-auto'
-        } fixed bg-[#FCFCFC] hover:!opacity-100 border-b border-solid border-transparent font-normal duration-300 select-none z-10`}
+        } top-0 fixed bg-[#FCFCFC] hover:!opacity-100 border-b border-solid border-transparent font-normal duration-300 select-none z-10`}
       >
         <div className={`px-4 py-4 flex ${navActive ? 'flex-col' : ''}`}>
           <Link
