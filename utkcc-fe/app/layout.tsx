@@ -3,6 +3,7 @@ import './globals.css';
 import NavBar from '../components/navbar';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
+import FooterContactInfo from '@/components/footerContactInfo';
 
 const gMarket = localFont({
   src: [
@@ -64,19 +65,7 @@ export default function RootLayout({
         </header>
         <main>{children}</main>
         <footer>
-          <div className="flex flex-col min-h-[20vh] mt-[10vh] p-8 bg-kcc-theme text-white font-normal">
-            <div className="text-center">Contact Information</div>
-            <div className="flex flex-col my-3 text-xs">
-              <div>General Inquiries: {kccEmail}</div>
-              <div>President: {presEmail}</div>
-              <div>Vice-president: {vicePresEmail}</div>
-              <div>Sponsor Inquiries: {erDirectorEmail}</div>
-              <div className="pt-8 pb-2 opacity-50">
-                Designed by Hyunjun You, <br /> Created by Jaehyuk Ryu and
-                Jingeon Kim
-              </div>
-            </div>
-          </div>
+          <FooterContactInfo />
         </footer>
       </body>
     </html>
