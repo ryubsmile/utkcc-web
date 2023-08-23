@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { SetStateAction, useState, useEffect, useRef } from 'react';
+import './navbarButton.css';
 
 export default function NavBar({
   visibleThreshold,
@@ -124,20 +125,12 @@ function NavBarMenuButton({ getter, setter }: navBarProps) {
   return (
     <div
       id="menu-button"
-      className={`w-full h-full flex flex-col justify-between cursor-pointer`}
+      className={`w-8 h-8 flex flex-col justify-center items-center cursor-pointer navbar-button ${
+        navActive ? 'active' : ''
+      }`}
       onClick={() => {
         setNavActive(!navActive);
       }}
-    >
-      <Image
-        width={40}
-        height={40}
-        src={`${
-          navActive ? '/assets/menu-opened.png' : '/assets/menu-closed.png'
-        }`}
-        alt="menu"
-        className={`${navActive ? 'scale-100' : 'scale-150'}`}
-      />
-    </div>
+    />
   );
 }

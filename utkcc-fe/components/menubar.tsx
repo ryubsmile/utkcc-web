@@ -40,6 +40,7 @@ export default function MenuBar({
         ))}
       </div>
       <div
+        // TODO: more columns to map as objects after interns come in
         className={`grid ${columnNumber === 1 ? 'grid-cols-1' : 'grid-cols-2'}
         )} p-5 gap-x-10 gap-y-5`}
       >
