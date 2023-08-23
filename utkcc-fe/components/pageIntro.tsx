@@ -6,25 +6,21 @@ export default function PageIntro({
   pageName,
   pageSlogan,
   pageExp,
-  pageFooter,
 }: {
   children: React.ReactNode;
   pageName: string;
   pageSlogan: string | React.ReactNode;
   pageExp: string | React.ReactNode;
-  pageFooter?: string | React.ReactNode;
 }) {
   const [name, setName] = useState('');
   const [slogan, setSlogan] = useState<React.ReactNode | string | null>(null);
   const [exp, setExp] = useState<React.ReactNode | string | null>(null);
-  const [footer, setFooter] = useState<React.ReactNode | string | null>(null);
 
   useEffect(() => {
     setName(pageName);
     setSlogan(pageSlogan);
     setExp(pageExp);
-    setFooter(pageFooter);
-  }, [pageName, pageSlogan, pageExp, pageFooter]);
+  }, [pageName, pageSlogan, pageExp]);
 
   return (
     <article className="h-auto lg:grid grid-cols-right-tilt-twin-columns gap-x-[5vw] grid-rows-3-auto-rows grid-flow-col-dense items-end overflow-y-visible">
