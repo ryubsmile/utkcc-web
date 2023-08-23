@@ -22,8 +22,6 @@ export default function NavBar({
         const isIntersecting = entry.isIntersecting;
 
         // Scrolling down/up
-        console.log(isIntersecting);
-
         if (appliedTarget.current) {
           appliedTarget.current.style.opacity = isIntersecting ? '0' : '1';
         }

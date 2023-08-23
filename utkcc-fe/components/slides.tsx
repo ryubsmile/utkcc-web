@@ -38,6 +38,7 @@ export default function Slides() {
             src="/icon4.png"
             alt=""
             fill={true}
+            sizes={'100%'}
             className="object-contain"
           />
         </div>
@@ -189,6 +190,7 @@ function LogoSlide({ duration }: { duration: number }) {
               src="/icon4.png"
               alt=""
               fill={true}
+              sizes={'100%'}
               className="object-contain"
             />
           </div>
