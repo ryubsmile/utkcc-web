@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       padding: {
         'safe-top': 'calc(env(safe-area-inset-top, 15px) - 15px)',
+        'safe-bottom': 'env(safe-area-inset-bottom, 0px)',
+        'safe-left': 'env(safe-area-inset-left, 0px)',
+        'safe-right': 'env(safe-area-inset-right, 0px)',
       },
       fontFamily: {
         mainfont: ['var(--font-main)'],
