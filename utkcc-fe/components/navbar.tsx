@@ -51,7 +51,7 @@ export default function NavBar({
         ref={navbarElementTarget}
         className={`w-screen ${
           navActive ? 'h-[100dvh] lg:h-auto' : 'h-auto'
-        } pt-safe-top top-0 fixed bg-[#FCFCFC] hover:!opacity-100 border-b border-solid border-transparent font-normal duration-300 select-none z-10`}
+        } pt-safe-top top-0 fixed bg-[#FCFCFC] hover:!opacity-100 border-b border-solid border-transparent font-normal duration-300 select-none z-10 touch-none`}
       >
         {/* NAVBAR FOR DEFAULT (sm - md) VIEWPORT */}
         <div
