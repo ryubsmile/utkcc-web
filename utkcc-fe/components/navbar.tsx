@@ -3,7 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { SetStateAction, useState, useEffect, useRef } from 'react';
-import './navbarButton.css';
+import './navbarMenuButton.css';
+import { handleScroll } from './reusedFunctions';
 
 export default function NavBar({
   visibleThreshold,
@@ -12,9 +13,18 @@ export default function NavBar({
 }) {
   const [navActive, setNavActive] = useState(false);
 
-  const appliedTarget = useRef<HTMLDivElement>(null);
-  const observedTarget = useRef<HTMLDivElement>(null);
+  const subpagesList = [
+    'about',
+    'events',
+    'executives',
+    'sponsors',
+    'resources',
+    'newsletter',
+  ];
 
+  // HANDLE NAVBAR VISIBILITY
+  const navbarElementTarget = useRef<HTMLDivElement>(null); // navbar element
+  const navbarHiderTarget = useRef<HTMLDivElement>(null); // if this target is visible, hide navbar
   useEffect(() => {
     let observer: IntersectionObserver;
 
@@ -23,25 +33,30 @@ export default function NavBar({
         const isIntersecting = entry.isIntersecting;
 
         // Scrolling down/up
-        if (appliedTarget.current) {
-          appliedTarget.current.style.opacity = isIntersecting ? '0' : '1';
+        if (navbarElementTarget.current) {
+          navbarElementTarget.current.style.opacity = isIntersecting
+            ? '0'
+            : '1';
         }
       });
     };
 
     observer = new IntersectionObserver(handleIntersect);
-    observer.observe(observedTarget.current as Element);
+    observer.observe(navbarHiderTarget.current as Element);
   });
 
   return (
     <>
       <nav
-        ref={appliedTarget}
+        ref={navbarElementTarget}
         className={`w-screen ${
           navActive ? 'h-[100dvh] lg:h-auto' : 'h-auto'
         } top-0 fixed bg-[#FCFCFC] hover:!opacity-100 border-b border-solid border-transparent font-normal duration-300 select-none z-10`}
       >
-        <div className={`px-4 py-4 flex ${navActive ? 'flex-col' : ''}`}>
+        {/* NAVBAR FOR DEFAULT (sm - md) VIEWPORT */}
+        <div
+          className={`flex lg:hidden px-4 py-4 ${navActive ? 'flex-col' : ''}`}
+        >
           <Link
             className={`${
               navActive ? 'hidden' : 'flex'
@@ -66,31 +81,39 @@ export default function NavBar({
               navActive ? 'flex' : 'hidden lg:flex'
             } flex-col lg:flex-row basis-full mt-10 lg:my-auto pl-16 lg:pl-5 gap-8 lg:place-content-around lg:place-items-center text-xl lg:text-sm text-gray-600 lg:font-bold lg:text-kcc-theme`}
           >
-            <Link href="/" onClick={() => setNavActive(false)}>
-              Home
+            <Link
+              href="/"
+              className="capitalize"
+              onClick={() => {
+                setNavActive(false);
+              }}
+            >
+              home
             </Link>
-            <Link href="/about" onClick={() => setNavActive(false)}>
-              About
-            </Link>
-            <Link href="/events" onClick={() => setNavActive(false)}>
-              Events
-            </Link>
-            <Link href="/executives" onClick={() => setNavActive(false)}>
-              Executives
-            </Link>
-            <Link href="/sponsors" onClick={() => setNavActive(false)}>
-              Sponsors
-            </Link>
-            <Link href="/resources" onClick={() => setNavActive(false)}>
-              Resources
-            </Link>
-            <Link href="/newsletter" onClick={() => setNavActive(false)}>
-              Newsletter
-            </Link>
-            <Link href="/contact" onClick={() => setNavActive(false)}>
+            {subpagesList.map((subpageName, i) => (
+              <Link
+                key={i}
+                href={`#${subpageName}`}
+                className="capitalize"
+                onClick={e => {
+                  setNavActive(false);
+                  handleScroll(e);
+                }}
+              >
+                {subpageName}
+              </Link>
+            ))}
+            <Link
+              href="#footer"
+              onClick={e => {
+                setNavActive(false);
+                handleScroll(e);
+              }}
+            >
               Contact
             </Link>
             <Link
+              // TODO: Link update
               href="/"
               className="hidden lg:block py-2 px-5 rounded-lg text-white bg-kcc-theme "
             >
@@ -98,10 +121,46 @@ export default function NavBar({
             </Link>
           </div>
         </div>
+        {/* NAVBAR FOR LARGE (lg - xl) VIEWPORT, no menu button. join button added. */}
+        <div className={`hidden lg:flex px-4 py-4`}>
+          <Link className={`flex w-fit h-full gap-2 items-center`} href="/">
+            <div className="w-8 h-8 relative">
+              <Image
+                src="/logo-nav.png"
+                alt="logo"
+                fill={true}
+                sizes={'100%'}
+                className="object-scale-down"
+              />
+            </div>
+          </Link>
+          <div
+            className={`flex flex-row basis-full my-auto pl-5 gap-8 place-content-around place-items-center text-sm font-bold text-kcc-theme`}
+          >
+            <Link href="/" className="capitalize">
+              home
+            </Link>
+            {subpagesList.map((subpageName, i) => (
+              <Link key={i} href={`/${subpageName}`} className="capitalize">
+                {subpageName}
+              </Link>
+            ))}
+            <Link href="#footer" onClick={handleScroll}>
+              Contact
+            </Link>
+            <Link
+              // TODO: Link update
+              href="/"
+              className="py-2 px-5 rounded-lg text-white bg-kcc-theme "
+            >
+              Join
+            </Link>
+          </div>
+        </div>
       </nav>
       <div
-        ref={observedTarget}
-        className={`absolute w-1 bg-transparent -z-10`}
+        ref={navbarHiderTarget}
+        className={`absolute w-1 bg-transparent opacity-0 -z-10`}
         style={
           visibleThreshold
             ? {

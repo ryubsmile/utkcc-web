@@ -54,7 +54,7 @@ export default function RootLayout({
         // suppressHydrationWarning={true}
       >
         {children}
-        <footer className="mt-auto">
+        <footer id="footer" className="mt-auto">
           <FooterContactInfo />
         </footer>
       </body>
