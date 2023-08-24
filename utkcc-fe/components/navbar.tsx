@@ -55,7 +55,9 @@ export default function NavBar({
       >
         {/* NAVBAR FOR DEFAULT (sm - md) VIEWPORT */}
         <div
-          className={`flex lg:hidden px-4 py-4 ${navActive ? 'flex-col' : ''}`}
+          className={`flex h-full lg:hidden px-4 py-4 ${
+            navActive ? 'flex-col' : ''
+          }`}
         >
           <Link
             className={`${
@@ -83,7 +85,7 @@ export default function NavBar({
           >
             <Link
               href="/"
-              className="capitalize"
+              className="capitalize w-fit"
               onClick={() => {
                 setNavActive(false);
               }}
@@ -94,7 +96,7 @@ export default function NavBar({
               <Link
                 key={i}
                 href={`#${subpageName}`}
-                className="capitalize"
+                className="capitalize w-fit"
                 onClick={e => {
                   setNavActive(false);
                   handleScroll(e);
@@ -105,12 +107,13 @@ export default function NavBar({
             ))}
             <Link
               href="#footer"
+              className="capitalize w-fit"
               onClick={e => {
                 setNavActive(false);
                 handleScroll(e);
               }}
             >
-              Contact
+              contact
             </Link>
             <Link
               // TODO: Link update
