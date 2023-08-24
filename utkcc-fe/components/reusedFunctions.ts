@@ -17,7 +17,7 @@ export const handleScroll = (
 
   const isAtHomePage = href.replace(/.*\//, '') === hash;
 
-  if (!isAtHomePage) {
+  if (!isAtHomePage && window.innerWidth < 1024) {
     window.location.assign(`${window.location.origin}/${hash}`);
   }
 
