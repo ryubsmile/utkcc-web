@@ -85,9 +85,11 @@ function ExecutiveCell({ imageSrc, position, name, program, intro }: ExecInfo) {
         <Image
           alt=""
           src={imageSrc}
+          // width={500}
+          // height={500}
           fill={true}
           sizes={'100%'}
-          className="bg-gray-200 border-0 rounded-lg object-cover"
+          className="bg-gray-200 border-0 rounded-lg aspect-square object-cover"
         />
       </div>
       <div className="text-2xs my-2 underline underline-offset-2 first-letter:capitalize">

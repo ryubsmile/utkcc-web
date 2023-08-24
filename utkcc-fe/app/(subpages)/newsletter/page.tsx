@@ -39,7 +39,11 @@ export default function Newsletter() {
         </>
       }
     >
-      <Image alt="events image" className="h-fit" src={newsletterImage} />
+      <Image
+        alt="events image"
+        className="w-[80vw] h-auto max-h-[40vh] lg:max-h-[60vh] object-contain"
+        src={newsletterImage}
+      />
     </PageIntro>
   );
 }
