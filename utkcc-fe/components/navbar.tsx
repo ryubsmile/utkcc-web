@@ -81,7 +81,7 @@ export default function NavBar({
           <div
             className={`${
               navActive ? 'flex' : 'hidden lg:flex'
-            } flex-col lg:flex-row basis-full mt-10 lg:my-auto pl-16 lg:pl-5 gap-8 lg:place-content-around lg:place-items-center text-xl lg:text-sm text-gray-600 lg:font-bold lg:text-kcc-theme`}
+            } flex-col lg:flex-row w-fit overflow-y-clip h-min flex-wrap py-10 lg:my-auto px-16 lg:pl-5 gap-8 lg:place-content-around lg:place-items-center text-xl lg:text-sm text-gray-600 lg:font-bold lg:text-kcc-theme`}
           >
             <Link
               href="/"
