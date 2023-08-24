@@ -53,6 +53,7 @@ export default function NavBar({
           navActive ? 'h-[100dvh] lg:h-auto' : 'h-auto'
         } top-0 fixed bg-[#FCFCFC] hover:!opacity-100 border-b border-solid border-transparent font-normal duration-300 select-none z-10`}
       >
+        <div className="absolute -top-5 w-full bg-[#FCFCFC] h-[calc(env(safe-area-inset-top, 15px) + 32px)]"></div>
         {/* NAVBAR FOR DEFAULT (sm - md) VIEWPORT */}
         <div
           className={`flex lg:hidden px-4 py-4 ${navActive ? 'flex-col' : ''}`}
