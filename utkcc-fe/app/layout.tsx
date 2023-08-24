@@ -3,16 +3,18 @@ import './globals.css';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
 
-// Metadata Saves.
-const LOCATION_ORIGIN = 'https://utkcc-web.vercel.app';
-const SITE_NAME = 'UTKCC';
-const SITE_DESCRIPTION =
-  'UTKCC는 토론토 대학교 학생들이 만든 경영 동아리입니다.';
-const SITE_AUTHORS = [
-  { name: 'Jaehyuk Ryu', url: 'https://www.linkedin.com/in/jaehyuk-ryu/' },
-  { name: 'Hyunjun You', url: 'https://www.linkedin.com/in/hyunjunyou/' },
-  { name: 'JinGeon Kim', url: 'https://www.linkedin.com/in/justingeonkim/' },
-];
+// Frequently-used Metadata Saves.
+export const METADATA_SAVES = {
+  locationOrigin: 'https://utkcc-web.vercel.app',
+  siteName: 'UTKCC',
+  siteDescription: 'UTKCC는 토론토 대학교 학생들이 만든 경영 동아리입니다.',
+  siteAuthors: [
+    { name: 'Jaehyuk Ryu', url: 'https://www.linkedin.com/in/jaehyuk-ryu/' },
+    { name: 'Hyunjun You', url: 'https://www.linkedin.com/in/hyunjunyou/' },
+    { name: 'JinGeon Kim', url: 'https://www.linkedin.com/in/justingeonkim/' },
+  ],
+  colorHexCode: '#053C8C',
+};
 
 const gMarket = localFont({
   src: [
@@ -38,21 +40,21 @@ const gMarket = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | ${SITE_NAME}`,
-    default: SITE_NAME,
+    template: `%s | ${METADATA_SAVES.siteName}`,
+    default: METADATA_SAVES.siteName,
   },
-  description: SITE_DESCRIPTION,
-  authors: SITE_AUTHORS,
+  description: METADATA_SAVES.siteDescription,
+  authors: METADATA_SAVES.siteAuthors,
   keywords: ['UTKCC', 'University of Toronto', 'Uoft', 'Clubs'],
   referrer: 'origin-when-cross-origin',
   generator: 'Next.js',
-  themeColor: '#053C8C',
+  themeColor: METADATA_SAVES.colorHexCode,
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(LOCATION_ORIGIN),
+  metadataBase: new URL(METADATA_SAVES.locationOrigin),
   alternates: {
     canonical: '/',
     languages: {
@@ -62,12 +64,12 @@ export const metadata: Metadata = {
   colorScheme: 'only light',
   openGraph: {
     title: {
-      template: `%s | ${SITE_NAME}`,
-      default: SITE_NAME,
+      template: `%s | ${METADATA_SAVES.siteName}`,
+      default: METADATA_SAVES.siteName,
     },
     url: '/',
-    siteName: SITE_NAME,
-    description: SITE_DESCRIPTION,
+    siteName: METADATA_SAVES.siteName,
+    description: METADATA_SAVES.siteDescription,
     type: 'website',
   },
   robots: {
@@ -83,6 +85,19 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  appleWebApp: {
+    title: 'UTKCC',
+    statusBarStyle: 'black-translucent',
+    startupImage: [
+      // '/assets/startup/apple-touch-startup-image-768x1004.png',
+      // {
+      //   url: '/assets/startup/apple-touch-startup-image-1536x2008.png',
+      //   media: '(device-width: 768px) and (device-height: 1024px)',
+      // },
+    ],
+    capable: true,
+  },
+  category: 'academic',
 };
 
 export default function RootLayout({
