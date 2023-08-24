@@ -48,11 +48,17 @@ export const metadata: Metadata = {
   keywords: ['UTKCC', 'University of Toronto', 'Uoft', 'Clubs'],
   referrer: 'origin-when-cross-origin',
   generator: 'Next.js',
-  themeColor: '#FCFCFC',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    minimumScale: 1,
+    viewportFit: 'cover',
   },
   metadataBase: new URL(METADATA_SAVES.locationOrigin),
   alternates: {

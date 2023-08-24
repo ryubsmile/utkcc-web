@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      padding: {
+        'safe-top': 'calc(env(safe-area-inset-top, 15px) - 15px)',
+      },
       fontFamily: {
         mainfont: ['var(--font-main)'],
       },
