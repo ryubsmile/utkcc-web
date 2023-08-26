@@ -9,12 +9,12 @@ export default function Events() {
   const subtitle = '매년 다양하고 의미있는 이벤트를 주최하고자 합니다.';
 
   return (
-    <div className="mx-auto">
+    <div className="w-full">
       <div className="text-xl font-bold text-center mt-12">{title}</div>
       <div className="text-sm font-normal text-center mt-4 mb-8 text-kcc-gray">
         {subtitle}
       </div>
-      <div className="flex flex-col lg:flex-row gap-8 h-auto">
+      <div className="flex flex-col lg:flex-row gap-8 h-auto w-[30vmax] lg:w-full mx-auto">
         <EventTile
           eventType="academic"
           eventSlogan={
@@ -55,7 +55,7 @@ function EventTile({
   bgImage?: string;
 }) {
   return (
-    <div className="aspect-square bg-gray-200 w-full rounded-lg p-6 flex flex-col gap-6">
+    <div className="aspect-square bg-gray-200 w-full h-auto rounded-lg p-6 flex flex-col gap-6 cursor-pointer">
       <div className="text-s capitalize">{eventType}</div>
       <div className="text-lg leading-5">{eventSlogan}</div>
     </div>
