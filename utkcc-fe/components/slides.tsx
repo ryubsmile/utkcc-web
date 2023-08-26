@@ -4,6 +4,19 @@ import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { thresholdArray } from './reusedFunctions';
 
+function LogoImage() {
+  return (
+    <Image
+      src="/icon4.png"
+      alt=""
+      fill={true}
+      sizes={'100%'}
+      priority={true}
+      className="object-contain"
+    />
+  );
+}
+
 export default function Slides() {
   return (
     <div className="h-[600vh] w-fit">
@@ -34,13 +47,7 @@ export default function Slides() {
         ]}
       >
         <div className="relative w-screen h-[100dvmin] scale-[0.4] lg:scale-[0.25]">
-          <Image
-            src="/icon4.png"
-            alt=""
-            fill={true}
-            sizes={'100%'}
-            className="object-contain"
-          />
+          <LogoImage />
         </div>
       </Slide>
       <Slide
@@ -186,13 +193,7 @@ function LogoSlide({ duration }: { duration: number }) {
           ref={appliedTarget}
         >
           <div className="relative w-full h-[100dvmin] scale-[0.4] lg:scale-[0.25]">
-            <Image
-              src="/icon4.png"
-              alt=""
-              fill={true}
-              sizes={'100%'}
-              className="object-contain"
-            />
+            <LogoImage />
           </div>
           <div className="fixed w-full opacity-60 bottom-[8dvh]">
             아래로 스크롤하세요.
