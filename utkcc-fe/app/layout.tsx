@@ -7,7 +7,9 @@ import localFont from 'next/font/local';
 export const METADATA_SAVES = {
   locationOrigin: 'https://utkcc-web.vercel.app',
   siteName: 'UTKCC',
-  siteDescription: 'UTKCC는 토론토 대학교 학생들이 만든 경영 동아리입니다.',
+  siteFullName: 'University of Toronto Korean Commerce Community',
+  siteDescription:
+    'UTKCC는 토론토 대학교 한인 학생들이 만든 경영 동아리입니다.',
   siteAuthors: [
     { name: 'Jaehyuk Ryu', url: 'https://www.linkedin.com/in/jaehyuk-ryu/' },
     { name: 'Hyunjun You', url: 'https://www.linkedin.com/in/hyunjunyou/' },
@@ -41,7 +43,7 @@ const gMarket = localFont({
 export const metadata: Metadata = {
   title: {
     template: `%s | ${METADATA_SAVES.siteName}`,
-    default: METADATA_SAVES.siteName,
+    default: `${METADATA_SAVES.siteName} - ${METADATA_SAVES.siteFullName}`,
   },
   description: METADATA_SAVES.siteDescription,
   authors: METADATA_SAVES.siteAuthors,
