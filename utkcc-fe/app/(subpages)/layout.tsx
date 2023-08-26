@@ -1,5 +1,4 @@
 import NavBar from '@/components/navbar';
-import FooterContactInfo from '@/components/footerContactInfo';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

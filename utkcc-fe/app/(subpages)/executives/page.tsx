@@ -85,20 +85,19 @@ function ExecutiveCell({ imageSrc, position, name, program, intro }: ExecInfo) {
         <Image
           alt=""
           src={imageSrc}
-          // width={500}
-          // height={500}
           fill={true}
+          priority={true}
           sizes={'100%'}
+          // placeholder="blur"
+          // blurDataURL=""
           className="bg-gray-200 border-0 rounded-lg aspect-square object-cover"
         />
       </div>
-      <div className="text-2xs my-2 underline underline-offset-2 first-letter:capitalize">
+      <div className="text-2xs my-2 underline underline-offset-2 capitalize">
         {position}
       </div>
       <div className="mb-1">{name}</div>
-      <div className="text-3xs opacity-50 first-letter: capitalize">
-        {program}
-      </div>
+      <div className="text-3xs opacity-50 capitalize">{program}</div>
       {!intro ? (
         ''
       ) : (
