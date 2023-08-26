@@ -131,7 +131,7 @@ export default function Resources() {
           전공 및 교양 수업 대비에 도움이 될 유용한 족보를 배포하고 있습니다.
           <span className="my-3 w-full block" />
           UTKCC의 최신 소식들은 소셜미디어에서 확인해보세요.
-          <span className="text-center flex justify-center">
+          <span className="text-center flex justify-center my-2">
             {/* TODO: link update */}
             <Link
               className="text-center p-2 bg-kcc-theme mt-4 text-white text-sm w-fit rounded-md"
