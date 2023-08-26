@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 
 export default function Events() {
   const title = 'UTKCC PRESENTS';
-  const subtitle = '남들과는 다른 이벤트를 만들고자 합니다';
+  const subtitle = '매년 다양하고 의미있는 이벤트를 주최하고자 합니다.';
 
   return (
     <div className="mx-auto">
@@ -15,22 +15,49 @@ export default function Events() {
         {subtitle}
       </div>
       <div className="flex flex-col lg:flex-row gap-8 h-auto">
-        <EventTile></EventTile>
-        <EventTile></EventTile>
-        <EventTile></EventTile>
+        <EventTile
+          eventType="academic"
+          eventSlogan={
+            <>
+              학생의 본분을 <br />
+              잊지 않기 위하여
+            </>
+          }
+        ></EventTile>
+        <EventTile
+          eventType="professional"
+          eventSlogan={
+            <>
+              대학 그 너머 <br /> 커리어를 위하여
+            </>
+          }
+        ></EventTile>
+        <EventTile
+          eventType="professional"
+          eventSlogan={
+            <>
+              대학 생활의 묘미를 <br /> 잊지 않기 위하여
+            </>
+          }
+        ></EventTile>
       </div>
     </div>
   );
 }
 
-function EventTile({ bgImage }: { bgImage?: string }) {
+function EventTile({
+  eventType,
+  eventSlogan,
+  bgImage,
+}: {
+  eventType: string;
+  eventSlogan: string | React.ReactNode;
+  bgImage?: string;
+}) {
   return (
     <div className="aspect-square bg-gray-200 w-full rounded-lg p-6 flex flex-col gap-6">
-      <div className="text-sm">Academic Events</div>
-      <div className="text-lg leading-5">
-        학생의 본분을 <br />
-        잊지 않기 위하여
-      </div>
+      <div className="text-s capitalize">{eventType}</div>
+      <div className="text-lg leading-5">{eventSlogan}</div>
     </div>
   );
 }

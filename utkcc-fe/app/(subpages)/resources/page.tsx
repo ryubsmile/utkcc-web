@@ -22,7 +22,7 @@ export default function Resources() {
             className="aspect-square bg-gray-200 border-0 rounded-lg object-cover"
           />
         </div>
-        <div className="my-2 underline underline-offset-2 first-letter:capitalize">
+        <div className="my-2 underline underline-offset-2 capitalize">
           Anti-calendar
         </div>
         <div className="mb-1 text-xs">과목별 꿀팁들은 여기서</div>
@@ -57,8 +57,8 @@ export default function Resources() {
             className="aspect-square bg-gray-200 border-0 rounded-lg object-cover"
           />
         </div>
-        <div className="my-2 underline underline-offset-2 first-letter:capitalize">
-          Study Package
+        <div className="my-2 underline underline-offset-2 capitalize">
+          study package
         </div>
         <div className="mb-1 text-xs">
           선배들의 팁, 연습문제, 렉처 정리를 한 번에
@@ -94,8 +94,8 @@ export default function Resources() {
             className="aspect-square bg-gray-200 border-0 rounded-lg object-cover"
           />
         </div>
-        <div className="my-2 underline underline-offset-2 first-letter:capitalize">
-          Social Media
+        <div className="my-2 underline underline-offset-2 capitalize">
+          social media
         </div>
         <div className="mb-1 text-xs">여러 곳에서 저희를 만나보세요</div>
         {/* TODO: links update */}
@@ -124,15 +124,25 @@ export default function Resources() {
   return (
     <PageIntro
       pageName="resources"
-      pageSlogan={<>소스라치는 리소스</>}
+      pageSlogan={<>UTKCC가 제공하는 다양한 리소스</>}
       pageExp={
         <>
-          UTKCC는 인스타그램와 유튜브를 소통창구로, 안티캘린더와 족보를
-          참고자료로 나눠드리고 있습니다.
-          <span className="my-3 w-full block" />각 아이콘을 클릭하여 UTKCC가
-          제공하는 다양한 리소스를 받아보세요.
+          멤버쉽 소지자에 한하여, 60개 이상의 강의 후기를 포함한 안티캘린더와
+          전공 및 교양 수업 대비에 도움이 될 유용한 족보를 배포하고 있습니다.
+          <span className="my-3 w-full block" />
+          UTKCC의 최신 소식들은 소셜미디어에서 확인해보세요.
+          <span className="text-center flex justify-center">
+            {/* TODO: link update */}
+            <Link
+              className="text-center p-2 bg-kcc-theme mt-4 text-white text-sm w-fit rounded-md"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="/"
+            >
+              멤버십 신청하기
+            </Link>
+          </span>
         </>
-        // TODO: footer link
       }
     >
       <MenuBar

@@ -30,12 +30,12 @@ export default function Executives() {
   return (
     <PageIntro
       pageName="executives"
-      pageSlogan={<>자랑스러운 17기 임원</>}
+      pageSlogan={<>UTKCC 17기 임원진</>}
       pageExp={
         <>
-          UTKCC는 현재 회장단과 일곱 개의 부서로 이루어져 있습니다.
-          <span className="my-3 w-full block" />각 부서를 클릭하여 자랑스러운
-          17기 임원들을 확인해보세요!
+          UTKCC는 현재 회장단과 일곱개의 부서로 이루어져 있습니다.
+          <span className="my-3 w-full block" />각 부서를 클릭하여 17기
+          임원진들을 확인해보세요.
         </>
       }
     >

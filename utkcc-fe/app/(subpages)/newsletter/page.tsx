@@ -33,7 +33,7 @@ export default function Newsletter() {
               rel="noopener noreferrer"
               href="https://docs.google.com/forms/d/1h8FoNhv85dFnX4ICnw9BmvtRr_MBFhHS5Z6WrRlUP6Y/viewform?edit_requested=true"
             >
-              Subscribe
+              뉴스레터 구독하기
             </Link>
           </span>
         </>

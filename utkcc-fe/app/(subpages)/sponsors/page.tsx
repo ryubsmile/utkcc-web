@@ -20,13 +20,13 @@ export default function Sponsors() {
   return (
     <PageIntro
       pageName="sponsors"
-      pageSlogan={<>함께하는 든든한 분들</>}
+      pageSlogan={<>UTKCC와 함께하는 파트너쉽</>}
       pageExp={
         <>
-          UTKCC는 토론토에 위치한 한인식당들과 제휴하여 UTKCC 멤버쉽 소지자에게
+          UTKCC는 토론토에 위치한 한인식당들과 제휴하여 UTKCC 멤버십 소지자에게
           일정 할인 혹은 경품 등 다양한 혜택들을 제공해드리고 있습니다.
           <span className="my-3 w-full block" />
-          멤버쉽에 가입하셔서 더 많은 혜택을 누려보세요.
+          멤버십에 가입하셔서 더 많은 혜택을 누려보세요.
         </>
         // TODO: footer 링크 요청해서 받기
       }
