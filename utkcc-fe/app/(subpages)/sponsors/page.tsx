@@ -46,6 +46,7 @@ interface SponsorInfo {
   imageSrc: string;
   websiteUrl: string;
   locationUrl: string;
+  id: number;
 }
 
 function getSponsorCell({
@@ -54,13 +55,14 @@ function getSponsorCell({
   imageSrc,
   websiteUrl,
   locationUrl,
+  id,
 }: SponsorInfo) {
   return (
-    <div key={0} className="text-center">
+    <div key={id} className="text-center">
       <div className="max-w-[50%] mt-5 mx-auto relative aspect-square rounded-xl">
         <Image
+          key={id}
           alt="-"
-          // TODO: update image
           src={imageSrc}
           fill={true}
           sizes={'100%'}
@@ -71,23 +73,22 @@ function getSponsorCell({
         {name}
       </div>
       <div className="mb-1 text-xs">{exp}</div>
-      {/* TODO: links update */}
       <div className="flex w-max mx-auto gap-3">
         <Link
-          className="text-xs rounded-lg bg-gray-200 py-2 px-4 mx-auto my-2"
+          className="text-xs rounded-lg bg-gray-200 py-2 px-4 mx-auto my-2 capitalize"
           target="_blank"
           rel="noopener noreferrer"
           href={websiteUrl}
         >
-          Website
+          website
         </Link>
         <Link
-          className="text-xs rounded-lg bg-gray-200 py-2 px-4 mx-auto my-2"
+          className="text-xs rounded-lg bg-gray-200 py-2 px-4 mx-auto my-2 capitalize"
           target="_blank"
           rel="noopener noreferrer"
           href={locationUrl}
         >
-          Location
+          location
         </Link>
       </div>
     </div>

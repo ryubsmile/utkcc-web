@@ -2,14 +2,14 @@
   {
     "name": "shinjeon",
     "exp": "한국의 신전을 캐나다에서도",
-    "imageSrc": "/assets/exec-dummy-image.png",
+    "imageSrc": "/assets/images/exec-dummy-image.png",
     "websiteUrl": "https://naver.com",
     "locationUrl": "https://google.com"
   },
   {
     "name": "jjintoast",
     "exp": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-    "imageSrc": "/assets/exec-dummy-image.png",
+    "imageSrc": "/assets/images/exec-dummy-image.png",
     "websiteUrl": "https://naver.com",
     "locationUrl": "https://google.com"
   }

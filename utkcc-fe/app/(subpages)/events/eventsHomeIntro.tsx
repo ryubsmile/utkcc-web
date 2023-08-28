@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import PageIntro from '@/components/pageIntro';
 import LearnMoreLink from '@/components/learnMoreLink';
-import eventsImage from '/public/assets/events-image.png';
+import eventsImage from '/public/assets/images/events-image.png';
 
 export default function EventsHomeIntro() {
   return (

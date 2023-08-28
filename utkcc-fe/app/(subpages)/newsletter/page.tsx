@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import PageIntro from '@/components/pageIntro';
-import newsletterImage from '/public/assets/newsletter-image.png';
+import newsletterImage from '/public/assets/images/newsletter-image.png';
 
 export const metadata: Metadata = {
   title: 'Newsletter',

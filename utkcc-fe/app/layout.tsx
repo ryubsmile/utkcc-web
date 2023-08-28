@@ -5,7 +5,7 @@ import localFont from 'next/font/local';
 
 // Frequently-used Metadata Saves.
 export const METADATA_SAVES = {
-  locationOrigin: process.env.BASE_URL,
+  locationOrigin: `${process.env.BASE_URL}`,
   siteName: 'UTKCC',
   siteFullName: 'University of Toronto Korean Commerce Community',
   siteDescription:
@@ -17,28 +17,6 @@ export const METADATA_SAVES = {
   ],
   colorHexCode: '#053C8C',
 };
-
-const gMarket = localFont({
-  src: [
-    {
-      path: './GmarketSansTTF/GmarketSansTTFMedium.ttf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './GmarketSansTTF/GmarketSansTTFLight.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: './GmarketSansTTF/GmarketSansTTFBold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  display: 'swap',
-  variable: '--font-main',
-});
 
 export const metadata: Metadata = {
   title: {
@@ -98,9 +76,9 @@ export const metadata: Metadata = {
     title: 'UTKCC',
     statusBarStyle: 'black-translucent',
     startupImage: [
-      // '/assets/startup/apple-touch-startup-image-768x1004.png',
+      // 'public/assets/fonts/startup/apple-touch-startup-image-768x1004.png',
       // {
-      //   url: '/assets/startup/apple-touch-startup-image-1536x2008.png',
+      //   url: 'public/assets/fonts/startup/apple-touch-startup-image-1536x2008.png',
       //   media: '(device-width: 768px) and (device-height: 1024px)',
       // },
     ],
@@ -108,6 +86,28 @@ export const metadata: Metadata = {
   },
   category: 'academic',
 };
+
+const gMarket = localFont({
+  src: [
+    {
+      path: './fonts/GmarketSansTTF/GmarketSansTTFMedium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/GmarketSansTTF/GmarketSansTTFLight.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './fonts/GmarketSansTTF/GmarketSansTTFBold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-main',
+});
 
 export default function RootLayout({
   children,

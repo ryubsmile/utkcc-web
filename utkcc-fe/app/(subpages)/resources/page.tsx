@@ -14,9 +14,10 @@ export default function Resources() {
       <div key={0} className="text-center">
         <div className="max-w-[50%] mt-5 mx-auto relative aspect-square rounded-xl">
           <Image
+            key={0}
             alt=""
             // TODO: update image
-            src={'/assets/exec-dummy-image.png'}
+            src={'/assets/images/exec-dummy-image.png'}
             fill={true}
             sizes={'100%'}
             className="aspect-square bg-gray-200 border-0 rounded-lg object-cover"
@@ -49,9 +50,10 @@ export default function Resources() {
       <div key={1} className="text-center">
         <div className="max-w-[50%] mt-5 mx-auto relative aspect-square rounded-xl">
           <Image
+            key={1}
             alt=""
             // TODO: update image
-            src={'/assets/exec-dummy-image.png'}
+            src={'/assets/images/exec-dummy-image.png'}
             fill={true}
             sizes={'100%'}
             className="aspect-square bg-gray-200 border-0 rounded-lg object-cover"
@@ -86,9 +88,10 @@ export default function Resources() {
       <div key={2} className="text-center">
         <div className="max-w-[50%] mt-5 mx-auto relative aspect-square rounded-xl">
           <Image
+            key={2}
             alt=""
             // TODO: update image
-            src={'/assets/exec-dummy-image.png'}
+            src={'/assets/images/exec-dummy-image.png'}
             fill={true}
             sizes={'100%'}
             className="aspect-square bg-gray-200 border-0 rounded-lg object-cover"

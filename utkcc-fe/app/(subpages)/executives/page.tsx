@@ -3,6 +3,7 @@ import Image from 'next/image';
 import PageIntro from '@/components/pageIntro';
 import MenuBar from '@/components/menubar';
 import execData from './executives-info.json';
+import { getPlaiceholder } from 'plaiceholder';
 
 export const metadata: Metadata = {
   title: 'Executives',
@@ -50,6 +51,7 @@ interface ExecInfo {
   name: string;
   program: string;
   intro: string;
+  id: number;
 }
 
 // TODO: optimize, rewrite using Object.groupBy when released
@@ -65,20 +67,30 @@ function getExecutives() {
     social: [],
   };
 
-  execData.forEach(execInfo => {
+  execData.forEach((execInfo, i) => {
     deptContent[execInfo.dept].push({
       name: execInfo.name,
       program: execInfo.program,
       position: execInfo.position,
-      imageSrc: `/assets/exec-headshots/${execInfo.name}.webp`,
+      imageSrc: `/assets/images/exec-headshots/${execInfo.name}.webp`,
       intro: execInfo.intro,
+      id: i,
     } as ExecInfo);
   });
 
   return deptContent;
 }
 
-function ExecutiveCell({ imageSrc, position, name, program, intro }: ExecInfo) {
+async function ExecutiveCell({
+  imageSrc,
+  position,
+  name,
+  program,
+  intro,
+  id,
+}: ExecInfo) {
+  const blurImageUrl = await getBase64(`${process.env.BASE_URL}${imageSrc}`);
+
   return (
     <div>
       <div className="relative aspect-square rounded-xl">
@@ -88,9 +100,11 @@ function ExecutiveCell({ imageSrc, position, name, program, intro }: ExecInfo) {
           fill={true}
           priority={true}
           sizes={'100%'}
-          // placeholder="blur"
-          // blurDataURL=""
+          loading="eager"
+          placeholder="blur"
+          blurDataURL={blurImageUrl}
           className="bg-gray-200 border-0 rounded-lg aspect-square object-cover"
+          key={id}
         />
       </div>
       <div className="text-2xs my-2 underline underline-offset-2 capitalize">
@@ -111,14 +125,33 @@ function ExecutiveCell({ imageSrc, position, name, program, intro }: ExecInfo) {
 }
 
 function getDeptExecCells(deptExecList: ExecInfo[]) {
-  return deptExecList.map(({ imageSrc, name, position, program, intro }, i) => (
-    <ExecutiveCell
-      key={i}
-      imageSrc={imageSrc}
-      name={name}
-      position={position}
-      program={program}
-      intro={intro}
-    />
-  ));
+  return deptExecList.map(
+    ({ imageSrc, name, position, program, intro, id }) => (
+      <ExecutiveCell
+        key={id}
+        imageSrc={imageSrc}
+        name={name}
+        position={position}
+        program={program}
+        intro={intro}
+        id={id}
+      />
+    ),
+  );
+}
+
+// get the base64 ImageURL from source url
+async function getBase64(imageUrl: string) {
+  try {
+    const res = await fetch(imageUrl);
+    if (!res.ok) {
+      throw new Error(`Failed to fetch image: ${res.status} ${res.statusText}`);
+    }
+
+    const buffer = await res.arrayBuffer();
+    const { base64 } = await getPlaiceholder(Buffer.from(buffer));
+    return base64;
+  } catch (e) {
+    if (e instanceof Error) console.log(e.stack);
+  }
 }

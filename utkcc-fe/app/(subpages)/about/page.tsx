@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import PageIntro from '@/components/pageIntro';
-import aboutImage from '/public/assets/about-image.png';
+import aboutImage from '/public/assets/images/about-image.png';
 
 export const metadata: Metadata = {
   title: 'About',
