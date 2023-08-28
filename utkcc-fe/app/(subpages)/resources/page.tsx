@@ -106,7 +106,7 @@ export default function Resources() {
           </Link>
           <Link
             target="_blank"
-            href="https://www.youtube.com/@utkcc"
+            href="https://www.youtube.com/@utkcc3050"
             rel="noopener noreferrer"
             className="aspect-square w-full h-full relative rounded-lg overflow-hidden"
           >
