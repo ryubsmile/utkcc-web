@@ -21,7 +21,8 @@ export default function MenuBar({
   const handleMenuChange = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
   ) => {
-    setSelectedCategory(e.currentTarget.outerText.toLowerCase());
+    const category = e.currentTarget.outerText.toLowerCase();
+    setSelectedCategory(category);
   };
 
   return (
