@@ -10,8 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function Executives() {
-  console.log(process.env.BASE_URL);
-
   const deptList = [
     'presidents',
     'academic',
@@ -100,9 +98,7 @@ async function ExecutiveCell({
           alt=""
           src={imageSrc}
           fill={true}
-          priority={true}
           sizes={'100%'}
-          loading="eager"
           placeholder="blur"
           blurDataURL={blurImageUrl}
           className="bg-gray-200 border-0 rounded-lg aspect-square object-cover"

@@ -43,6 +43,7 @@ export default function Newsletter() {
         alt="events image"
         className="w-[80vw] h-auto max-h-[40vh] lg:max-h-[60vh] object-contain"
         src={newsletterImage}
+        placeholder="blur"
       />
     </PageIntro>
   );
