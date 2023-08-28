@@ -36,7 +36,7 @@ export default function Resources() {
           <Link
             href="/assets/pdf/anti-calendar-freshmen.pdf"
             target="_blank"
-            className="text-xs rounded-lg bg-gray-200 w-full"
+            className="text-xs rounded-lg bg-gray-200 w-full py-2 px-auto mx-auto my-2"
           >
             Sample for freshmen
           </Link>
@@ -74,7 +74,7 @@ export default function Resources() {
           <Link
             href="/assets/pdf/eco101-sample.pdf"
             target="_blank"
-            className="text-xs rounded-lg bg-gray-200 w-full"
+            className="text-xs rounded-lg bg-gray-200 w-full py-2 px-auto mx-auto my-2"
           >
             Sample for ECO101
           </Link>
