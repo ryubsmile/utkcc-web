@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default function Executives() {
+  console.log(process.env.BASE_URL);
+
   const deptList = [
     'presidents',
     'academic',
