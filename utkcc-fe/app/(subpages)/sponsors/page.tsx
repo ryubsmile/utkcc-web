@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 export default function Sponsors() {
   const data: { [k: string]: JSX.Element[] } = Object.fromEntries(
-    sponsorData.map((sponsorInfo: SponsorInfo) => [
+    sponsorData.map((sponsorInfo, i) => [
       sponsorInfo.name,
-      [getSponsorCell(sponsorInfo)],
+      [getSponsorCell({ ...sponsorInfo, id: i })],
     ]),
   );
 
