@@ -70,9 +70,9 @@ function getExecutives() {
       name: execInfo.name,
       program: execInfo.program,
       position: execInfo.position,
-      imageSrc: `/assets/exec-headshots/${execInfo.name}.png`,
+      imageSrc: `/assets/exec-headshots/${execInfo.name}.webp`,
       intro: execInfo.intro,
-    });
+    } as ExecInfo);
   });
 
   return deptContent;
@@ -111,14 +111,14 @@ function ExecutiveCell({ imageSrc, position, name, program, intro }: ExecInfo) {
 }
 
 function getDeptExecCells(deptExecList: ExecInfo[]) {
-  return deptExecList.map((info, i) => (
+  return deptExecList.map(({ imageSrc, name, position, program, intro }, i) => (
     <ExecutiveCell
       key={i}
-      imageSrc={info.imageSrc}
-      name={info.name}
-      position={info.position}
-      program={info.program}
-      intro={info.intro}
+      imageSrc={imageSrc}
+      name={name}
+      position={position}
+      program={program}
+      intro={intro}
     />
   ));
 }
