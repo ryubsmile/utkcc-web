@@ -117,7 +117,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={gMarket.className}>
       <body
-        className="w-[100dvw] min-h-[100vh]"
+        className="w-[100dvw] min-h-[100lvh]"
         // suppressHydrationWarning={true}
       >
         {children}
