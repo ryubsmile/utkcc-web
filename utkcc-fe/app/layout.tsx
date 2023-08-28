@@ -5,7 +5,7 @@ import localFont from 'next/font/local';
 
 // Frequently-used Metadata Saves.
 export const METADATA_SAVES = {
-  locationOrigin: 'https://utkcc-web.vercel.app',
+  locationOrigin: process.env.BASE_URL,
   siteName: 'UTKCC',
   siteFullName: 'University of Toronto Korean Commerce Community',
   siteDescription:
