@@ -1,11 +1,12 @@
-import FooterContactInfo from '@/components/footerContactInfo';
-import './globals.css';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
+import FooterContactInfo from '@/components/footerContactInfo';
+import { getURL } from '@/components/utils';
+import './globals.css';
 
 // Frequently-used Metadata Saves.
 export const METADATA_SAVES = {
-  locationOrigin: `${process.env.BASE_URL}`,
+  locationOrigin: getURL('/'),
   siteName: 'UTKCC',
   siteFullName: 'University of Toronto Korean Commerce Community',
   siteDescription:

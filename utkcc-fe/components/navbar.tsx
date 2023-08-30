@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SetStateAction, useState, useEffect, useRef } from 'react';
 import './navbarMenuButton.css';
-import { handleScroll } from './reusedFunctions';
+import { handleScroll } from './utils';
 
 export default function NavBar({
   visibleThreshold,

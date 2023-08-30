@@ -4,6 +4,7 @@ import PageIntro from '@/components/pageIntro';
 import MenuBar from '@/components/menubar';
 import execData from './executives-info.json';
 import { getPlaiceholder } from 'plaiceholder';
+import { getURL } from '@/components/utils';
 
 export const metadata: Metadata = {
   title: 'Executives',
@@ -89,7 +90,7 @@ async function ExecutiveCell({
   intro,
   id,
 }: ExecInfo) {
-  const blurImageUrl = await getBase64(`${process.env.BASE_URL}${imageSrc}`);
+  const blurImageUrl = await getBase64(getURL(imageSrc));
 
   return (
     <div>

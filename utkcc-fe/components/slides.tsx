@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
-import { thresholdArray } from './reusedFunctions';
+import { thresholdArray } from './utils';
 
 function LogoImage() {
   return (

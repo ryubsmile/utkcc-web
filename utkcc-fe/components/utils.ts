@@ -34,3 +34,12 @@ export const handleScroll = (
     window.location.pathname + window.location.search + hash,
   );
 };
+
+// get the current base URL
+const IS_SERVER = typeof window === 'undefined';
+export function getURL(path: string) {
+  const baseURL = IS_SERVER
+    ? process.env.NEXT_PUBLIC_BASE_URL
+    : window.location.origin;
+  return new URL(path, baseURL).toString();
+}
