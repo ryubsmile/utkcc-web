@@ -28,7 +28,7 @@ export default function About() {
     >
       <Image
         alt="about image"
-        className="w-[80vw] h-auto max-h-[40vh] lg:max-h-[60vh] object-contain rounded-md"
+        className="w-full h-auto lg:max-h-[60vh] object-contain rounded-md"
         placeholder="blur"
         src={aboutImage}
       />
