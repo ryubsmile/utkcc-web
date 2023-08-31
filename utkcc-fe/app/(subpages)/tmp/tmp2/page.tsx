@@ -70,7 +70,3 @@ export default function NewSlide() {
     </div>
   );
 }
-
-interface AnimationProps {
-  animation: string;
-}

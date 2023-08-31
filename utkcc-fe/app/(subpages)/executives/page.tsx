@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import { getPlaiceholder } from 'plaiceholder';
 import PageIntro from '@/components/pageIntro';
 import MenuBar from '@/components/menubar';
-import execData from './executives-info.json';
-import { getPlaiceholder } from 'plaiceholder';
 import { getURL } from '@/components/utils';
 import PresidentsIntro from './presidentsIntro';
+import execData from './executives-info.json';
 
 export const metadata: Metadata = {
   title: 'Executives',

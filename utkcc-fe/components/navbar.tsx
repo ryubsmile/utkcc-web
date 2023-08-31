@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { SetStateAction, useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './navbarMenuButton.css';
 import { handleScroll } from './utils';
 
@@ -178,7 +178,7 @@ export default function NavBar({
 
 interface navBarProps {
   getter: boolean;
-  setter: React.Dispatch<SetStateAction<boolean>>;
+  setter: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function NavBarMenuButton({ getter, setter }: navBarProps) {
