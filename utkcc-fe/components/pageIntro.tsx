@@ -29,7 +29,7 @@ export default function PageIntro({
       <div className="text-kcc-theme font-bold capitalize self-end">{name}</div>
       {/* section intro slogans */}
       <div className="text-black font-normal text-2xl my-6">{slogan}</div>
-      <div className="max-w-full w-full flex items-center justify-center mx-auto row-span-2 row-start-2">
+      <div className="max-w-full w-full h-full flex items-center justify-center mx-auto row-span-2 row-start-2">
         {children}
       </div>
       <p className="break-keep hyphens-auto font-normal my-6 lg:mt-0 text-kcc-gray self-start">
