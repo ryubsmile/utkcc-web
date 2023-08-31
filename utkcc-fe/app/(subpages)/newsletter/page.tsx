@@ -42,7 +42,7 @@ export default function Newsletter() {
       <Image
         alt="events image"
         // className="object-contain w-[80vw] h-auto max-h-[40vh] lg:max-h-[60vh] rounded-lg"
-        className="object-contain w-auto max-w-full h-[40vh] lg:h-full lg:max-h-[60vh] rounded-lg"
+        className="object-contain w-auto max-w-full h-[40vh] lg:h-full lg:max-h-[60vh] rounded-lg mb-6"
         src={newsletterImage}
         placeholder="blur"
       />

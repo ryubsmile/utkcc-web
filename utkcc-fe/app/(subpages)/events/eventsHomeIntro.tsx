@@ -24,7 +24,7 @@ export default function EventsHomeIntro() {
     >
       <Image
         alt="events image"
-        className="w-full h-auto lg:max-h-[60vh] object-contain"
+        className="w-full h-auto lg:max-h-[60vh] object-contain mb-6"
         src={eventsImage}
       />
     </PageIntro>

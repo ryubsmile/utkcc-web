@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <NavBar />
       </header>
       <main>
-        <div className="flex box-border pt-24 pb-10 lg:py-32 mx-8 lg:mx-32 lg:min-h-screen">
+        <div className="flex box-border pt-24 pb-10 lg:py-32 mx-4 lg:mx-32 lg:min-h-screen">
           {children}
         </div>
       </main>

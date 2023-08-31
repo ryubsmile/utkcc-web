@@ -23,7 +23,12 @@ export default function PageIntro({
   }, [pageName, pageSlogan, pageExp]);
 
   return (
-    <article className="h-auto w-full lg:pt-0 lg:grid grid-cols-right-tilt-twin-columns gap-x-[5vw] grid-rows-3-auto-rows grid-flow-col-dense items-end relative">
+    <article
+      className="h-auto w-full lg:pt-0 lg:grid grid-cols-right-tilt-twin-columns 
+    gap-x-[5vw] grid-rows-3-auto-rows grid-flow-col-dense items-end relative
+    border border-gray-200 p-6 rounded-lg lg:border-none bg-white
+    "
+    >
       <div id={pageName} className="absolute -top-32"></div>
       {/* section intro title */}
       <div className="text-kcc-theme font-bold capitalize self-end">{name}</div>
@@ -32,7 +37,7 @@ export default function PageIntro({
       <div className="max-w-full w-full h-full flex items-center justify-center mx-auto row-span-2 row-start-2">
         {children}
       </div>
-      <p className="break-keep hyphens-auto font-normal my-6 lg:mt-0 text-kcc-gray self-start">
+      <p className="break-keep hyphens-auto font-normal lg:mt-0 text-kcc-gray self-start">
         {exp}
       </p>
     </article>
