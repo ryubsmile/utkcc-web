@@ -1,11 +1,10 @@
 import Link from 'next/link';
 
 interface TmpProps {
-  children: React.ReactNode;
   searchParams: Record<string, string> | undefined;
 }
 
-export default function Tmp({ children, searchParams }: TmpProps) {
+export default function Tmp({ searchParams }: TmpProps) {
   const pathname = 'tmp/';
   const modalname = 'true';
   const showModal = searchParams?.modal;
