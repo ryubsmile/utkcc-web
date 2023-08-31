@@ -1,18 +1,13 @@
 import Link from 'next/link';
 
 interface Props {
-  pathname?: string;
-  modalname?: string;
   children: React.ReactNode;
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default function Tmp({
-  pathname = 'tmp/',
-  modalname = 'true',
-  children,
-  searchParams,
-}: Props) {
+export default function Tmp({ children, searchParams }: Props) {
+  const pathname = 'tmp/';
+  const modalname = 'true';
   const showModal = searchParams?.modal;
   return (
     <>
@@ -22,17 +17,16 @@ export default function Tmp({
       >
         this is tmp page.
       </Link>
-      {showModal && <BasicModal pathname={pathname}>{children}</BasicModal>}
+      {showModal && <BasicModal pathname={pathname} />}
     </>
   );
 }
 
 interface ModalProps {
   pathname: string;
-  children: React.ReactNode;
 }
 
-function BasicModal({ pathname, children }: ModalProps) {
+function BasicModal({ pathname }: ModalProps) {
   return (
     <>
       <dialog className="fixed top-0 left-0 z-[100] w-screen h-screen p-0 bg-black bg-opacity-50 justify-center items-center flex mx-auto my-auto">
