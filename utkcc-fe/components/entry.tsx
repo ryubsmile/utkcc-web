@@ -34,9 +34,9 @@ export default function Entry() {
         모두 이 곳에서 시작하세요. <br />
       </p>
       <p className={`${animationName}-text-2`}>
-        이제껏 경험 못 했던 한인경영동아리, <br />
+        이제껏 경험 못 했던 한인 경영동아리, <br />
         <span className="text-kcc-theme">UTKCC</span>와 함께라면 당신의 <br />
-        유티는 분명 더 즐거울거에요.
+        유티는 분명 더 즐거울거예요.
       </p>
     </div>
   );

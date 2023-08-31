@@ -1,11 +1,10 @@
+import Entry from '@/components/entry';
 import About from '../(subpages)/about/page';
 import Executives from '../(subpages)/executives/page';
 import Sponsors from '../(subpages)/sponsors/page';
 import Resources from '../(subpages)/resources/page';
 import Newsletter from '../(subpages)/newsletter/page';
-import Slides from '@/components/slides';
 import EventsHomeIntro from '../(subpages)/events/eventsHomeIntro';
-import Entry from '@/components/entry';
 
 export default function Home() {
   return (
