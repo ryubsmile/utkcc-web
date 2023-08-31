@@ -5,6 +5,7 @@ import MenuBar from '@/components/menubar';
 import execData from './executives-info.json';
 import { getPlaiceholder } from 'plaiceholder';
 import { getURL } from '@/components/utils';
+import PresidentsIntro from './presidentsIntro';
 
 export const metadata: Metadata = {
   title: 'Executives',
@@ -51,7 +52,7 @@ interface ExecInfo {
   position: string;
   name: string;
   program: string;
-  intro: string;
+  intro: string[];
   id: number;
 }
 
@@ -111,13 +112,8 @@ async function ExecutiveCell({
       </div>
       <div className="mb-1">{name}</div>
       <div className="text-3xs opacity-50 capitalize">{program}</div>
-      {!intro ? (
-        ''
-      ) : (
-        // TODO: onclick
-        <div className="rounded-lg bg-gray-300 px-3 py-1 w-fit text-2xs mt-2">
-          소개글
-        </div>
+      {intro !== undefined && intro.length !== 0 && (
+        <PresidentsIntro position={position} name={name} intro={intro} />
       )}
     </div>
   );
