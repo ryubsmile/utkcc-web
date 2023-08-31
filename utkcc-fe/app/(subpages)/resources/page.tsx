@@ -102,6 +102,7 @@ export default function Resources() {
               src={instagramLogo}
               fill={true}
               placeholder="blur"
+              sizes={'100%'}
             />
           </Link>
           <Link
@@ -115,6 +116,7 @@ export default function Resources() {
               src={youtubeLogo}
               fill={true}
               placeholder="blur"
+              sizes={'100%'}
             />
           </Link>
           <Link
@@ -128,6 +130,7 @@ export default function Resources() {
               src={facebookLogo}
               fill={true}
               placeholder="blur"
+              sizes={'100%'}
             />
           </Link>
           <Link
@@ -141,6 +144,7 @@ export default function Resources() {
               src={linkedInLogo}
               fill={true}
               placeholder="blur"
+              sizes={'100%'}
             />
           </Link>
         </div>

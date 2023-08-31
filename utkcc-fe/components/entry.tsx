@@ -15,7 +15,7 @@ export default function Entry() {
       fill={true}
       sizes={'100%'}
       priority={true}
-      className="object-contain"
+      className={`object-contain scale-[0.4] lg:scale-[0.25] ${animationName}-logo`}
     />
   );
 
@@ -57,36 +57,32 @@ export default function Entry() {
     </div>
   );
 
-  const PlaceCenter = ({ children }: { children: React.JSX.Element }) => (
-    <div className="absolute w-screen h-screen flex items-center justify-center">
-      {children}
-    </div>
-  );
+  const animationComponents = [
+    Logo(),
+    ScrollInstructor(),
+    Text1(),
+    Text2(),
+    GroupName(),
+  ];
 
   return (
     <>
-      <div className="w-screen h-screen absolute top-0 left-0 z-50">
+      <div className="w-screen h-screen absolute top-0 left-0">
         <div className="relative w-full h-full">
-          <div
-            className={`absolute w-screen h-screen scale-[0.4] lg:scale-[0.25] ${animationName}-logo`}
-          >
-            <Logo />
-          </div>
-          <PlaceCenter>
-            <Text1 />
-          </PlaceCenter>
-          <PlaceCenter>
-            <Text2 />
-          </PlaceCenter>
-          <PlaceCenter>
-            <GroupName />
-          </PlaceCenter>
-          <PlaceCenter>
-            <ScrollInstructor />
-          </PlaceCenter>
+          {animationComponents.map((components, i) => (
+            <PlaceCenter key={i}>{components}</PlaceCenter>
+          ))}
         </div>
       </div>
       <div className="h-screen"></div>
     </>
+  );
+}
+
+function PlaceCenter({ children }: { children: React.JSX.Element }) {
+  return (
+    <div className="absolute w-screen h-screen flex items-center justify-center">
+      {children}
+    </div>
   );
 }
