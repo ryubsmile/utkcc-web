@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import PageIntro from '@/components/pageIntro';
-import aboutImage from '/public/assets/images/about-image.png';
+import aboutImage from '/public/assets/images/about-image.webp';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -28,7 +28,8 @@ export default function About() {
     >
       <Image
         alt="about image"
-        className="w-[80vw] h-auto max-h-[40vh] lg:max-h-[60vh] object-contain"
+        className="w-[80vw] h-auto max-h-[40vh] lg:max-h-[60vh] object-contain rounded-md"
+        placeholder="blur"
         src={aboutImage}
       />
     </PageIntro>
