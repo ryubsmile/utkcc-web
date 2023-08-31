@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import './navbarMenuButton.css';
 import { handleScroll } from './utils';
+import SmallLogoImage from '/public/assets/images/logo-nav.png';
 
 export default function NavBar({
   visibleThreshold,
@@ -51,11 +52,11 @@ export default function NavBar({
         ref={navbarElementTarget}
         className={`w-screen ${
           navActive ? 'h-[100dvh] lg:h-auto' : 'h-auto'
-        } pt-safe-top top-0 fixed bg-[#FCFCFC] hover:!opacity-100 border-b border-solid border-transparent font-normal duration-300 select-none z-10 touch-none`}
+        } pt-safe-top top-0 fixed bg-[#FCFCFC] hover:!opacity-100 border-b border-solid border-gray-200 font-normal duration-300 select-none z-10 touch-none`}
       >
         {/* NAVBAR FOR DEFAULT (sm - md) VIEWPORT */}
         <div
-          className={`flex h-full lg:hidden px-4 py-4 ${
+          className={`flex h-full lg:hidden px-8 py-4 ${
             navActive ? 'flex-col' : ''
           }`}
         >
@@ -65,12 +66,11 @@ export default function NavBar({
             } w-fit h-full gap-2 items-center`}
             href="/"
           >
-            <div className="w-8 h-8 relative">
+            <div className="w-12 h-12 relative">
               <Image
-                src="/logo-nav.png"
+                src={SmallLogoImage}
                 alt="logo"
-                fill={true}
-                sizes={'100%'}
+                priority={true}
                 className="object-scale-down"
               />
             </div>
