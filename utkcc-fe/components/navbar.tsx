@@ -131,10 +131,9 @@ export default function NavBar({
           <Link className={`flex w-fit h-full gap-2 items-center`} href="/">
             <div className="w-8 h-8 relative">
               <Image
-                src="/logo-nav.png"
+                src={SmallLogoImage}
                 alt="logo"
-                fill={true}
-                sizes={'100%'}
+                priority={true}
                 className="object-scale-down"
               />
             </div>
