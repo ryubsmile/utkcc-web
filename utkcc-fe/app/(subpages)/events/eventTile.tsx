@@ -18,15 +18,12 @@ export default function EventTile({
   return (
     <>
       <div
-        // href={`${backURL}?modal=${eventType}`}
-        // shallow={true}
-        // scroll={false}
         onClick={() => setShowModal(true)}
         className="aspect-square bg-gray-200 w-full h-auto rounded-lg p-6 flex flex-col gap-6 cursor-pointer"
       >
         <div className="text-s capitalize">{eventType}</div>
         <div className="text-lg leading-5">{eventSlogan}</div>
-        <div className="text-4xl">+</div>
+        <div className="text-xl font-light">+</div>
       </div>
       {showModal && (
         <EventModal

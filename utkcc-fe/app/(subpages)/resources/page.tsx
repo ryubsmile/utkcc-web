@@ -169,7 +169,7 @@ export default function Resources() {
           <span className="text-center flex justify-center my-2">
             {/* TODO: link update */}
             <Link
-              className="text-center p-2 bg-kcc-theme mt-4 text-white text-sm w-fit rounded-md"
+              className="text-center px-6 py-2 bg-kcc-theme mt-4 text-white text-sm w-fit rounded-xl"
               target="_blank"
               rel="noopener noreferrer"
               href="/"

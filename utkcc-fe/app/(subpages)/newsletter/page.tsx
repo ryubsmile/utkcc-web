@@ -28,7 +28,7 @@ export default function Newsletter() {
           이메일 구독으로 KCC 월간 뉴스레터를 간편하게 받아보세요!
           <span className="text-center flex justify-center my-2">
             <Link
-              className="text-center p-2 bg-kcc-theme mt-4 text-white text-sm w-fit rounded-md"
+              className="text-center px-6 py-2 bg-kcc-theme mt-4 text-white text-sm w-fit rounded-xl"
               target="_blank"
               rel="noopener noreferrer"
               href="https://docs.google.com/forms/d/1h8FoNhv85dFnX4ICnw9BmvtRr_MBFhHS5Z6WrRlUP6Y/viewform?edit_requested=true"

@@ -20,7 +20,7 @@ export default function Sponsors() {
   return (
     <PageIntro
       pageName="sponsors"
-      pageSlogan={<>UTKCC와 함께하는 파트너쉽</>}
+      pageSlogan={<>UTKCC와 함께하는 파트너십</>}
       pageExp={
         <>
           UTKCC는 토론토에 위치한 한인식당들과 제휴하여 UTKCC 멤버십 소지자에게
