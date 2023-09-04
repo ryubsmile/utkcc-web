@@ -56,7 +56,7 @@ export default function NavBar({
       >
         {/* NAVBAR FOR DEFAULT (sm - md) VIEWPORT */}
         <div
-          className={`flex h-full lg:hidden px-8 py-4 ${
+          className={`flex h-full lg:hidden px-4 py-4 ${
             navActive ? 'flex-col' : ''
           }`}
         >
@@ -66,7 +66,7 @@ export default function NavBar({
             } w-fit h-full gap-2 items-center`}
             href="/"
           >
-            <div className="w-12 h-12 relative">
+            <div className="w-8 h-8 relative">
               <Image
                 src={SmallLogoImage}
                 alt="logo"

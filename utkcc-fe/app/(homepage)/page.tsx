@@ -12,7 +12,7 @@ export default function Home() {
       <Entry />
       {/* default: px-8 */}
       <div className="pl-safe-left pr-safe-right">
-        <div className="px-8 lg:px-32 z-50 flex flex-col gap-y-[15vh] mb-[10vh]">
+        <div className="px-4 lg:px-32 z-50 flex flex-col gap-y-[15vh] mb-[10vh]">
           {/* about intro */}
           <About />
           {/* events intro */}
