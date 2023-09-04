@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
 import FooterContactInfo from '@/components/footerContactInfo';
-import { getURL } from '@/misc/utils';
+import { getURL } from '@/lib/utils';
 import './globals.css';
 
 // Frequently-used Metadata Saves.

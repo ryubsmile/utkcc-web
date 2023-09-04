@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { getPlaiceholder } from 'plaiceholder';
 import PageIntro from '@/components/pageIntro';
 import MenuBar from '@/components/menubar';
-import { getURL } from '@/misc/utils';
+import { getURL } from '@/lib/utils';
 import PresidentsIntro from './presidentsIntro';
 import { deptList, execData } from '@/data/executives-data';
 
