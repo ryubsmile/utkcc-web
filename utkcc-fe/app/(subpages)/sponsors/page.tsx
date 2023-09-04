@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Sponsors() {
   const data: { [k: string]: JSX.Element[] } = Object.fromEntries(
     sponsorData.map((sponsorInfo, i) => [
-      sponsorInfo.name,
+      sponsorInfo.name.toLowerCase(),
       [getSponsorCell({ ...sponsorInfo, id: i })],
     ]),
   );
@@ -69,9 +69,7 @@ function getSponsorCell({
           className="aspect-square bg-gray-200 border-0 rounded-lg object-cover"
         />
       </div>
-      <div className="my-2 underline underline-offset-2 first-letter:capitalize">
-        {name}
-      </div>
+      <div className="my-2 underline underline-offset-2 capitalize">{name}</div>
       <div className="mb-1 text-xs">{exp}</div>
       <div className="flex w-max mx-auto gap-3">
         <Link
