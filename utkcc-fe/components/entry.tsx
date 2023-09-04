@@ -8,7 +8,7 @@ import './entry.css';
 export default function Entry() {
   const animationName = 'upfold';
 
-  const Logo = () => (
+  const Logo = (
     <Image
       src={LogoImage}
       alt=""
@@ -19,7 +19,7 @@ export default function Entry() {
     />
   );
 
-  const ScrollInstructor = () => (
+  const ScrollInstructor = (
     <div
       className={`absolute w-full bottom-[8dvh] opacity-60 text-center ${animationName}-logo`}
     >
@@ -27,7 +27,7 @@ export default function Entry() {
     </div>
   );
 
-  const Text1 = () => (
+  const Text1 = (
     <div className="font-normal text-xl text-center text-gray-600">
       <p className={`${animationName}-text-1`}>
         학업 성취와 커리어의 첫 시작점 <br />
@@ -41,14 +41,14 @@ export default function Entry() {
     </div>
   );
 
-  const Text2 = () => (
+  const Text2 = (
     <div className={`font-normal text-xl text-center ${animationName}-slogan`}>
       Be Part of a
       <br /> <span className="text-kcc-theme">Professional</span> Community.
     </div>
   );
 
-  const GroupName = () => (
+  const GroupName = (
     <div className={`flex flex-col text-center ${animationName}-group-name`}>
       <div className="font-bold text-4xl text-kcc-theme">UTKCC</div>
       <div className="mt-4 font-normal text-gray-600">
@@ -57,17 +57,11 @@ export default function Entry() {
     </div>
   );
 
-  const animationComponents = [
-    Logo(),
-    ScrollInstructor(),
-    Text1(),
-    Text2(),
-    GroupName(),
-  ];
+  const animationComponents = [Logo, ScrollInstructor, Text1, Text2, GroupName];
 
   return (
     <>
-      <div className="w-screen h-screen absolute top-0 left-0">
+      <div className="w-screen h-[100dvh] absolute top-0 left-0">
         <div className="relative w-full h-full">
           {animationComponents.map((components, i) => (
             <PlaceCenter key={i}>{components}</PlaceCenter>
@@ -81,7 +75,7 @@ export default function Entry() {
 
 function PlaceCenter({ children }: { children: React.JSX.Element }) {
   return (
-    <div className="absolute w-screen h-screen flex items-center justify-center">
+    <div className="absolute w-screen h-[100dvh] flex items-center justify-center">
       {children}
     </div>
   );
