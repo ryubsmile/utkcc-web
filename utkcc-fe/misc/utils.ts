@@ -1,10 +1,14 @@
-// threshold 배열 생성함수
+/*
+ * reused function compilations
+ */
+
+/** threshold 배열 생성함수 */
 export const thresholdArray = (steps: number) =>
   Array(steps + 1)
     .fill(0)
     .map((_, index) => index / steps || 0);
 
-// smooth scroll
+/** smooth scroll */
 export const handleScroll = (
   e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
 ) => {
@@ -35,8 +39,8 @@ export const handleScroll = (
   );
 };
 
-// get the current base URL
 const IS_SERVER = typeof window === 'undefined';
+/** get the current base URL */
 export function getURL(path: string) {
   const baseURL = IS_SERVER
     ? process.env.NEXT_PUBLIC_BASE_URL
