@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import EventTile from './eventTile';
+import { data } from './eventsInfo';
 
 export const metadata: Metadata = {
   title: 'Events',
@@ -16,31 +17,9 @@ export default function Events() {
         {subtitle}
       </div>
       <div className="flex flex-col lg:flex-row gap-8 h-auto w-[30vmax] lg:w-full mx-auto">
-        <EventTile
-          eventType="academic"
-          eventSlogan={
-            <>
-              학생의 본분을 <br />
-              잊지 않기 위하여
-            </>
-          }
-        ></EventTile>
-        <EventTile
-          eventType="professional"
-          eventSlogan={
-            <>
-              대학 그 너머 <br /> 커리어를 위하여
-            </>
-          }
-        ></EventTile>
-        <EventTile
-          eventType="social"
-          eventSlogan={
-            <>
-              대학 생활의 묘미를 <br /> 잊지 않기 위하여
-            </>
-          }
-        ></EventTile>
+        {data.map((e, i) => (
+          <EventTile info={e.info} key={i} />
+        ))}
       </div>
     </div>
   );
