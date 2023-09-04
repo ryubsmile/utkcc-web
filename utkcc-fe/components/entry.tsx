@@ -61,7 +61,7 @@ export default function Entry() {
 
   return (
     <>
-      <div className="w-screen h-[100dvh] absolute top-0 left-0">
+      <div id="entry" className="w-screen h-[100dvh] absolute top-0 left-0">
         <div className="relative w-full h-full">
           {animationComponents.map((components, i) => (
             <PlaceCenter key={i}>{components}</PlaceCenter>
