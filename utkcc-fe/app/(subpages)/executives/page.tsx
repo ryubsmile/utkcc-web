@@ -5,24 +5,13 @@ import PageIntro from '@/components/pageIntro';
 import MenuBar from '@/components/menubar';
 import { getURL } from '@/components/utils';
 import PresidentsIntro from './presidentsIntro';
-import execData from './executives-info.json';
+import { deptList, execData } from '@/data/executives-data';
 
 export const metadata: Metadata = {
   title: 'Executives',
 };
 
 export default function Executives() {
-  const deptList = [
-    'presidents',
-    'academic',
-    'external relations',
-    'finance',
-    'marketing',
-    'media',
-    'programming',
-    'social',
-  ];
-
   const deptContent = Object.fromEntries(
     deptList.map((deptName: string) => [
       deptName,
@@ -42,7 +31,7 @@ export default function Executives() {
         </>
       }
     >
-      <MenuBar defaultLabel="presidents" columnNumber={2} data={deptContent} />
+      <MenuBar defaultLabel={deptList[0]} columnNumber={2} data={deptContent} />
     </PageIntro>
   );
 }
@@ -135,7 +124,9 @@ function getDeptExecCells(deptExecList: ExecInfo[]) {
   );
 }
 
-// get the base64 ImageURL from source url
+/**
+ * Get the base64 blurred image url from the href source url
+ */
 async function getBase64(imageUrl: string) {
   try {
     const res = await fetch(imageUrl);

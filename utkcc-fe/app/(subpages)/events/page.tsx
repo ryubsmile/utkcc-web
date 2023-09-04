@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import EventTile from './eventTile';
-import { data } from './eventsInfo';
+import { eventData } from '@/data/events-data';
 
 export const metadata: Metadata = {
   title: 'Events',
@@ -17,7 +17,7 @@ export default function Events() {
         {subtitle}
       </div>
       <div className="flex flex-col lg:flex-row gap-8 h-auto w-[30vmax] lg:w-full mx-auto">
-        {data.map((e, i) => (
+        {eventData.map((e, i) => (
           <EventTile info={e.info} key={i} />
         ))}
       </div>

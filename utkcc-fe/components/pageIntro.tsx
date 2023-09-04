@@ -18,7 +18,7 @@ export default function PageIntro({
       </div>
       {/* section intro slogans */}
       <div className="text-black font-normal text-2xl my-6">{pageSlogan}</div>
-      <div className="max-w-full w-full h-full flex items-center justify-center mx-auto row-span-2 row-start-2 rounded-lg overflow-hidden">
+      <div className="max-w-full w-full h-full flex items-center justify-center mx-auto row-span-2 row-start-2">
         {children}
       </div>
       <p className="break-keep hyphens-auto font-normal my-6 lg:mt-0 text-kcc-gray self-start">

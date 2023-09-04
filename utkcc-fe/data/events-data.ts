@@ -1,6 +1,15 @@
-import { EventTileProps } from './eventTile';
+import { EventTileProps } from '@/app/(subpages)/events/eventTile';
 
-export const data: EventTileProps[] = [
+/**
+ * @warning
+ * 수정 O
+ *
+ * @description
+ * events - learn more 를 클릭하면 나오는 페이지의 이벤트 소개.
+ *
+ * 이미지 파일은 되도록 수정하지 마세요!
+ */
+export const eventData: EventTileProps[] = [
   {
     info: {
       type: 'academic',

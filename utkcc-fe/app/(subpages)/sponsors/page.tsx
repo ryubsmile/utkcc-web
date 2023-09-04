@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PageIntro from '@/components/pageIntro';
 import MenuBar from '@/components/menubar';
-import sponsorData from './sponsor-info.json';
+import { sponsorData } from '@/data/sponsors-data';
 
 export const metadata: Metadata = {
   title: 'Sponsors',
