@@ -22,7 +22,7 @@ export default function EventsHomeIntro() {
             href={`/events`}
             className="block rounded-lg bg-gray-300 text-black px-4 py-2 w-fit mt-4 mx-auto cursor-pointer"
           >
-            Learn more
+            Learn More
           </Link>
         </>
       }

@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PageIntro from '@/components/pageIntro';
 import MenuBar from '@/components/menubar';
+import antiCalendarImage from '/public/assets/images/resources/anticalendar.jpeg';
+import studyPackageImage from '/public/assets/images/resources/studypackage.jpeg';
 import instagramLogo from '/public/assets/images/media-logo/instagram.png';
 import facebookLogo from '/public/assets/images/media-logo/facebook.png';
 import linkedInLogo from '/public/assets/images/media-logo/linkedIn.png';
@@ -21,9 +23,9 @@ export default function Resources() {
           <Image
             key={0}
             alt=""
-            // TODO: update image
-            src={'/assets/images/exec-dummy-image.png'}
+            src={antiCalendarImage}
             fill={true}
+            placeholder="blur"
             sizes={'100%'}
             className="aspect-square bg-gray-200 border-0 rounded-lg object-cover"
           />
@@ -32,7 +34,6 @@ export default function Resources() {
           Anti-calendar
         </div>
         <div className="mb-1 text-xs">과목별 꿀팁들은 여기서</div>
-        {/* TODO: links update */}
         <div className="flex flex-col w-max mx-auto">
           <Link
             href="/assets/pdf/anti-calendar-freshmen.pdf"
@@ -57,9 +58,9 @@ export default function Resources() {
           <Image
             key={1}
             alt=""
-            // TODO: update image
-            src={'/assets/images/exec-dummy-image.png'}
+            src={studyPackageImage}
             fill={true}
+            placeholder="blur"
             sizes={'100%'}
             className="aspect-square bg-gray-200 border-0 rounded-lg object-cover"
           />
@@ -70,7 +71,6 @@ export default function Resources() {
         <div className="mb-1 text-xs">
           선배들의 팁, 연습문제, 렉처 정리를 한 번에
         </div>
-        {/* TODO: links update */}
         <div className="flex flex-col w-max mx-auto">
           <Link
             href="/assets/pdf/eco101-sample.pdf"
