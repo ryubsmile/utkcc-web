@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import PageIntro from '@/components/pageIntro';
 import aboutImage from '/public/assets/images/about-image.webp';
+import AboutModalButton from './aboutModal';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -23,6 +24,7 @@ export default function About() {
           매년 커리어 컨퍼런스, 케이스 컴피티션, 네트워킹 세션 및 다양한 경영
           동아리와 같은 활동을 통해 한인 학생들의 커리어 발전을 지원하고
           있습니다.
+          <AboutModalButton />
         </>
       }
     >
