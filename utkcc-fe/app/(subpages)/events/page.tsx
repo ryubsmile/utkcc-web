@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import EventTile from './eventTile';
+import EventTile from './eventModal';
 import { eventData } from '@/data/events-data';
 
 export const metadata: Metadata = {

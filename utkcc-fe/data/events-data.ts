@@ -1,4 +1,4 @@
-import { EventTileProps } from '@/app/(subpages)/events/eventTile';
+import { EventTileProps } from '@/app/(subpages)/events/eventModal';
 
 /**
  * @warning
