@@ -1,4 +1,4 @@
-import Entry from '@/components/entry';
+import Entry from './entry';
 import About from '../(subpages)/about/page';
 import Executives from '../(subpages)/executives/page';
 import Sponsors from '../(subpages)/sponsors/page';
