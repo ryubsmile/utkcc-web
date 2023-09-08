@@ -3,6 +3,7 @@
 }
 
 .upfold-logo {
+  opacity: 0.2;
   animation: upfold-logo var(--animation-duration) ease-in-out 0.5s infinite
     forwards;
 }
@@ -82,6 +83,7 @@
 }
 
 .upfold-scroll-instructor {
+  opacity: 0.4;
   animation: upfold-scroll-instructor var(--animation-duration) ease-in-out 0.5s
     infinite forwards;
 }
