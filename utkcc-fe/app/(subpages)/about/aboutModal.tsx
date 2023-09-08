@@ -33,7 +33,7 @@ function AboutModal({
       <div className="z-10 m-4 lg:my-12 lg:mx-48 p-4 lg:p-16 rounded-lg w-full h-fit bg-white flex flex-col gap-3 lg:gap-6">
         <div className="text-xl font-bold text-kcc-theme">About UTKCC</div>
         <div className="text-kcc-gray text-xs lg:text-sm flex flex-col gap-3">
-          <p className="leading-6">
+          <p className="leading-5">
             올해 {KCC_TH_NOW}기를 맞이하는 토론토 대학교의 UTKCC는 Commerce 또는
             Economics를 전공하는 학생들로부터 출범하여, {KCC_START_YEAR}년부터
             현재까지 왕성한 활동을 펼치고 있는 한인학생회입니다. 현재는 다양한
@@ -41,7 +41,7 @@ function AboutModal({
             위하여 상경계 학생은 물론 다양한 전공을 공부하는 학생 임원진들로
             이루어져 있습니다.
           </p>
-          <p className="leading-6">
+          <p className="leading-5">
             UTKCC는{' '}
             <span className="text-kcc-theme underline underline-offset-4">
               #Be Part of a Professional Community
@@ -56,7 +56,7 @@ function AboutModal({
             머리를 맞대어 고민하고, 기획하며, 학업을 위해 함께 공부하고, 다양한
             전공의 커리어 고민들을 나누며 새로운 시각을 접하고 배워갑니다.
           </p>
-          <p className="leading-6">
+          <p className="leading-5">
             또한, 지난 {KCC_TH_NOW}년이라는 시간 동안 KCC를 거쳐가시고 국내외
             사회 여러 분야로 진출하신 Alumni분들로 구성된 KCCA 네트워크가
             형성되었습니다. KCC에 애정을 갖고 계시는 Alumni분들을 통하여 학우
