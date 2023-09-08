@@ -27,14 +27,14 @@ export default function EventModalButton({
     <>
       <div
         onClick={() => setShowModal(true)}
-        className="aspect-square relative text-white w-full h-auto rounded-lg p-6 flex flex-col gap-6 cursor-pointer overflow-hidden"
+        className="group aspect-square relative text-white w-full h-auto rounded-lg p-6 flex flex-col gap-6 cursor-pointer overflow-hidden"
       >
         <div className="absolute w-full h-full bg-black top-0 left-0 -z-20"></div>
         <Image
           alt="-"
           src={bgImage}
           fill={true}
-          className="opacity-40 object-cover -z-10"
+          className="opacity-40 group-hover:opacity-20 duration-200 object-cover -z-10"
         />
         <div className="text-s capitalize">{info.type}</div>
         <div className="text-lg leading-5">
@@ -77,7 +77,7 @@ function EventModal({ info, setShowModal }: EventModalProps) {
         </div>
         <div
           onClick={() => setShowModal(false)}
-          className="w-fit self-end underline underline-offset-2 text-kcc-gray cursor-pointer"
+          className="w-fit self-end underline underline-offset-2 text-kcc-gray hover:opacity-70 cursor-pointer"
         >
           돌아가기
         </div>

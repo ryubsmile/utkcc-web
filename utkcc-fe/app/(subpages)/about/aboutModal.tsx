@@ -10,7 +10,7 @@ export default function AboutModalButton() {
     <>
       <div
         onClick={() => setShowModal(true)}
-        className="rounded-lg bg-gray-300 text-black px-4 py-2 w-fit mt-4 mx-auto cursor-pointer"
+        className="rounded-xl bg-gray-300 text-black text-sm px-6 py-2 w-fit mt-4 mx-auto cursor-pointer hover:bg-gray-200"
       >
         Learn More
       </div>
@@ -30,9 +30,9 @@ function AboutModal({
         onClick={() => setShowModal(false)}
         className="z-0 absolute bg-transparent w-full h-full top-0 left-0"
       />
-      <div className="z-10 m-4 lg:my-12 lg:mx-48 p-4 lg:p-16 rounded-lg w-full h-fit bg-white flex flex-col gap-3 lg:gap-6">
+      <div className="z-10 m-4 lg:my-12 lg:mx-48 p-4 lg:p-16 rounded-lg w-full h-fit bg-white flex flex-col gap-3 lg:gap-6 max-h-[80vh]">
         <div className="text-xl font-bold text-kcc-theme">About UTKCC</div>
-        <div className="text-kcc-gray text-xs lg:text-sm flex flex-col gap-3">
+        <div className="text-kcc-gray text-xs lg:text-sm flex flex-col gap-3 overflow-auto">
           <p className="leading-5">
             올해 {KCC_TH_NOW}기를 맞이하는 토론토 대학교의 UTKCC는 Commerce 또는
             Economics를 전공하는 학생들로부터 출범하여, {KCC_START_YEAR}년부터
@@ -70,7 +70,7 @@ function AboutModal({
         </div>
         <div
           onClick={() => setShowModal(false)}
-          className="w-fit self-end underline underline-offset-2 text-kcc-gray text-xs lg:text-sm cursor-pointer"
+          className="w-fit self-end underline underline-offset-2 text-kcc-gray hover:opacity-70 text-xs lg:text-sm cursor-pointer"
         >
           돌아가기
         </div>

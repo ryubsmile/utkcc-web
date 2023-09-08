@@ -14,7 +14,7 @@ export default function PresidentModalButton(props: PresidentIntroProps) {
     <>
       <div
         onClick={() => setShowIntro(true)}
-        className="rounded-lg bg-gray-300 px-3 py-1 w-fit text-2xs mt-2 cursor-pointer"
+        className="rounded-lg bg-gray-300 px-3 py-1 w-fit text-2xs mt-2 cursor-pointer border border-gray-200 hover:bg-gray-200"
       >
         소개글
       </div>
@@ -54,7 +54,7 @@ function PresidentModal({
         </div>
         <div
           onClick={() => setShowModal(false)}
-          className="w-fit self-end underline underline-offset-2 text-kcc-gray text-xs lg:text-sm cursor-pointer"
+          className="w-fit self-end underline underline-offset-2 text-kcc-gray hover:opacity-70 text-xs lg:text-sm cursor-pointer"
         >
           돌아가기
         </div>

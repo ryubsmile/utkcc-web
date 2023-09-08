@@ -88,7 +88,7 @@ async function SponsorCell({
       <div className="mb-1 text-xs">{exp}</div>
       <div className="flex w-max mx-auto gap-3">
         <Link
-          className="text-xs rounded-lg bg-gray-200 py-2 px-4 mx-auto my-2 capitalize"
+          className="text-xs rounded-lg bg-gray-300 hover:bg-gray-200 py-2 px-4 mx-auto my-2 capitalize"
           target="_blank"
           rel="noopener noreferrer"
           href={websiteUrl}
@@ -96,7 +96,7 @@ async function SponsorCell({
           website
         </Link>
         <Link
-          className="text-xs rounded-lg bg-gray-200 py-2 px-4 mx-auto my-2 capitalize"
+          className="text-xs rounded-lg bg-gray-300 hover:bg-gray-200 py-2 px-4 mx-auto my-2 capitalize"
           target="_blank"
           rel="noopener noreferrer"
           href={locationUrl}

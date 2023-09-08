@@ -4,6 +4,7 @@
 
 :root {
   --main-theme-color: rgb(5, 60, 140);
+  --main-theme-color-darker: rgb(3, 40, 100);
   --bg-color: rgb(255, 255, 255);
   --txt-color: rgb(0, 0, 0);
   --theme-gray-color: #767171;

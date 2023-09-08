@@ -20,7 +20,7 @@ export default function EventsHomeIntro() {
           모두 UTKCC에서 만나보세요.
           <Link
             href={`/events`}
-            className="block rounded-lg bg-gray-300 text-black px-4 py-2 w-fit mt-4 mx-auto cursor-pointer"
+            className="block rounded-xl bg-gray-300 text-sm text-black px-6 py-2 w-fit mt-4 mx-auto cursor-pointer hover:bg-gray-200"
           >
             Learn More
           </Link>

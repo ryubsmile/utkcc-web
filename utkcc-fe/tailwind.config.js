@@ -18,6 +18,7 @@ module.exports = {
       },
       colors: {
         'kcc-theme': 'var(--main-theme-color)',
+        'kcc-theme-darker': 'var(--main-theme-color-darker)',
         'kcc-gray': 'var(--theme-gray-color)',
       },
       fontSize: {

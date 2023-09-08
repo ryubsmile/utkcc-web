@@ -82,7 +82,8 @@ export default function NavBar({
           <div
             className={`${
               navActive ? 'flex' : 'hidden lg:flex'
-            } flex-col lg:flex-row w-fit overflow-y-clip h-min flex-wrap py-10 lg:my-auto px-16 lg:pl-5 gap-8 lg:place-content-around lg:place-items-center text-xl lg:text-sm text-gray-600 lg:font-bold lg:text-kcc-theme`}
+            } flex-col lg:flex-row w-fit overflow-y-clip h-min flex-wrap py-10 lg:my-auto px-16 lg:pl-5 gap-8 lg:place-content-around lg:place-items-center 
+            text-xl lg:text-sm text-gray-600 lg:font-bold lg:text-kcc-theme`}
           >
             <Link
               href="/"
@@ -132,29 +133,39 @@ export default function NavBar({
                 src={SmallLogoImage}
                 alt="logo"
                 priority={true}
-                className="object-scale-down"
+                className="object-scale-down hover:opacity-70"
               />
             </div>
           </Link>
           <div
-            className={`flex flex-row basis-full my-auto pl-5 gap-8 place-content-around place-items-center text-sm font-bold text-kcc-theme`}
+            className={`flex flex-row basis-full my-auto pl-5 gap-8 place-content-around place-items-center 
+            text-sm font-bold text-kcc-theme`}
           >
-            <Link href="/" className="capitalize">
+            <Link href="/" className="capitalize hover:opacity-70">
               home
             </Link>
             {subpagesList.map((subpageName, i) => (
-              <Link key={i} href={`/${subpageName}`} className="capitalize">
+              <Link
+                key={i}
+                href={`/${subpageName}`}
+                className="capitalize hover:opacity-70"
+              >
                 {subpageName}
               </Link>
             ))}
-            <Link href="#footer" onClick={handleScroll}>
-              Contact
+            <Link
+              href="#footer"
+              onClick={handleScroll}
+              className="capitalize hover:opacity-70"
+            >
+              contact
             </Link>
             <Link
               href={recruitmentLink}
-              className="py-2 px-5 rounded-lg text-white bg-kcc-theme "
+              target="_blank"
+              className="py-2 px-5 rounded-lg capitalize text-white bg-kcc-theme text-opacity-90 hover:text-opacity-100 hover:bg-kcc-theme-darker"
             >
-              Join
+              join
             </Link>
           </div>
         </div>

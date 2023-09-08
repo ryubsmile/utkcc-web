@@ -27,7 +27,7 @@ export default function Resources() {
             fill={true}
             placeholder="blur"
             sizes={'100%'}
-            className="aspect-square bg-gray-200 border-0 rounded-lg object-cover"
+            className="aspect-square bg-gray-300 border-0 rounded-lg object-cover"
           />
         </div>
         <div className="my-2 underline underline-offset-2 capitalize">
@@ -38,14 +38,14 @@ export default function Resources() {
           <Link
             href="/assets/pdf/anti-calendar-freshmen.pdf"
             target="_blank"
-            className="text-xs rounded-lg bg-gray-200 w-full py-2 px-auto mx-auto my-2"
+            className="text-xs rounded-lg bg-gray-300 w-full py-2 px-auto mx-auto my-2 hover:bg-gray-200"
           >
             Sample for freshmen
           </Link>
           <Link
             href="/assets/pdf/anti-calendar-upperyears.pdf"
             target="_blank"
-            className="text-xs rounded-lg bg-gray-200 w-fit py-2 px-5 mx-auto my-2"
+            className="text-xs rounded-lg bg-gray-300 w-fit py-2 px-5 mx-auto my-2 hover:bg-gray-200"
           >
             Sample for upper years
           </Link>
@@ -75,14 +75,14 @@ export default function Resources() {
           <Link
             href="/assets/pdf/eco101-sample.pdf"
             target="_blank"
-            className="text-xs rounded-lg bg-gray-200 w-full py-2 px-auto mx-auto my-2"
+            className="text-xs rounded-lg bg-gray-300 w-full py-2 px-auto mx-auto my-2 hover:bg-gray-200"
           >
             Sample for ECO101
           </Link>
           <Link
             href="/assets/pdf/sta130-sample.pdf"
             target="_blank"
-            className="text-xs rounded-lg bg-gray-200 w-fit py-2 px-5 mx-auto my-2"
+            className="text-xs rounded-lg bg-gray-300 w-fit py-2 px-5 mx-auto my-2 hover:bg-gray-200"
           >
             Sample for STA130
           </Link>
@@ -169,7 +169,7 @@ export default function Resources() {
           UTKCC의 최신 소식들은 소셜미디어에서 확인해보세요.
           <span className="text-center flex justify-center my-2">
             <Link
-              className="text-center px-6 py-2 bg-kcc-theme mt-4 text-white text-sm w-fit rounded-xl"
+              className="text-center px-6 py-2 bg-kcc-theme hover:bg-kcc-theme-darker mt-4 text-white text-opacity-90 hover:text-opacity-100 text-sm w-fit rounded-xl"
               target="_blank"
               rel="noopener noreferrer"
               href={joinMemberShipLink}
