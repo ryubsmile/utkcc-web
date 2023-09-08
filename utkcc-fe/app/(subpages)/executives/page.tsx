@@ -6,6 +6,7 @@ import MenuBar from '@/components/menubar';
 import { getURL } from '@/lib/utils';
 import PresidentModalButton from './presidentModal';
 import { deptList, execData } from '@/data/executives-data';
+import { KCC_TH_NOW } from '@/data/change-annually-data';
 
 export const metadata: Metadata = {
   title: 'Executives',
@@ -25,9 +26,10 @@ export default function Executives() {
       pageSlogan={<>UTKCC 17기 임원진</>}
       pageExp={
         <>
-          UTKCC는 현재 회장단과 일곱개의 부서로 이루어져 있습니다.
-          <span className="my-3 w-full block" />각 부서를 클릭하여 17기
-          임원진들을 확인해보세요.
+          UTKCC는 현재 회장단과 {deptList.length - 1}개의 부서로 이루어져
+          있습니다.
+          <span className="my-3 w-full block" />각 부서를 클릭하여 {KCC_TH_NOW}
+          기 임원진들을 확인해보세요.
         </>
       }
     >
@@ -47,23 +49,16 @@ interface ExecInfo {
 
 // TODO: optimize, rewrite using Object.groupBy when released
 function getExecutives() {
-  const deptContent: { [dept: string]: any[] } = {
-    presidents: [],
-    academic: [],
-    'external relations': [],
-    finance: [],
-    marketing: [],
-    media: [],
-    programming: [],
-    social: [],
-  };
+  const deptContent: { [dept: string]: any[] } = Object.fromEntries(
+    deptList.map((deptName: string) => [deptName, []]),
+  );
 
   execData.forEach((execInfo, i) => {
     deptContent[execInfo.dept].push({
       name: execInfo.name,
       program: execInfo.program,
       position: execInfo.position,
-      imageSrc: `/assets/images/exec-headshots/${execInfo.name}.webp`,
+      imageSrc: execInfo.imageSrc,
       intro: execInfo.intro,
       id: i,
     } as ExecInfo);
