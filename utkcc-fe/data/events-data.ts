@@ -1,4 +1,4 @@
-import { EventTileProps } from '@/app/(subpages)/events/eventModal';
+import { EventModalButtonProps } from '@/app/(subpages)/events/eventModal';
 
 /**
  * @warning
@@ -9,7 +9,7 @@ import { EventTileProps } from '@/app/(subpages)/events/eventModal';
  *
  * 이미지 파일은 되도록 수정하지 마세요!
  */
-export const eventData: EventTileProps[] = [
+export const eventData: EventModalButtonProps[] = [
   {
     info: {
       type: 'academic',
@@ -17,6 +17,7 @@ export const eventData: EventTileProps[] = [
       explanation:
         '대학 공부는 처음이라 버겁게 느껴진다면 UTKCC와 함께 공부해요. 코스를 수강했던 선배들에게만 들을 수 있는 팁과 문제풀이 방식을 코스 튜토리얼을 통해 배워갈 수 있습니다.',
     },
+    bgImage: '/assets/images/events/academic-events.jpeg',
   },
   {
     info: {
@@ -25,6 +26,7 @@ export const eventData: EventTileProps[] = [
       explanation:
         '대학 생활 이후의 미래, UTKCC와 함께라면 걱정하지마세요. 현직자들의 뼈 있는 조언과 더 나아가 인생의 로드맵까지 생각해 볼 수 있는 기회가 될 거에요.',
     },
+    bgImage: '/assets/images/events/professional-events.jpg',
   },
   {
     info: {
@@ -33,5 +35,6 @@ export const eventData: EventTileProps[] = [
       explanation:
         '즐거운 대학 생활을 보내고 싶으신가요? UTKCC에 속한 다양한 배경의 학생들과 교류하며 친목을 다져보세요!',
     },
+    bgImage: '/assets/images/events/social-events-2.jpg',
   },
 ];

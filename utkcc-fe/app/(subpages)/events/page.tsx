@@ -18,7 +18,7 @@ export default function Events() {
       </div>
       <div className="flex flex-col lg:flex-row gap-8 h-auto w-[30vmax] lg:w-full mx-auto">
         {eventData.map((e, i) => (
-          <EventTile info={e.info} key={i} />
+          <EventTile info={e.info} bgImage={e.bgImage} key={i} />
         ))}
       </div>
     </div>
