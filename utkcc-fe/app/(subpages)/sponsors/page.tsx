@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getPlaiceholder } from 'plaiceholder';
 import PageIntro from '@/components/pageIntro';
 import MenuBar from '@/components/menubar';
 import { sponsorData } from '@/data/sponsors-data';
+import { getURL } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Sponsors',
@@ -13,7 +15,7 @@ export default function Sponsors() {
   const data: { [k: string]: JSX.Element[] } = Object.fromEntries(
     sponsorData.map((sponsorInfo, i) => [
       sponsorInfo.name.toLowerCase(),
-      [getSponsorCell({ ...sponsorInfo, id: i })],
+      [<SponsorCell {...sponsorInfo} id={i} key={i} />],
     ]),
   );
 
@@ -49,7 +51,16 @@ interface SponsorInfo {
   id: number;
 }
 
-function getSponsorCell({
+function getSponsors() {
+  const data: { [k: string]: JSX.Element[] } = Object.fromEntries(
+    sponsorData.map((sponsorInfo, i) => [
+      sponsorInfo.name.toLowerCase(),
+      [<SponsorCell {...sponsorInfo} id={i} key={i} />],
+    ]),
+  );
+}
+
+async function SponsorCell({
   name,
   exp,
   imageSrc,
@@ -57,6 +68,8 @@ function getSponsorCell({
   locationUrl,
   id,
 }: SponsorInfo) {
+  const blurImageUrl = await getBase64(getURL(imageSrc));
+
   return (
     <div key={id} className="text-center">
       <div className="max-w-[50%] mt-5 mx-auto relative aspect-square rounded-xl">
@@ -65,8 +78,10 @@ function getSponsorCell({
           alt="-"
           src={imageSrc}
           fill={true}
+          placeholder="blur"
+          blurDataURL={blurImageUrl}
           sizes={'100%'}
-          className="aspect-square bg-gray-200 border-0 rounded-lg object-cover"
+          className="aspect-square bg-gray-200 rounded-lg object-cover"
         />
       </div>
       <div className="my-2 underline underline-offset-2 capitalize">{name}</div>
@@ -91,4 +106,22 @@ function getSponsorCell({
       </div>
     </div>
   );
+}
+
+/**
+ * Get the base64 blurred image url from the href source url
+ */
+async function getBase64(imageUrl: string) {
+  try {
+    const res = await fetch(imageUrl);
+    if (!res.ok) {
+      throw new Error(`Failed to fetch image: ${res.status} ${res.statusText}`);
+    }
+
+    const buffer = await res.arrayBuffer();
+    const { base64 } = await getPlaiceholder(Buffer.from(buffer));
+    return base64;
+  } catch (e) {
+    if (e instanceof Error) console.log(e.stack);
+  }
 }
