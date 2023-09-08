@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import {
+  kccEmail,
+  presEmail,
+  vicePresEmail,
+  erDirectorEmail,
+} from '@/data/change-annually-data';
 
 export default function FooterContactInfo() {
-  const kccEmail = 'koreancommerce@gmail.com';
-  const presEmail = 'seohyun.kang@mail.utoronto.ca';
-  const vicePresEmail = 'suye.han@mail.utoronto.ca';
-  const erDirectorEmail = 'yujin.shim@mail.utoronto.ca';
-
   return (
     <div className="flex flex-col min-h-[20vh] p-8 lg:px-32 bg-kcc-theme text-white font-normal">
       <div className="text-center">Contact Information</div>

@@ -7,6 +7,7 @@ import instagramLogo from '/public/assets/images/media-logo/instagram.png';
 import facebookLogo from '/public/assets/images/media-logo/facebook.png';
 import linkedInLogo from '/public/assets/images/media-logo/linkedIn.png';
 import youtubeLogo from '/public/assets/images/media-logo/youtube.png';
+import { joinMemberShipLink } from '@/data/change-annually-data';
 
 export const metadata: Metadata = {
   title: 'Resources',
@@ -167,12 +168,11 @@ export default function Resources() {
           <span className="my-3 w-full block" />
           UTKCC의 최신 소식들은 소셜미디어에서 확인해보세요.
           <span className="text-center flex justify-center my-2">
-            {/* TODO: link update */}
             <Link
               className="text-center px-6 py-2 bg-kcc-theme mt-4 text-white text-sm w-fit rounded-xl"
               target="_blank"
               rel="noopener noreferrer"
-              href="/"
+              href={joinMemberShipLink}
             >
               멤버십 신청하기
             </Link>

@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from 'react';
 import './navbar.css';
 import { handleScroll } from '@/lib/utils';
 import SmallLogoImage from '/public/assets/images/logo-nav.png';
+import { recruitmentLink } from '@/data/change-annually-data';
 
 export default function NavBar({
   visibleThreshold,
@@ -116,9 +117,8 @@ export default function NavBar({
               contact
             </Link>
             <Link
-              // TODO: Link update
-              href="/"
-              className="hidden lg:block py-2 px-5 rounded-lg text-white bg-kcc-theme "
+              href={recruitmentLink}
+              className="py-2 px-5 rounded-lg text-white bg-kcc-theme"
             >
               Join
             </Link>
@@ -151,8 +151,7 @@ export default function NavBar({
               Contact
             </Link>
             <Link
-              // TODO: Link update
-              href="/"
+              href={recruitmentLink}
               className="py-2 px-5 rounded-lg text-white bg-kcc-theme "
             >
               Join

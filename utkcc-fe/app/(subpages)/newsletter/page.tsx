@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PageIntro from '@/components/pageIntro';
 import newsletterImage from '/public/assets/images/newsletter-image.png';
+import { subscribeNewsletterLink } from '@/data/change-annually-data';
 
 export const metadata: Metadata = {
   title: 'Newsletter',
@@ -31,7 +32,7 @@ export default function Newsletter() {
               className="text-center px-6 py-2 bg-kcc-theme mt-4 text-white text-sm w-fit rounded-xl"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://docs.google.com/forms/d/1h8FoNhv85dFnX4ICnw9BmvtRr_MBFhHS5Z6WrRlUP6Y/viewform?edit_requested=true"
+              href={subscribeNewsletterLink}
             >
               뉴스레터 구독하기
             </Link>
