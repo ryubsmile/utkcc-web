@@ -12,12 +12,15 @@ interface EventSummary {
   explanation: string;
 }
 
-export interface EventTileProps {
+export interface EventModalButtonProps {
   info: EventSummary;
   bgImage?: StaticImageData;
 }
 
-export default function EventTile({ info, bgImage }: EventTileProps) {
+export default function EventModalButton({
+  info,
+  bgImage,
+}: EventModalButtonProps) {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -53,7 +56,7 @@ function EventModal({ info, setShowModal }: EventModalProps) {
         onClick={() => setShowModal(false)}
         className="z-0 absolute bg-transparent w-full h-full top-0 left-0"
       />
-      <div className="z-10 m-4 lg:my-12 lg:mx-32 p-4 lg:p-8 rounded-lg w-full h-fit bg-white flex flex-col gap-3">
+      <div className="z-10 m-4 lg:my-12 lg:mx-48 p-4 lg:p-8 rounded-lg w-full h-fit bg-white flex flex-col gap-3">
         <div className="text-kcc-theme text-sm capitalize">{info.type}</div>
         <div className="text-xl">
           {info.slogan.map((slice, i) => (

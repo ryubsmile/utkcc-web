@@ -4,7 +4,7 @@ import { getPlaiceholder } from 'plaiceholder';
 import PageIntro from '@/components/pageIntro';
 import MenuBar from '@/components/menubar';
 import { getURL } from '@/lib/utils';
-import PresidentModal from './presidentModal';
+import PresidentModalButton from './presidentModal';
 import { deptList, execData } from '@/data/executives-data';
 
 export const metadata: Metadata = {
@@ -102,7 +102,7 @@ async function ExecutiveCell({
       <div className="mb-1">{name}</div>
       <div className="text-3xs opacity-50 capitalize">{program}</div>
       {intro !== undefined && intro.length !== 0 && (
-        <PresidentModal position={position} name={name} intro={intro} />
+        <PresidentModalButton position={position} name={name} intro={intro} />
       )}
     </div>
   );

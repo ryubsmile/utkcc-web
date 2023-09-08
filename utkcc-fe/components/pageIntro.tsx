@@ -21,9 +21,9 @@ export default function PageIntro({
       <div className="max-w-full w-full h-full flex items-center justify-center mx-auto row-span-2 row-start-2">
         {children}
       </div>
-      <p className="break-keep hyphens-auto font-normal my-6 lg:mt-0 text-kcc-gray self-start">
+      <div className="break-keep hyphens-auto font-normal my-6 lg:mt-0 text-kcc-gray self-start">
         {pageExp}
-      </p>
+      </div>
     </article>
   );
 }

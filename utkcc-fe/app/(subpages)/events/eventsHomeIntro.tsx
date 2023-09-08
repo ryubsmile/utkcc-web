@@ -2,6 +2,7 @@ import Image from 'next/image';
 import PageIntro from '@/components/pageIntro';
 import LearnMoreLink from '@/components/learnMoreLink';
 import eventsImage from '/public/assets/images/events-image.png';
+import Link from 'next/link';
 
 export default function EventsHomeIntro() {
   return (
@@ -18,7 +19,12 @@ export default function EventsHomeIntro() {
           만나볼 수 있는 네트워킹 세션, 스트레스를 시원하게 날릴 소셜 이벤트.
           <span className="my-3 w-full block" />
           모두 UTKCC에서 만나보세요.
-          <LearnMoreLink name="events" />
+          <Link
+            href={`/events`}
+            className="block rounded-lg bg-gray-300 text-black px-4 py-2 w-fit mt-4 mx-auto cursor-pointer"
+          >
+            Learn more
+          </Link>
         </>
       }
     >

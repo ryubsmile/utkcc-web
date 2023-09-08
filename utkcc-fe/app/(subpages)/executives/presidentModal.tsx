@@ -7,7 +7,7 @@ interface PresidentIntroProps {
   intro: string[];
 }
 
-export default function PresidentsIntro(props: PresidentIntroProps) {
+export default function PresidentModalButton(props: PresidentIntroProps) {
   const [showIntro, setShowIntro] = useState(false);
 
   return (
@@ -39,7 +39,7 @@ function PresidentModal({
         onClick={() => setShowModal(false)}
         className="z-0 absolute bg-transparent w-full h-full top-0 left-0"
       />
-      <div className="z-10 m-4 lg:my-12 lg:mx-24 p-4 lg:p-16 rounded-lg w-full h-fit bg-white flex flex-col gap-3 lg:gap-6">
+      <div className="z-10 m-4 lg:my-12 lg:mx-48 p-4 lg:p-16 rounded-lg w-full h-fit bg-white flex flex-col gap-3 lg:gap-6">
         <div className="text-kcc-theme text-sm">
           <span className="capitalize">{position}</span>
           {' of UTKCC'}
