@@ -8,7 +8,7 @@ This repository contains the source code for the UTKCC official website, created
 - [Hyunjun You](https://www.instagram.com/hyunjun2003): Designer.
 - [Jingeon Kim](https://github.com/JustKim04): Administrator and Maintainer.
 
-## Documentation (Attention Maintainers!)
+## Documentation (Attention Maintainers-)
 
 This documentation is intended for non-coders who wish to maintain the website with minimal coding.
 
