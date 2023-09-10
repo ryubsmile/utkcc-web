@@ -171,3 +171,7 @@ The deployment of this project will be done automatically via Vercel once a comm
 ## Appendix
 
 For coders and programmers in future UTKCC: we, the creators, kindly ask you to maintain and update this website for the benefit of your institution. Thank you!
+
+## :)
+
+Written by @ryubsmile .

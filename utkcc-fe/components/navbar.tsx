@@ -119,7 +119,7 @@ export default function NavBar({
             </Link>
             <Link
               href={recruitmentLink}
-              className="py-2 px-5 rounded-lg text-white bg-kcc-theme"
+              className="py-2 px-5 rounded-lg text-white bg-kcc-theme w-fit"
             >
               Join
             </Link>
