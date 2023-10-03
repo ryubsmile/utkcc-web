@@ -182,6 +182,14 @@ export const execData: {
     intro: [],
   },
   {
+    dept: 'external relations',
+    position: 'intern',
+    name: '박서정',
+    imageSrc: '',
+    program: 'social science',
+    intro: [],
+  },
+  {
     dept: 'marketing',
     position: 'director',
     name: '김소현',
@@ -227,6 +235,14 @@ export const execData: {
     name: '최정윤',
     imageSrc: '',
     program: 'Social Science',
+    intro: [],
+  },
+  {
+    dept: 'marketing',
+    position: 'intern',
+    name: '김유진',
+    imageSrc: '',
+    program: 'Econ. & Stats.',
     intro: [],
   },
   {
