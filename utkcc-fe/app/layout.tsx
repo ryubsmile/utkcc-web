@@ -87,7 +87,7 @@ export const metadata: Metadata = {
   },
   category: 'academic',
   verification: {
-    google: 'ljg_P00gvkQ-_ZDRxHfi7lF1fLMLDFldSxSux6r8BWw',
+    google: '2sYmo44TnfFSo8jT2-TOaUR5fAd8p0TovKZ_H5vyNlI',
   },
 };
 
