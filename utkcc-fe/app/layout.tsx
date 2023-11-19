@@ -86,6 +86,9 @@ export const metadata: Metadata = {
     capable: true,
   },
   category: 'academic',
+  verification: {
+    google: 'ljg_P00gvkQ-_ZDRxHfi7lF1fLMLDFldSxSux6r8BWw',
+  },
 };
 
 const gMarket = localFont({
