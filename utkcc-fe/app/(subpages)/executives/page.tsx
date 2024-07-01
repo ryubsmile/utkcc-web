@@ -23,7 +23,7 @@ export default function Executives() {
   return (
     <PageIntro
       pageName="executives"
-      pageSlogan={<>UTKCC 17기 임원진</>}
+      pageSlogan={<>UTKCC {KCC_TH_NOW}기 임원진</>}
       pageExp={
         <>
           UTKCC는 현재 회장단과 {deptList.length - 1}개의 부서로 이루어져
