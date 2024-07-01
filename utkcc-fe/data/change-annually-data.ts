@@ -5,7 +5,7 @@
 
 /** KCC 시작 연도: 2007년 */
 export const KCC_START_YEAR = 2007;
-export const KCC_TH_NOW = new Date().getFullYear() - KCC_START_YEAR;
+export const KCC_TH_NOW = new Date().getFullYear() - KCC_START_YEAR + (new Date().getMonth() >= 4 ? 1 : 0);
 
 /** 멤버십 가입 링크 */
 export const joinMemberShipLink = 'https://forms.gle/VCSYDbiWNDYbw8rZ7';
