@@ -1,8 +1,12 @@
+
 # The Official UTKCC Website
 
 This repository contains the v1.0.0 source code for the UTKCC official website, created by members of the 17th UTKCC.
 
-<span style="color:red; font-weight:bold;">Currently, the website is maintained in [@uoft-kcc/web](https://github.com/UofT-KCC/web). This repository remains here for archiving purposes of a primitive version.</span>
+```diff
+- Currently, the website is maintained in [@uoft-kcc/web](https://github.com/UofT-KCC/web). 
+- This repository remains here for archiving purposes of a primitive version.
+```
 
 ## Authors
 
